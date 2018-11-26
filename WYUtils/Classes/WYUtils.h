@@ -14,5 +14,6 @@
 #import "UIColor+WYUtils.h"
 #import "UIImage+WYUtils.h"
 #import "UIView+WYUtils.h"
+#import "UIFont+WYUtils.h"
 
 #endif /* WYUtils_h */

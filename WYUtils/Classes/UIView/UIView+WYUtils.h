@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UIView+WYRenderImage.h"
 #import "UIView+WYCorner.h"
+#import "UIView+WYGestureRecognizer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
