@@ -22,7 +22,7 @@ pod 'WYUtils'
 
 ## Author
 
-wyanassert, 1402099772@qq.com
+wyanassert, wyanassert@gmail.com
 
 ## License
 
