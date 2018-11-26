@@ -19,5 +19,5 @@
     "ios": "8.0"
   },
   "source_files": "WYUtils/Classes/**/*",
-  "public_header_files": "WYUtils/Classes/*.h"
+  "public_header_files": "WYUtils/Classes/**/*.h"
 }

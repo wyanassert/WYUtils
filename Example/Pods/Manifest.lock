@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WYUtils: ad5783dd29d696ee370eae7a4868dd9a7f5eb39b
+  WYUtils: 97cfa627416cfd2f9c54d25c03d045a2f0b3dcb6
 
 PODFILE CHECKSUM: 99b55afe6246b6c71b0c7b5fe6028cfe47c3d7ab
 

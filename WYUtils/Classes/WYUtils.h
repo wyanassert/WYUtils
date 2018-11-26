@@ -13,5 +13,6 @@
 #import "NSString+WYUtils.h"
 #import "UIColor+WYUtils.h"
 #import "UIImage+WYUtils.h"
+#import "UIView+WYUtils.h"
 
 #endif /* WYUtils_h */
