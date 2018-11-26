@@ -1,0 +1,6 @@
+framework module WYUtils {
+  umbrella header "WYUtils-umbrella.h"
+
+  export *
+  module * { export * }
+}

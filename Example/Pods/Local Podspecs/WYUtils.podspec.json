@@ -1,0 +1,22 @@
+{
+  "name": "WYUtils",
+  "version": "0.1.0",
+  "summary": "A short description of WYUtils.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/wyanassert/WYUtils",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "wyanassert": "1402099772@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/wyanassert/WYUtils.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "WYUtils/Classes/**/*"
+}

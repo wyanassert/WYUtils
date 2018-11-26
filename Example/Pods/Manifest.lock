@@ -1,0 +1,16 @@
+PODS:
+  - WYUtils (0.1.0)
+
+DEPENDENCIES:
+  - WYUtils (from `../`)
+
+EXTERNAL SOURCES:
+  WYUtils:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WYUtils: e0e91232cc3f3e751baaf8a120871a229bd01acd
+
+PODFILE CHECKSUM: 99b55afe6246b6c71b0c7b5fe6028cfe47c3d7ab
+
+COCOAPODS: 1.5.3
