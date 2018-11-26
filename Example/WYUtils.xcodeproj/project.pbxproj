@@ -66,7 +66,7 @@
 		A91F7DABB83949988C8C264F /* Pods-WYUtils_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYUtils_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYUtils_Tests/Pods-WYUtils_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F0E7C5064C47AD98D4AF3665 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F139D1B66B7FA83CAAE48A00 /* Pods-WYUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYUtils_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYUtils_Tests/Pods-WYUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F82E36ED5EC379098CB0B363 /* WYUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WYUtils.podspec; path = ../WYUtils.podspec; sourceTree = "<group>"; };
+		F82E36ED5EC379098CB0B363 /* WYUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WYUtils.podspec; path = ../WYUtils.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

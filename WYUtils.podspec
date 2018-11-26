@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'WYUtils'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of WYUtils.'
+  s.summary          = 'Some Utils For Myself.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Some Utils For Myself.
+Basical Utils For Myself. Will not require for Auth of iOS. And will not use runtime for security.
                        DESC
 
   s.homepage         = 'https://github.com/wyanassert/WYUtils'
@@ -30,7 +30,7 @@ Some Utils For Myself.
 
   s.source_files = 'WYUtils/Classes/**/*'
 
-  s.public_header_files = 'Pod/Classes/WYUtils.h'
+  s.public_header_files = 'WYUtils/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
