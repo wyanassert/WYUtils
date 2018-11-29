@@ -26,12 +26,13 @@
     lb.text = @"Test For Pinch Pan and Rotate";
     lb.textColor = [UIColor blueColor];
     lb.font = [UIFont systemFontOfSize:12];
-    lb.backgroundColor = [UIColor greenColor];
+    lb.backgroundColor = [UIColor redColor];
     [self.view addSubview:lb];
     lb.userInteractionEnabled = YES;
     [lb wy_addPanAction];
     [lb wy_addPinchAction];
     [lb wy_addRotateAction];
+    [lb wy_addRoundedCornerTopLeft:0 topRight:0 bottomLeft:0 bottomRight:100];
 }
 
 - (void)didReceiveMemoryWarning

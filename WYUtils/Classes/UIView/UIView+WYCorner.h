@@ -13,5 +13,6 @@
 - (void)wy_addRoundedCorners:(UIRectCorner)corners withRadii:(CGSize)radii;
 
 - (void)wy_addRoundedCorners:(UIRectCorner)corners withRadii:(CGSize)radii viewRect:(CGRect)rect;
+- (void)wy_addRoundedCornerTopLeft:(CGFloat)topLeft topRight:(CGFloat)topRight bottomLeft:(CGFloat)bottomLeft bottomRight:(CGFloat)bottomRight;
 
 @end

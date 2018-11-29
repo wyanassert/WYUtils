@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5930D6479028AAB23256E4C4 /* Pods_WYUtils_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA00F096C437DC490F35821 /* Pods_WYUtils_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -21,9 +22,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		734E4AD996D71DDAB7C853D0 /* Pods_WYUtils_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756555313B6544127BD4783E /* Pods_WYUtils_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		DBF15844B514B07256722397 /* Pods_WYUtils_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CADD4FA0D47C90C90FB683 /* Pods_WYUtils_Tests.framework */; };
+		CF658823FEA36F27C76A4DAC /* Pods_WYUtils_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD71252413ABAD0C397F28E2 /* Pods_WYUtils_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0FD62FE3719E1EC9BC49FD11 /* Pods-WYUtils_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYUtils_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYUtils_Example/Pods-WYUtils_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1C0D9E4D8FB78898389001DA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1F2A37ABD5D7A3AF5E7C13E9 /* Pods-WYUtils_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYUtils_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYUtils_Example/Pods-WYUtils_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		29D5D5F118982B5DC122695C /* Pods-WYUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYUtils_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYUtils_Tests/Pods-WYUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		34A8DF7F8F97513A2D845179 /* Pods-WYUtils_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYUtils_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYUtils_Example/Pods-WYUtils_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* WYUtils_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYUtils_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,15 +60,13 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		6720BB22617E9A3ED039E5BC /* Pods-WYUtils_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYUtils_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYUtils_Tests/Pods-WYUtils_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		756555313B6544127BD4783E /* Pods_WYUtils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WYUtils_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		80CADD4FA0D47C90C90FB683 /* Pods_WYUtils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WYUtils_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		89508D8526BD8D82F785FA73 /* Pods-WYUtils_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYUtils_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYUtils_Example/Pods-WYUtils_Example.release.xcconfig"; sourceTree = "<group>"; };
-		A91F7DABB83949988C8C264F /* Pods-WYUtils_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYUtils_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYUtils_Tests/Pods-WYUtils_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		AEA00F096C437DC490F35821 /* Pods_WYUtils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WYUtils_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E7C5064C47AD98D4AF3665 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		F139D1B66B7FA83CAAE48A00 /* Pods-WYUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYUtils_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYUtils_Tests/Pods-WYUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F82E36ED5EC379098CB0B363 /* WYUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WYUtils.podspec; path = ../WYUtils.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FD71252413ABAD0C397F28E2 /* Pods_WYUtils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WYUtils_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				734E4AD996D71DDAB7C853D0 /* Pods_WYUtils_Example.framework in Frameworks */,
+				5930D6479028AAB23256E4C4 /* Pods_WYUtils_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,20 +88,20 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				DBF15844B514B07256722397 /* Pods_WYUtils_Tests.framework in Frameworks */,
+				CF658823FEA36F27C76A4DAC /* Pods_WYUtils_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1954E4BE9F478D27C7095811 /* Pods */ = {
+		41D9FE32609C8E0C0A97B63B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0FD62FE3719E1EC9BC49FD11 /* Pods-WYUtils_Example.debug.xcconfig */,
-				89508D8526BD8D82F785FA73 /* Pods-WYUtils_Example.release.xcconfig */,
-				F139D1B66B7FA83CAAE48A00 /* Pods-WYUtils_Tests.debug.xcconfig */,
-				A91F7DABB83949988C8C264F /* Pods-WYUtils_Tests.release.xcconfig */,
+				1F2A37ABD5D7A3AF5E7C13E9 /* Pods-WYUtils_Example.debug.xcconfig */,
+				34A8DF7F8F97513A2D845179 /* Pods-WYUtils_Example.release.xcconfig */,
+				29D5D5F118982B5DC122695C /* Pods-WYUtils_Tests.debug.xcconfig */,
+				6720BB22617E9A3ED039E5BC /* Pods-WYUtils_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -114,7 +114,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				1954E4BE9F478D27C7095811 /* Pods */,
+				41D9FE32609C8E0C0A97B63B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,8 +134,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				756555313B6544127BD4783E /* Pods_WYUtils_Example.framework */,
-				80CADD4FA0D47C90C90FB683 /* Pods_WYUtils_Tests.framework */,
+				AEA00F096C437DC490F35821 /* Pods_WYUtils_Example.framework */,
+				FD71252413ABAD0C397F28E2 /* Pods_WYUtils_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -203,11 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "WYUtils_Example" */;
 			buildPhases = (
-				75A4EA18B67DB6542F749C6F /* [CP] Check Pods Manifest.lock */,
+				F0DBA2684CE8FEDE2B84AC43 /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				EEDE4831DC5E70282B4AADA0 /* [CP] Embed Pods Frameworks */,
+				566AE94FC9E10BBACC4CA91D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,7 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "WYUtils_Tests" */;
 			buildPhases = (
-				1891A169078E2C55D31750F5 /* [CP] Check Pods Manifest.lock */,
+				FCC4653484D92BE898E71728 /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
@@ -297,7 +297,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1891A169078E2C55D31750F5 /* [CP] Check Pods Manifest.lock */ = {
+		566AE94FC9E10BBACC4CA91D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -305,21 +305,21 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${SRCROOT}/Pods/Target Support Files/Pods-WYUtils_Example/Pods-WYUtils_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/WYUtils/WYUtils.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WYUtils_Tests-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WYUtils.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WYUtils_Example/Pods-WYUtils_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		75A4EA18B67DB6542F749C6F /* [CP] Check Pods Manifest.lock */ = {
+		F0DBA2684CE8FEDE2B84AC43 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -341,7 +341,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EEDE4831DC5E70282B4AADA0 /* [CP] Embed Pods Frameworks */ = {
+		FCC4653484D92BE898E71728 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -349,18 +349,18 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WYUtils_Example/Pods-WYUtils_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/WYUtils/WYUtils.framework",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WYUtils.framework",
+				"$(DERIVED_FILE_DIR)/Pods-WYUtils_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WYUtils_Example/Pods-WYUtils_Example-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -497,7 +497,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0FD62FE3719E1EC9BC49FD11 /* Pods-WYUtils_Example.debug.xcconfig */;
+			baseConfigurationReference = 1F2A37ABD5D7A3AF5E7C13E9 /* Pods-WYUtils_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WDSNS842MX;
@@ -513,7 +513,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89508D8526BD8D82F785FA73 /* Pods-WYUtils_Example.release.xcconfig */;
+			baseConfigurationReference = 34A8DF7F8F97513A2D845179 /* Pods-WYUtils_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WDSNS842MX;
@@ -529,7 +529,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F139D1B66B7FA83CAAE48A00 /* Pods-WYUtils_Tests.debug.xcconfig */;
+			baseConfigurationReference = 29D5D5F118982B5DC122695C /* Pods-WYUtils_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -553,7 +553,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A91F7DABB83949988C8C264F /* Pods-WYUtils_Tests.release.xcconfig */;
+			baseConfigurationReference = 6720BB22617E9A3ED039E5BC /* Pods-WYUtils_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
