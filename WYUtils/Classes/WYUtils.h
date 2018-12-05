@@ -15,5 +15,8 @@
 #import "UIImage+WYUtils.h"
 #import "UIView+WYUtils.h"
 #import "UIFont+WYUtils.h"
+#import "UINavigationBar+WYUtils.h"
+
+#import "WYMacroHeader.h"
 
 #endif /* WYUtils_h */
