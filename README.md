@@ -20,6 +20,12 @@ it, simply add the following line to your Podfile:
 pod 'WYUtils'
 ```
 
+Extra 
+Because some code may require for System permissions such as Camera roll, so I place these code in Gist.
+
+* [Share & Save ](https://gist.github.com/wyanassert/a01f693a49efaf15020d940803528c71)
+* [UIImagePicker](https://gist.github.com/wyanassert/b098c5c2849492c6b1dab9d391598952)
+
 ## Author
 
 wyanassert, wyanassert@gmail.com
