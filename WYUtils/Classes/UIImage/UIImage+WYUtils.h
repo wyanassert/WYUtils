@@ -11,6 +11,7 @@
 #import "UIImage+WYColor.h"
 #import "UIImage+WYOrientation.h"
 #import "UIImage+WYSpilteNine.h"
+#import "UIImage+WYMask.h"
 
 
 NS_ASSUME_NONNULL_BEGIN

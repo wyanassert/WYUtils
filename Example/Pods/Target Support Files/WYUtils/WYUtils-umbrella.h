@@ -34,6 +34,7 @@
 #import "UIImage+WYSpilteNine.h"
 #import "UIImage+WYUtils.h"
 #import "UINavigationBar+WYBottomBorderColor.h"
+#import "UINavigationBar+WYUtils.h"
 #import "UIView+WYCorner.h"
 #import "UIView+WYGestureRecognizer.h"
 #import "UIView+WYRenderImage.h"

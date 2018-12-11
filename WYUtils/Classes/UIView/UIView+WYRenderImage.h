@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIView (WYRenderImage)
 
 - (UIImage *)wy_renderImage;
+- (UIImage *)wy_renderImageWithBGColor:(UIColor *)bgColor;
+
 
 @end
 

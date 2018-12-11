@@ -10,9 +10,13 @@
 @implementation UIView (WYRenderImage)
 
 - (UIImage *)wy_renderImage {
+    return [self wy_renderImageWithBGColor:[UIColor clearColor]];
+}
+
+- (UIImage *)wy_renderImageWithBGColor:(UIColor *)bgColor {
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0.0);
     CGContextRef ctx = UIGraphicsGetCurrentContext();
-    [[UIColor clearColor] set];
+    [bgColor set];
     CGContextFillRect(ctx, self.bounds);
     [self.layer renderInContext:ctx];
     UIImage * img = UIGraphicsGetImageFromCurrentImageContext();
