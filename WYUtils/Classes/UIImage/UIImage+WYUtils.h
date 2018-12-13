@@ -12,7 +12,7 @@
 #import "UIImage+WYOrientation.h"
 #import "UIImage+WYSpilteNine.h"
 #import "UIImage+WYMask.h"
-
+#import "UIImage+WYShrink.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

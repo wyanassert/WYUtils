@@ -33,6 +33,12 @@
     [lb wy_addPinchAction];
     [lb wy_addRotateAction];
     [lb wy_addRoundedCornerTopLeft:0 topRight:0 bottomLeft:0 bottomRight:100];
+    
+    self.view.layer.borderWidth = 4;
+    self.view.layer.borderColor = [UIColor redColor].CGColor;
+    
+    UIImage *smallImg = [[self.view wy_renderImage] wy_shrinkImageWithRecommendSize:CGSizeMake(300, 400)];
+    NSLog(@"%@", smallImg);
 }
 
 - (void)didReceiveMemoryWarning
