@@ -23,6 +23,14 @@
 #define WY_DESIGN_HEIGHT (667)
 #endif
 
+#ifndef WX_DESIGN_WIDTH
+#define WX_DESIGN_WIDTH (375)
+#endif
+
+#ifndef WX_DESIGN_HEIGHT
+#define WX_DESIGN_HEIGHT (812)
+#endif
+
 #ifndef WY_SCREEN_WIDTH
 #define WY_SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 #endif
@@ -44,11 +52,31 @@
 #endif
 
 #ifndef WYMIN
-#define WYMIN(x) (x<0?MAX(S_X(x), S_Y(x)):MIN(S_X(x), S_Y(x)))
+#define WYMIN(x) (x<0?MAX(WYX(x), WYY(x)):MIN(WYX(x), WYY(x)))
 #endif
 
 #ifndef WYMINSIZE
 #define WYMINSIZE(x, y) CGSizeMake(WYMIN(x), WYMIN(y))
+#endif
+
+#ifndef WXX //Apply For iPhoneX 375*812
+#define WXX(x)  ((x) * WY_SCREEN_WIDTH / WX_DESIGN_WIDTH)
+#endif
+
+#ifndef WXY
+#define WXY(y)  ((y) * WY_SCREEN_HEIGHT / WX_DESIGN_HEIGHT)
+#endif
+
+#ifndef WXSIZE
+#define WXSIZE(x, y) CGSizeMake(WXX(x), WXY(y))
+#endif
+
+#ifndef WXMIN
+#define WXMIN(x) (x<0?MAX(WXX(x), WXY(x)):MIN(WXX(x), WXY(x)))
+#endif
+
+#ifndef WXMINSIZE
+#define WXMINSIZE(x, y) CGSizeMake(WXMIN(x), WXMIN(y))
 #endif
 
 //execute time interval
