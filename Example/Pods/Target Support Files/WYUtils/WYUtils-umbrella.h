@@ -41,6 +41,8 @@
 #import "UIView+WYGestureRecognizer.h"
 #import "UIView+WYRenderImage.h"
 #import "UIView+WYUtils.h"
+#import "WYDisplayImageView.h"
+#import "WYStickerView.h"
 #import "WYUtils.h"
 
 FOUNDATION_EXPORT double WYUtilsVersionNumber;

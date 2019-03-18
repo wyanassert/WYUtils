@@ -10,6 +10,8 @@
 #import "UIView+WYRenderImage.h"
 #import "UIView+WYCorner.h"
 #import "UIView+WYGestureRecognizer.h"
+#import "WYDisplayImageView.h"
+#import "WYStickerView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
