@@ -12,6 +12,8 @@
 #import "UIView+WYGestureRecognizer.h"
 #import "WYDisplayImageView.h"
 #import "WYStickerView.h"
+#import "WYMaskView.h"
+#import "WYNotHintView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

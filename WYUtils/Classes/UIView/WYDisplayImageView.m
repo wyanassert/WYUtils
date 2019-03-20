@@ -29,6 +29,12 @@
     }
     return self;
 }
+- (void)loadImage:(UIImage *)image withSize:(CGSize)size {
+    _contentSize = size;
+    _image = image;
+    self.imageView.image = image;
+    [self configSubViews];
+}
 
 - (void)configSubViews {
     self.clipsToBounds = YES;
@@ -38,6 +44,9 @@
     if(scale <= 0) {
         scale = 1;
     }
+    if(self.imageView.superview) {
+        [self.imageView removeFromSuperview];
+    }
     CGFloat imageWidth = self.image.size.width / scale;
     CGFloat imageHeight = self.image.size.height / scale;
     self.imageView.frame = CGRectMake((self.contentSize.width - imageWidth)/2, (self.contentSize.height - imageHeight)/2, imageWidth, imageHeight);
@@ -45,6 +54,12 @@
 }
 
 #pragma mark - Action
+- (void)userDidClickAction {
+    if(self.clickImageBlock) {
+        self.clickImageBlock(self, self.image);
+    }
+}
+
 - (void)userDidPanImage:(UIPanGestureRecognizer *)pan {
     UIGestureRecognizerState state = [pan state];
     
@@ -76,8 +91,11 @@
         _imageView.layer.allowsEdgeAntialiasing = YES;
         UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(userDidPanImage:)];
         [_imageView addGestureRecognizer:pan];
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userDidClickAction)];
+        [_imageView addGestureRecognizer:tapGesture];
     }
     return _imageView;
 }
 
 @end
+

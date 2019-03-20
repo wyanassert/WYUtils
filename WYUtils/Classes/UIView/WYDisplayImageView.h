@@ -14,7 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface WYDisplayImageView : UIView
 
 - (instancetype)initWithImage:(UIImage *)image andSize:(CGSize)size;
+- (void)loadImage:(UIImage *)image withSize:(CGSize)size;
+@property (nonatomic, copy) void(^clickImageBlock)(WYDisplayImageView *displayView, UIImage *image);
 
 @end
 
 NS_ASSUME_NONNULL_END
+
