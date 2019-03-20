@@ -1,5 +1,5 @@
 PODS:
-  - WYUtils (0.2.0)
+  - WYUtils (0.2.1)
 
 DEPENDENCIES:
   - WYUtils (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WYUtils: be409c6cec85c89f9247fe417763439e406b18d2
+  WYUtils: 21079349c732137cf0aaa9e2bc4cb7db364af105
 
 PODFILE CHECKSUM: 99b55afe6246b6c71b0c7b5fe6028cfe47c3d7ab
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

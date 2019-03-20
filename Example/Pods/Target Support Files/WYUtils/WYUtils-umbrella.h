@@ -42,6 +42,7 @@
 #import "UIView+WYRenderImage.h"
 #import "UIView+WYUtils.h"
 #import "WYDisplayImageView.h"
+#import "WYMaskView.h"
 #import "WYStickerView.h"
 #import "WYUtils.h"
 
