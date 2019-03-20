@@ -73,7 +73,8 @@
         
         CGPoint endPoint = translation;
         CGFloat changeLine = sqrt(pow(endPoint.x - (WYLEFT(self) + WYRIGHT(self))/2, 2) + pow(endPoint.y - (WYTOP(self) + WYBOTTOM(self))/2, 2));
-        CGSize resultSize = CGSizeMake(changeLine * 2 / sqrt(2), changeLine * 2 / sqrt(2));
+        CGFloat realLine = changeLine + sqrt(pow(WYWIDTH(pan.view), 2) + pow(WYHEIGHT(pan.view), 2)) / 2;
+        CGSize resultSize = CGSizeMake(realLine * 2 / sqrt(2), realLine * 2 / sqrt(2));
         
         BOOL isWise = (endPoint.x - (WYLEFT(self) + WYRIGHT(self))/2) - (endPoint.y - (WYTOP(self) + WYBOTTOM(self))/2) >= 0;
         NSLog(@"%d", isWise);
