@@ -38,7 +38,13 @@
 - (void)commonInit {
     _wyMinWidth = WYMIN(60);
     
-    [self wy_addPanAction];
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(wy_stickerDidPanAction:)];
+    [self addGestureRecognizer:pan];
+    
+    UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(wy_userDidPinchRoateAction:)];
+    UIRotationGestureRecognizer *rotate = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(wy_userDidPinchRoateAction:)];
+    [self addGestureRecognizer:pinch];
+    [self addGestureRecognizer:rotate];
 }
 
 - (void)wy_addImageEditActionWithCancelView:(UIView *)cancelView cancelBlock:(WYCancelBlock)cancelBlock {
@@ -53,7 +59,7 @@
     _wyMinWidth = minWidth;
     
     changeView.userInteractionEnabled = YES;
-    UIPanGestureRecognizer *pangesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(wy_panZoomAction:)];
+    UIPanGestureRecognizer *pangesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(wy_stickerPanZoomAction:)];
     [changeView addGestureRecognizer:pangesture];
 }
 
@@ -65,7 +71,43 @@
     }
 }
 
-- (void)wy_panZoomAction:(UIPanGestureRecognizer *)pan {
+- (void)wy_stickerDidPanAction:(UIPanGestureRecognizer *)pan {
+    UIGestureRecognizerState state = [pan state];
+    
+    if (state == UIGestureRecognizerStateBegan || state == UIGestureRecognizerStateChanged) {
+        CGAffineTransform transform = pan.view.transform;
+        pan.view.transform = CGAffineTransformIdentity;
+        CGPoint translation = [pan translationInView:pan.view];
+        pan.view.center = CGPointMake(pan.view.center.x + translation.x, pan.view.center.y + translation.y);
+        pan.view.transform = transform;
+        [pan setTranslation:CGPointZero inView:pan.view];
+    }
+}
+
+- (void)wy_userDidPinchRoateAction:(UIGestureRecognizer *)gesture {
+    if([gesture respondsToSelector:@selector(rotation)]) {
+        [self setTransform:CGAffineTransformRotate(self.transform, [(UIRotationGestureRecognizer *)gesture rotation])];
+        [(UIRotationGestureRecognizer *)gesture setRotation:0];
+    } else if ([gesture respondsToSelector:@selector(scale)]) {
+        CGFloat scale = [(UIPinchGestureRecognizer *)gesture scale];
+        CGAffineTransform transform = self.transform;
+        self.transform = CGAffineTransformIdentity;
+        CGSize resultSize = CGSizeMake(WYWIDTH(self) * scale, WYHEIGHT(self) * scale);
+        if (resultSize.width >= self.wyMinWidth) {
+            
+            CGPoint lastCenter = self.center;
+            self.frame = CGRectMake(lastCenter.x - resultSize.width / 2, lastCenter.y - resultSize.height / 2, resultSize.width, resultSize.height);
+            
+            if(self.wyChangeBlock) {
+                self.wyChangeBlock(self, resultSize);
+            }
+        }
+        self.transform = transform;
+        [(UIPinchGestureRecognizer *)gesture setScale:1.0];
+    }
+}
+
+- (void)wy_stickerPanZoomAction:(UIPanGestureRecognizer *)pan {
     UIGestureRecognizerState state = [pan state];
     
     if (state == UIGestureRecognizerStateBegan || state == UIGestureRecognizerStateChanged) {
@@ -77,7 +119,6 @@
         CGSize resultSize = CGSizeMake(realLine * 2 / sqrt(2), realLine * 2 / sqrt(2));
         
         BOOL isWise = (endPoint.x - (WYLEFT(self) + WYRIGHT(self))/2) - (endPoint.y - (WYTOP(self) + WYBOTTOM(self))/2) >= 0;
-        NSLog(@"%d", isWise);
         CGFloat l0 = changeLine;
         CGFloat l1 = l0;
         CGPoint originCenter = CGPointMake((WYLEFT(self) + WYRIGHT(self))/2 + changeLine / sqrt(2), (WYTOP(self) + WYBOTTOM(self))/2 + changeLine / sqrt(2));
@@ -86,10 +127,17 @@
         CGFloat angle = acos(cosAngle);
         
         if (resultSize.width >= self.wyMinWidth) {
+            CGAffineTransform transform = self.transform;
+            self.transform = CGAffineTransformIdentity;
+            
+            CGPoint lastCenter = self.center;
+            self.frame = CGRectMake(lastCenter.x - resultSize.width / 2, lastCenter.y - resultSize.height / 2, resultSize.width, resultSize.height);
             
             if(self.wyChangeBlock) {
                 self.wyChangeBlock(self, resultSize);
             }
+            
+            self.transform = transform;
             
             [pan setTranslation:CGPointZero inView:pan.view];
         }
