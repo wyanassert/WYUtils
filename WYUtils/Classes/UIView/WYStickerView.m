@@ -93,7 +93,7 @@
         CGAffineTransform transform = self.transform;
         self.transform = CGAffineTransformIdentity;
         CGSize resultSize = CGSizeMake(WYWIDTH(self) * scale, WYHEIGHT(self) * scale);
-        if (resultSize.width >= self.wyMinWidth) {
+        if (resultSize.width >= self.wyMinWidth && resultSize.height >= self.wyMinWidth) {
             
             CGPoint lastCenter = self.center;
             self.frame = CGRectMake(lastCenter.x - resultSize.width / 2, lastCenter.y - resultSize.height / 2, resultSize.width, resultSize.height);
@@ -113,20 +113,26 @@
     if (state == UIGestureRecognizerStateBegan || state == UIGestureRecognizerStateChanged) {
         CGPoint translation = [pan locationInView:self.superview];
         
+        CGAffineTransform transform = self.transform;
+        self.transform = CGAffineTransformIdentity;
+        CGFloat whScale = WYWIDTH(self)/WYHEIGHT(self);
+        self.transform = transform;
+        
         CGPoint endPoint = translation;
         CGFloat changeLine = sqrt(pow(endPoint.x - (WYLEFT(self) + WYRIGHT(self))/2, 2) + pow(endPoint.y - (WYTOP(self) + WYBOTTOM(self))/2, 2));
         CGFloat realLine = changeLine + sqrt(pow(WYWIDTH(pan.view), 2) + pow(WYHEIGHT(pan.view), 2)) / 2;
-        CGSize resultSize = CGSizeMake(realLine * 2 / sqrt(2), realLine * 2 / sqrt(2));
         
-        BOOL isWise = (endPoint.x - (WYLEFT(self) + WYRIGHT(self))/2) - (endPoint.y - (WYTOP(self) + WYBOTTOM(self))/2) >= 0;
+        CGSize resultSize = CGSizeMake(realLine * whScale * 2 / sqrt(1+pow(whScale, 2)), realLine * 2 / sqrt(1+pow(whScale, 2)));
+        
+        BOOL isWise = (endPoint.x - (WYLEFT(self) + WYRIGHT(self))/2) - whScale * (endPoint.y - (WYTOP(self) + WYBOTTOM(self))/2) >= 0;
         CGFloat l0 = changeLine;
         CGFloat l1 = l0;
-        CGPoint originCenter = CGPointMake((WYLEFT(self) + WYRIGHT(self))/2 + changeLine / sqrt(2), (WYTOP(self) + WYBOTTOM(self))/2 + changeLine / sqrt(2));
+        CGPoint originCenter = CGPointMake((WYLEFT(self) + WYRIGHT(self))/2 + changeLine * whScale / sqrt(1+pow(whScale, 2)), (WYTOP(self) + WYBOTTOM(self))/2 + changeLine / sqrt(1+pow(whScale, 2)));
         CGFloat l2 = sqrt(pow(originCenter.x - endPoint.x, 2) + pow(originCenter.y - endPoint.y, 2));
         CGFloat cosAngle = (l0*l0 + l1*l1 - l2*l2)/(2*l0*l1);
         CGFloat angle = acos(cosAngle);
         
-        if (resultSize.width >= self.wyMinWidth) {
+        if (resultSize.width >= self.wyMinWidth && resultSize.height >= self.wyMinWidth) {
             CGAffineTransform transform = self.transform;
             self.transform = CGAffineTransformIdentity;
             
@@ -146,3 +152,4 @@
 }
 
 @end
+
