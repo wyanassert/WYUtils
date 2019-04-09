@@ -16,25 +16,25 @@
     CGFloat alpha, red, blue, green;
     switch ([colorString length])
     {
-            case 3: // #RGB
+        case 3: // #RGB
             alpha = 1.0f;
             red   = [self colorComponentFrom: colorString start: 0 length: 1];
             green = [self colorComponentFrom: colorString start: 1 length: 1];
             blue  = [self colorComponentFrom: colorString start: 2 length: 1];
             break;
-            case 4: // #ARGB
+        case 4: // #ARGB
             alpha = [self colorComponentFrom: colorString start: 0 length: 1];
             red   = [self colorComponentFrom: colorString start: 1 length: 1];
             green = [self colorComponentFrom: colorString start: 2 length: 1];
             blue  = [self colorComponentFrom: colorString start: 3 length: 1];
             break;
-            case 6: // #RRGGBB
+        case 6: // #RRGGBB
             alpha = 1.0f;
             red   = [self colorComponentFrom: colorString start: 0 length: 2];
             green = [self colorComponentFrom: colorString start: 2 length: 2];
             blue  = [self colorComponentFrom: colorString start: 4 length: 2];
             break;
-            case 8: // #AARRGGBB
+        case 8: // #AARRGGBB
             alpha = [self colorComponentFrom: colorString start: 0 length: 2];
             red   = [self colorComponentFrom: colorString start: 2 length: 2];
             green = [self colorComponentFrom: colorString start: 4 length: 2];
@@ -56,4 +56,14 @@
     return hexComponent / 255.0;
 }
 
+- (NSString *)wy_converColorToDoubleARGB {
+    CGFloat r, g, b, a;
+    if ([self getRed:&r green:&g blue:&b alpha:&a]) {
+        return [NSString stringWithFormat:@"#%02x%02x%02x%02x", (int)(a * 255), (int)(r * 255), (int)(g * 255), (int)(b * 255)];
+    } else {
+        return @"#ffffffff";
+    }
+}
+
 @end
+

@@ -14,6 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIColor *)wy_colorWithHexString:(NSString *)hexString;
 
+//AARRGGBB
+- (NSString *)wy_converColorToDoubleARGB;
+
 @end
 
 NS_ASSUME_NONNULL_END
+
