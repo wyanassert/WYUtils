@@ -47,6 +47,10 @@
     [self addGestureRecognizer:rotate];
 }
 
+- (void)loadState:(BOOL)state {
+    //implemente in subclass
+}
+
 - (void)wy_addImageEditActionWithCancelView:(UIView *)cancelView cancelBlock:(WYCancelBlock)cancelBlock {
     _wyCancelBlock = cancelBlock;
     cancelView.userInteractionEnabled = YES;

@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)wy_addImageEditActionWithCancelView:(UIView *)cancelView cancelBlock:(WYCancelBlock)cancelBlock;
 - (void)wy_addImageEditActionWithChangeView:(UIView *)changeView sizeChangeBlock:(WYSizeChangedBlock)changeBlock minWidth:(CGFloat)minWidth;
+- (void)loadState:(BOOL)state;
 
 @end
 
