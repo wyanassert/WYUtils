@@ -13,6 +13,7 @@
 #import "NSString+WYBase64.h"
 #import "NSString+WYEncrypt.h"
 #import "NSString+WYHighLightColor.h"
+#import "NSString+WYDecimal.h"
 
 @interface NSString (WY)
 
