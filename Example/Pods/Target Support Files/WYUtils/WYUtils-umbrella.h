@@ -18,6 +18,7 @@
 #import "NSDate+WYExtension.h"
 #import "NSDate+WYUtils.h"
 #import "NSString+WYBase64.h"
+#import "NSString+WYDecimal.h"
 #import "NSString+WYEncrypt.h"
 #import "NSString+WYHighLightColor.h"
 #import "NSString+WYMd5.h"
