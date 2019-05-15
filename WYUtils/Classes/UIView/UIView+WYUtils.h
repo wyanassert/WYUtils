@@ -14,6 +14,7 @@
 #import "WYStickerView.h"
 #import "WYMaskView.h"
 #import "WYNotHintView.h"
+#import "WYPageControl.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
