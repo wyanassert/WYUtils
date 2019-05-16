@@ -45,6 +45,7 @@
 #import "WYDisplayImageView.h"
 #import "WYMaskView.h"
 #import "WYNotHintView.h"
+#import "WYPageControl.h"
 #import "WYStickerView.h"
 #import "WYUtils.h"
 

@@ -24,4 +24,17 @@
     }
 }
 
++ (UIImage *)wy_imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize {
+    return [UIImage wy_imageWithImage:image scaledToSize:newSize andScale:[UIScreen mainScreen].scale];
+}
+
++ (UIImage *)wy_imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize andScale:(CGFloat)scale {
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, scale);
+    [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+    
+}
+
 @end

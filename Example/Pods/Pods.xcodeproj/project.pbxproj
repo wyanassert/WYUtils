@@ -7,89 +7,89 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00C4946D3A586365862A3349A4DCA2C7 /* UIImage+WYSpilteNine.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A22A89EF2A0DC967E2B97286AE92187 /* UIImage+WYSpilteNine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		021A2576F973D5F123CE6DDA253E3042 /* UIColor+WYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 265F7ED4297105CE2F19A2E7615DA3E9 /* UIColor+WYUtils.m */; };
-		05F3AD0E5E69F9DB6FE0CD24CAB06B74 /* UIView+WYRenderImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B3E42CD61FA5259CE3C2BB39DD2D30 /* UIView+WYRenderImage.m */; };
-		0A3FCBF3EDC25DAF93B1E340BFECFD40 /* UIImage+WYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EDABF30D784E0FA913BFBF433660C71 /* UIImage+WYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A5292413682853427DE9C326954A156 /* UIColor+WYHexString.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E883D1BCEADFF00AE487FCD61B306F /* UIColor+WYHexString.m */; };
-		12BF2A0FD109C8FB208118ACCFBF52B2 /* UIView+WYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E63CA836FB425AB425E3F8C656D645A /* UIView+WYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		146C205617A12CFCA138D682F671BDA2 /* UIImage+WYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = DD040222B2AFF23A06CFBA7B61598631 /* UIImage+WYUtils.m */; };
-		15449B791E3F879F06341E5FF9BE2CE6 /* UIImage+WYBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFCD7684B487AE1AFEDEC8D7D7FE846 /* UIImage+WYBlur.m */; };
-		2190DBC4D1D1E7591B4DC5A6EF9B6C54 /* NSData+WYBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 89445F6234564614F631FBFDFE14C89F /* NSData+WYBase64.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26B0586F30EF71E95DD7C04DBFB7CB36 /* NSString+WYBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A4B31CE28E0C6E10A0F9DA0BDE25599 /* NSString+WYBase64.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26EA384735062122A1F1649D9C4F80E9 /* WYMaskView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B85C56474304820555811E0D0C69AA2 /* WYMaskView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		293D82764F31258625ACAABBDD27FAFB /* UIFont+WYAllFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF2B364761BC6812666B596E71463D0 /* UIFont+WYAllFonts.m */; };
-		2C1038854C7B050184A9C909EB9DFF78 /* NSString+WYSuffix.m in Sources */ = {isa = PBXBuildFile; fileRef = 6925ED1214C5E162E639E1E531B0F81B /* NSString+WYSuffix.m */; };
-		376BBAC886457C857A5F9111B8464FFD /* NSString+WYURLEncode.h in Headers */ = {isa = PBXBuildFile; fileRef = DE18D4EEC0F16ED174B4F29FC35E36B3 /* NSString+WYURLEncode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		39CC8ABEAB398A42C638C0018B0D17C5 /* WYDisplayImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AAE3D73779B40CFE83CF1950977AB0 /* WYDisplayImageView.m */; };
-		39CF7B4997D55F251FC517F5539C475F /* UIImage+WYSpilteNine.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F9C10EF0641715A8C68E83703C0D56 /* UIImage+WYSpilteNine.m */; };
-		3FACC439D67DC4E5E456CB08CE2717E9 /* NSString+WYURLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC8A20F8C34DA1127DCC8A1604092A7 /* NSString+WYURLEncode.m */; };
+		00B588DAF4962E8EB6088D5E2C729BDA /* UIFont+WYAllFonts.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D763EA469F033EE509F20A77F4BFFE8 /* UIFont+WYAllFonts.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01BD8C7B2D6512FE66CE8DC38417DA7C /* NSString+WYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 419E06DA3072DDED528C0832A10C561C /* NSString+WYUtils.m */; };
+		090DF12947CBF630B961B1A911EC0301 /* UIColor+WYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FCADE65AD43893BDEABE5D93B5BCF5EF /* UIColor+WYUtils.m */; };
+		15BE4312239A9708B034EC547844B25A /* NSString+WYDecimal.h in Headers */ = {isa = PBXBuildFile; fileRef = 175CABD2A37F702A3418B242FBB0A76D /* NSString+WYDecimal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E74CF1B2B22BAC405AF3280B98B9EBA /* NSString+WYBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = FE3CFEA932A0C8A0CC63BF9506CF3A43 /* NSString+WYBase64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		226EFA69676DA7B8E8CC35064CA912E0 /* UIFont+WYAllFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 50990925192A85AB3BC6DCA11AD50A1D /* UIFont+WYAllFonts.m */; };
+		23E0BB17AACD9EBF26315A27C4DB346B /* NSString+WYDecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = 734805D0645AB0373654C99BF6F87424 /* NSString+WYDecimal.m */; };
+		2481DF0A26B9DEF23DD854B544959AF8 /* WYNotHintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA66B1654D6606A4C85B211EF252BA4 /* WYNotHintView.m */; };
+		265E44669FB04C217101FBE1421FA06A /* NSDate+WYExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F453AB8ACD35F25523297E6713308EF /* NSDate+WYExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28B4C86E9759109624DE6C084169A035 /* UIImage+WYSpilteNine.h in Headers */ = {isa = PBXBuildFile; fileRef = 8713D852B0AAF6F205DBB56AE24A7094 /* UIImage+WYSpilteNine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29F9447A059ADBEC3E7936839AF96D5C /* UIImage+WYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D55B14FD898E2F3ED9BF671D6317F042 /* UIImage+WYColor.m */; };
+		2A4880034F09020CBB6AB01DE9F347CA /* UIImage+WYOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 403CEC1878517C66D61F50CBA7133E33 /* UIImage+WYOrientation.m */; };
+		2DE74C820D5019A1B6368FBAB55E5A34 /* NSData+WYEncrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 88CE7607003092E94D9EC144A954B763 /* NSData+WYEncrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F7596211D52A910D7B32DF75CF20B16 /* UIImage+WYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A35856426CFCC4FCFDD1DCE208E52B0 /* UIImage+WYUtils.m */; };
+		304BABDCBD8BE21CB78D41B36D488E11 /* UIImage+WYSpilteNine.m in Sources */ = {isa = PBXBuildFile; fileRef = 32575359ABE4E61C2187778FA9D5D177 /* UIImage+WYSpilteNine.m */; };
+		369BDEBE0202A29ED966D361A70EDDD6 /* NSString+WYURLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF38E9519223157EC0F21D368B244BB /* NSString+WYURLEncode.m */; };
+		3817885B70A282E86902CEC91B320598 /* UIFont+WYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 42BFB6F11EF48EAE1A612B5C91142183 /* UIFont+WYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38E00EF35CF2E643E3F5DD75E8F46400 /* WYMacroHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = BD5263260DE2AC3AFC86D5021F96B87E /* WYMacroHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		394AD122CFC0909FFF62F2FA4C4D887F /* UIFont+WYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D4089E3F9F1E801FB73C464C42AA1BA4 /* UIFont+WYUtils.m */; };
+		3AF3B646136D074AB252344E2B5F2225 /* NSData+WYEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CF8009D39BDC3CC021CADC72F1ECDD /* NSData+WYEncrypt.m */; };
+		3FDCFF57E81D41EABF90C5EB666E941E /* NSString+WYHighLightColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 378676FCB180EF68859043C6107B6242 /* NSString+WYHighLightColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		403E5DB5B5D21082F30AEDBFA5E554F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		4570CEB8C92D60493D3A981F8B207ED8 /* UIImage+WYColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 5599856AC97140E574E49218B2B9448A /* UIImage+WYColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		47EFC8ED3BD33F146A0D1F508CE36100 /* WYUtils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 52FE489016E3090891BEACA79B677114 /* WYUtils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F95886F25BDE83BE7552542F256C122 /* UINavigationBar+WYBottomBorderColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C95384ED9F6967329E86304B28C1382B /* UINavigationBar+WYBottomBorderColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		51FCDA740C4A0A495F4A74F90FC5FF02 /* UIImage+WYOrientation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B152229B2C9647B9977D5DDDAA127B8 /* UIImage+WYOrientation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5315BCB816E189FEB562783228EA567D /* UINavigationBar+WYBottomBorderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 43498323A677D2C018CCB0AA1A00BCFA /* UINavigationBar+WYBottomBorderColor.m */; };
-		54922814D22934957FBB8F2CFA8F27CD /* UINavigationBar+WYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D3B524DDB346E040C025667450441D /* UINavigationBar+WYUtils.m */; };
-		5797D889BB1E0E493E8105BBAD1F80F9 /* WYNotHintView.m in Sources */ = {isa = PBXBuildFile; fileRef = A17D17E09BA64E139F959EABD244119B /* WYNotHintView.m */; };
-		588B17C193CF1F1C10198270D151AA66 /* UIView+WYRenderImage.h in Headers */ = {isa = PBXBuildFile; fileRef = D74C223D39ADAA52BB5474D1E3C8A54E /* UIView+WYRenderImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		606C1DD38CEB2E9A9B8FC87BE0AE85DC /* NSData+WYBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB2AB80115372A0A46E250A66F8E56 /* NSData+WYBase64.m */; };
-		65775D2FC80D9851ECE42CAD9BEA04AC /* NSString+WYEncrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D2259AD1040183AC5856EABF055E7C1 /* NSString+WYEncrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6ABF1106DEE88E512A3301DBEBA85644 /* UINavigationBar+WYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B19BC60A66D26425F9E54C11654C53 /* UINavigationBar+WYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E61759A5375ADC931F401856C811AD8 /* NSString+WYHighLightColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2767A013CBC00390D95273BB314851C6 /* NSString+WYHighLightColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		715E18564BCAAE3BC97A2CA67755768A /* NSData+WYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B7F5251D23B2D7B146A8657007A06446 /* NSData+WYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		750200A91148AEE37C18B2FCC4076D27 /* NSString+WYBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 91984F6119F031ECEAF9266A4621BC88 /* NSString+WYBase64.m */; };
-		7AD3F94DE74D507DEED31C34A327EC56 /* NSString+WYEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F4B887389FED571DA982B758FF13EB9 /* NSString+WYEncrypt.m */; };
-		7BEDDC52C4AC048C0D9CE9D603A9A0D0 /* UIImage+WYShrink.m in Sources */ = {isa = PBXBuildFile; fileRef = AD14A399BFEDA6F44A863E604D52C872 /* UIImage+WYShrink.m */; };
-		7E06195EC097453DC5B848DDBCDD9EEF /* NSData+WYEncrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 0734ECE3C32E20ED3445232D41C9686B /* NSData+WYEncrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		812478F89F71CE1008DD402BA43B156F /* UIImage+WYShrink.h in Headers */ = {isa = PBXBuildFile; fileRef = 65766E66053C0961652481560D364B7B /* UIImage+WYShrink.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		82327E44064AC5F8DCE2BFDE5227A69E /* NSDate+WYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1B040B311A833DB46DA188A7D45987 /* NSDate+WYUtils.m */; };
-		83719E21C7314683B6E6A06EDD5701DA /* NSString+WYMd5.h in Headers */ = {isa = PBXBuildFile; fileRef = 6695D6F18D89FF6FDDB004A2BB0EB6A8 /* NSString+WYMd5.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83B66BBFB6FBAB75CE3460738D31ABA1 /* UIView+WYCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 2580BCF4ACD9382EE6E2DA426DE38436 /* UIView+WYCorner.m */; };
-		8CA4619732E9B49D15F16AB6C256A527 /* NSString+WYHighLightColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB59362DCDD83B03E5BC06E7E502760 /* NSString+WYHighLightColor.m */; };
-		9287D5E502E6734AAA94AF0CD7C2F192 /* UIImage+WYMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E083849574E5642FA85C8210DB82E7 /* UIImage+WYMask.m */; };
-		93AA6398228C11B700F8784C /* WYPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 93AA6396228C11B700F8784C /* WYPageControl.h */; };
-		93AA6399228C11B700F8784C /* WYPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AA6397228C11B700F8784C /* WYPageControl.m */; };
-		951F2BB5FC8B5B181C84F24FAD0B280D /* UIImage+WYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D45B18EFDF7AD74C8C9C27E0E8D3992 /* UIImage+WYColor.m */; };
-		95F81CE2F3991AF88B4F8D75F97AE2C8 /* NSDate+WYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 37E21AB20C2447F0C510ED32825C28BB /* NSDate+WYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A04B4CEA885AA1D8AFF5C9956A55BBB4 /* UIView+WYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C97923441B4490FB30644733C61F2E72 /* UIView+WYUtils.m */; };
+		42B0F811BF133D78CC65A67E102C9822 /* UINavigationBar+WYBottomBorderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = AF99FC5BD3EE3B45C1BEAF76003AD45B /* UINavigationBar+WYBottomBorderColor.m */; };
+		45CDDA3B304E6613D409601F6B1932F3 /* WYStickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F719A383BFAFC0B9D7AF17E018F1C01 /* WYStickerView.m */; };
+		4A11CF21345E4D47350B55BC538E8440 /* NSString+WYEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F03061942F4B295177B80AE2021D0FA /* NSString+WYEncrypt.m */; };
+		4CBE712F1B02A7EFD27E1B5D80D3AF72 /* UIImage+WYBlur.h in Headers */ = {isa = PBXBuildFile; fileRef = E8A71413824E641E2FA6C51515F8FD22 /* UIImage+WYBlur.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E923F86072758196C3C7D925259E01C /* NSString+WYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 48AB5C4F3A93D0D331073786FC7D8430 /* NSString+WYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		591EC2EC9D3049386CBD8D1237B56216 /* UINavigationBar+WYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CB68B1DE8EA240FC0218191522CB879F /* UINavigationBar+WYUtils.m */; };
+		5BB6056B6FECFE07CB5D5250E33BA9C6 /* WYStickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC0370D2FF58207BA6A8703B38FD42D /* WYStickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BC79F3410B2D04C8AAF64917CE22741 /* UIColor+WYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = DE666C807971BDE780989DAC7C55122A /* UIColor+WYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CE33153627CAF1A36D0CAC5AE19ACDB /* WYPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B323AAFC011CFA787648E35ACFF3BB /* WYPageControl.m */; };
+		6E34B0BC8122711F9ED006E73950B921 /* NSString+WYHighLightColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 257966724F3EB35E34B8AEA531CBA259 /* NSString+WYHighLightColor.m */; };
+		738915886B2344ACD459114740DD4279 /* WYNotHintView.h in Headers */ = {isa = PBXBuildFile; fileRef = 57665F18F4127AF49D5E7945CA5BD8C1 /* WYNotHintView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A33F3A160AC8587514F3B254048E1D4 /* NSString+WYURLEncode.h in Headers */ = {isa = PBXBuildFile; fileRef = 86411A3818AF9636CFF4F7EA3D428EBF /* NSString+WYURLEncode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B0C0329AC2762D9CE70F1C25CE61FD8 /* NSData+WYHexString.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4CB8F22DA353E67D69B3B62ABD645E /* NSData+WYHexString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81111114B5CA13517743971669AE0A0B /* NSString+WYSuffix.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC7554600D45CFC2048BA3C396248EC /* NSString+WYSuffix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83951F092CDCEE46D17D33A5C329DC84 /* UIColor+WYHexString.h in Headers */ = {isa = PBXBuildFile; fileRef = 12A4EA3C6E36BE8946E1638552E19D06 /* UIColor+WYHexString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86F0C30B27B50A0CE82E2BF95E159375 /* NSString+WYSuffix.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E734186C445C90E9D9691B5D4ED573 /* NSString+WYSuffix.m */; };
+		9457F8C7543020F4A215635BD0592582 /* NSData+WYBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 143E06E93AA199CC2F899F3311F040CC /* NSData+WYBase64.m */; };
+		96EB1D5F6619BD259BE358D4E96DF7A5 /* UIImage+WYShrink.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7397EC4770531C3EDC185BFE680524 /* UIImage+WYShrink.m */; };
+		982635D127711743A2646B02C4C665C1 /* NSString+WYMd5.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6A39094A9B00B4CF531045198D1D05 /* NSString+WYMd5.m */; };
+		9A45779CA24AC67ABA4C63008290A89F /* UIImage+WYMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 444A4979CE07D5FBCDC170D58311917F /* UIImage+WYMask.m */; };
+		9A866E76123F013299D9C543D7B2A81C /* NSString+WYMd5.h in Headers */ = {isa = PBXBuildFile; fileRef = C4348FCD5C5FE81533F1221AAFE5424C /* NSString+WYMd5.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9BF85E22DCF9C9528BB55E55A2EDE37A /* UIColor+WYHexString.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E1258E7076E756CE760A89A216F459 /* UIColor+WYHexString.m */; };
+		9D9240AF177D6A93F2BDA6F74042C6A9 /* NSDate+WYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D29D1E9D835E7617DEFE02C53BB5F5F /* NSDate+WYExtension.m */; };
 		A18903191B87CF8AA129AC960210FB74 /* Pods-WYUtils_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F0756A1A879B8BD836CBB922F70A6356 /* Pods-WYUtils_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A24EB0A29C775E4970705AED6BEE642D /* UIColor+WYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8E06FC53193914CA68D1E3AD8C2C2B7 /* UIColor+WYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A2DD8F4E5DC74699E47EE9CDAF4CA931 /* WYStickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = AC95F5304C5C2B827C7C0E795619BF3C /* WYStickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A398058F75021A7304947A20BA2522D9 /* UIImage+WYBlur.h in Headers */ = {isa = PBXBuildFile; fileRef = AF1020CA43899224EEA2914911C68498 /* UIImage+WYBlur.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A4B81E1C883A7E8F09560456EF83E48B /* UIFont+WYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F99EBDB9F301DF75581573B7E732EB43 /* UIFont+WYUtils.m */; };
-		A7EBEF41C2708E2ADE32BBEC0602C116 /* NSString+WYDecimal.h in Headers */ = {isa = PBXBuildFile; fileRef = 05269177E36EA93652C731369F294F80 /* NSString+WYDecimal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A83D238FF0E4F47F032CDC913162EBC3 /* NSData+WYHexString.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C3DAF4ED6302CD348411A51B4F18D9 /* NSData+WYHexString.m */; };
-		AF24A3AF8D19858AC4934216D5F1BB5B /* WYNotHintView.h in Headers */ = {isa = PBXBuildFile; fileRef = B2FE93C5C003099850CD77F55DCC9CC0 /* WYNotHintView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AFEEADF0209C082F87C40CEA5D51C416 /* WYStickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 758BD2E583C2A42C2B1423851BD0F95E /* WYStickerView.m */; };
-		B2D8C263E84FEDF94E593008ADF70F8D /* WYDisplayImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FD7F6E41A3FD42C37CA8075042A27CF /* WYDisplayImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6F75E59893CC206B1C6F0099EDCF24F /* WYPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 816157DBBB86B91D30335C3BBFC89F75 /* WYPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9E6B5D4723CE51C7519800849FB65C3 /* UIImage+WYShrink.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EB280BBAD998EDB35B9AE4D75020DAA /* UIImage+WYShrink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB865CA59E263E5A463CF7FE0D00F0E6 /* WYUtils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF50FCD30889F493E2397B786E188F28 /* WYUtils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF19C9DE35FBE1F0EE0626E5A6952F84 /* UIImage+WYBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 061C76A7E7E1DDA87909DC86A0580897 /* UIImage+WYBlur.m */; };
+		B13D40618CE33358C2703F878B2A622C /* NSData+WYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA4344E790C6B6380ECCCCE78BE6860 /* NSData+WYUtils.m */; };
 		B454C70E0DB7B56A6696A53FBFE62F10 /* Pods-WYUtils_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 965CC95549BF1025308F8FD37BE9589E /* Pods-WYUtils_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BABE7502745B70F256A0970A5511097B /* WYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AEC78BC02DC191EF438BDC7D1DB60ED2 /* WYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BCEDAF5143AC39F7817DC7DEBCB56F4C /* WYMacroHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 2372C2AE4F8328543F5E31166C9B0D81 /* WYMacroHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C2C483FF57AD2A5AD1695E951A53260A /* NSData+WYEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C685E12539E2D721A22A06A1480B249 /* NSData+WYEncrypt.m */; };
-		C48775E8F79F922781101B92FAA89D07 /* UIColor+WYHexString.h in Headers */ = {isa = PBXBuildFile; fileRef = 359C648EF7F7ADEB1B788089E43DAF18 /* UIColor+WYHexString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C77C8697736BAA20347B9789BBDBEE76 /* WYUtils-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 609AAA8F7530B65AE314C5BE7C93FFBF /* WYUtils-dummy.m */; };
-		C7B176943F5B861C141153A94A1B7E8A /* NSString+WYSuffix.h in Headers */ = {isa = PBXBuildFile; fileRef = C95A5C7A12EC3EE514804BDDD4586493 /* NSString+WYSuffix.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C817C33C59F2B236A8A69B28B4BB9FA1 /* UIView+WYGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = C57BE5354FD02DB8F452E104437E4947 /* UIView+WYGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C8B5181EBF6897EAD4AC11A57BD57E15 /* UIFont+WYAllFonts.h in Headers */ = {isa = PBXBuildFile; fileRef = 28C132699A8FF1104C0543B1627D0D58 /* UIFont+WYAllFonts.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9534F8F1EF40B4DEC612A7C8771791D /* NSString+WYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F7CE905664568CA2BE4C5F9120C56A /* NSString+WYUtils.m */; };
+		B6F89190047B3E92A83B9715D45E489E /* NSData+WYBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 38C290E684E79CCAC2BEEA367E526BCA /* NSData+WYBase64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8E33B227092EB988B528C27E0CF0DBF /* UIView+WYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = A94A260361F64EA9528ECE86170A7935 /* UIView+WYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA03939600A32C54D53FF7628B91B911 /* WYDisplayImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 552ECAEB4375406044B163637F652CA0 /* WYDisplayImageView.m */; };
+		BBCB34B542417E7F2EE1A854EF21F5CB /* UIView+WYGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6712B80AFA0E3B72BC3F4E29FD6237E2 /* UIView+WYGestureRecognizer.m */; };
+		BC65B03A20FDA445E6F0FD38A9A80E5A /* WYUtils-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD7DF7CA8B4BFE8B439A6D1C642751 /* WYUtils-dummy.m */; };
+		C6CEA194FA098099D2846C84B0CCE912 /* UIView+WYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EF2724DB3A384250DA6A54677CFDF8 /* UIView+WYUtils.m */; };
+		C78BCD203EF34709691BDDD1D483ACE8 /* UIImage+WYColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F52FCE145000E0A71E4E555B9A146EE /* UIImage+WYColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9CEFD31CFE7E9582C1C0E819CE359CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		CA033ABAB9AF018508790F4427461ADD /* NSString+WYMd5.m in Sources */ = {isa = PBXBuildFile; fileRef = FF64AA10E15A80E468151DF4AE028373 /* NSString+WYMd5.m */; };
-		CB06E2C53CEDAE5F02D8DDCBDD9249E2 /* NSString+WYDecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C101FE11ADCE9604663E12804C81659 /* NSString+WYDecimal.m */; };
-		CF46363A3D2F28F1452A4A4DE3EB617E /* UIView+WYGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D319CA0BA2214D15ADC2BB985E58F /* UIView+WYGestureRecognizer.m */; };
-		DA28BC9348E3B5D5C398D7F9C86108F3 /* UIImage+WYMask.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DFF2087F9EAF58D81578E74D63C974A /* UIImage+WYMask.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DCBE681B764DFB404726EF5F90E44796 /* NSDate+WYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E8850971A96E4FFA6DFAE6C895C006 /* NSDate+WYExtension.m */; };
-		DDF42B18F4E6812DAC6232D6BFFCE6C7 /* UIImage+WYOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6BD38ED507431B13CAD34A3FC6D61E /* UIImage+WYOrientation.m */; };
-		E08CE46F4D28B6EC84021DAD86A2064F /* UIFont+WYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E58A1982C80036E0CCC9CED86795E8E /* UIFont+WYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA70A6BCDE7CF3F47A2AB2B275AE9029 /* UIImage+WYOrientation.h in Headers */ = {isa = PBXBuildFile; fileRef = 831ECBABBC97A9715446CD6593BC54B7 /* UIImage+WYOrientation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D01FD7C00B1E129594BCDCB15BDCE8D3 /* UINavigationBar+WYBottomBorderColor.h in Headers */ = {isa = PBXBuildFile; fileRef = E56CD30B7E6205A487A9A24208B581AD /* UINavigationBar+WYBottomBorderColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0D5766C1F53FA6AD811A4A59F51AFF2 /* NSData+WYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8203DCD55C0496EAEA40168E8722CEFA /* NSData+WYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D316C7708A03A173898D2BCC9F112638 /* UIView+WYCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = D817FE019A81DCDD66326D7FB2525630 /* UIView+WYCorner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D349BBA5FFCEB5FECDB5084275D60223 /* UIImage+WYMask.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A5E13CC69CF75CDF00824FAAD9A7E05 /* UIImage+WYMask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAEBDC271B0B20094E3776F1FAFD576B /* UIImage+WYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A1034077433C593F557CD0514246F46 /* UIImage+WYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDD83316CE1C77715134307421FEA604 /* NSDate+WYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D461F6E21771F997DEF7FA78D43CE6E2 /* NSDate+WYUtils.m */; };
+		DF605F6AC2E4F39ACE6A2CCB1CCA511D /* WYMaskView.h in Headers */ = {isa = PBXBuildFile; fileRef = B66BE00CD3E3FAF78FCB26D4CB557DBA /* WYMaskView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E04A2ED001E4AC6D47A0A1201C4773BA /* UIView+WYGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E16162701AC868621B0F145827DEE62 /* UIView+WYGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E076E5630BC53544B72F5470B9048A8A /* NSString+WYEncrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = B047FA1D5F3DD22FD5B9C4A99DD451FC /* NSString+WYEncrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E36059A30E396CBEF0EE0E7C6D462B80 /* UIView+WYCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7FC002DADFC972A66F5605124D86B1 /* UIView+WYCorner.m */; };
 		E4487B82EB5836B40073C1D4CEDA6020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		E72F66CE9099F568E415E6918F4E9600 /* WYMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 754497BDBA93EA80BB2DD403C1ADFE4B /* WYMaskView.m */; };
+		E6C6034DEB42EB20B87C121CD160516A /* NSData+WYHexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C5B3B33D341292EA981F31D4C43DBD /* NSData+WYHexString.m */; };
+		E7E410DF2E281523FDD2F4C8973BEEB9 /* WYMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5063576C1BDEFA975CB72C470B5BE270 /* WYMaskView.m */; };
 		EAED6204958E65B94CF45A9BA3648E75 /* Pods-WYUtils_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D44F92F0923457BAD2A27E7A535B91C /* Pods-WYUtils_Example-dummy.m */; };
-		EB0DF98D986DEA7AE7BBA8E6DCDB38E3 /* NSString+WYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D2ED4F2C114486D2336A5B53A3A3263 /* NSString+WYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB0540DDF6A29A26166D7F922686E949 /* WYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 1762A455C6C8F1737F630D594EEF8210 /* WYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB7B280566DB0062642CAAABF1D52BAC /* UIView+WYRenderImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 64FA3093E1037A171813745AF0532CB0 /* UIView+WYRenderImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED0BF1C9C387F222AE834CD0100341C3 /* Pods-WYUtils_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FC5B0B7F13A938CAA9874687D7AFF0 /* Pods-WYUtils_Tests-dummy.m */; };
-		ED53C44FACEF242E7DBFCA1E12E234CD /* NSData+WYHexString.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B0FEBA6B9A645AF309D524B2C05F58F /* NSData+WYHexString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F5E1C6083C6B99F683C6D716ADDA2649 /* UIView+WYCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = 80E38DCEA0BD505943E8D6E245B2AFD2 /* UIView+WYCorner.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F823459D82038EE18FB7AB5418AE6236 /* NSData+WYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2147235A4D5D86041271AD4BB7759F47 /* NSData+WYUtils.m */; };
-		FDE42274903D8955D984B28C74371CBF /* NSDate+WYExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A47C25E822BE2E34A5BAB5B308CB45B6 /* NSDate+WYExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE9D12CDBDA06C8E39068E50EACBE991 /* NSString+WYBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 14253BD3C873D9693295EAEFAC00DD49 /* NSString+WYBase64.m */; };
+		EEE7151C6F45748646F1BB9B67ADD8AD /* UIView+WYRenderImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C74D2204C695337B86FE1A85A9659E /* UIView+WYRenderImage.m */; };
+		F5E0AA04F856EA7F821BDAED07DABA17 /* WYDisplayImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 716A28AE52CE7DAF1F03931D4A3D1058 /* WYDisplayImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F60AD3202D2215A92E52BEB6C6E2207C /* UINavigationBar+WYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 66A96058C3BE7E4E97453913432AAD77 /* UINavigationBar+WYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F82666FE722D10EF753106215DE54BB5 /* NSDate+WYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B63F9B33BB45C4F1AA1A7B3AC8D196ED /* NSDate+WYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,111 +110,111 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00F2876656207824ACB8AC1227DAFDF3 /* WYUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WYUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		023D3A227CB45A0C874F5C2AFE73BA7A /* WYUtils.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WYUtils.modulemap; sourceTree = "<group>"; };
-		0331A18F3B23BC7B197CEE78F8E318BD /* Pods_WYUtils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WYUtils_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		05269177E36EA93652C731369F294F80 /* NSString+WYDecimal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+WYDecimal.h"; sourceTree = "<group>"; };
-		0734ECE3C32E20ED3445232D41C9686B /* NSData+WYEncrypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+WYEncrypt.h"; sourceTree = "<group>"; };
-		0B85C56474304820555811E0D0C69AA2 /* WYMaskView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WYMaskView.h; sourceTree = "<group>"; };
+		00F2876656207824ACB8AC1227DAFDF3 /* WYUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WYUtils.framework; path = WYUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0331A18F3B23BC7B197CEE78F8E318BD /* Pods_WYUtils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WYUtils_Example.framework; path = "Pods-WYUtils_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		061C76A7E7E1DDA87909DC86A0580897 /* UIImage+WYBlur.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WYBlur.m"; sourceTree = "<group>"; };
+		0ABE54EDC492116CFD8C034BA2534510 /* WYUtils.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WYUtils.modulemap; sourceTree = "<group>"; };
 		0C72D1FC6F4B0806DFE592D56128853C /* Pods-WYUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WYUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		0D2ED4F2C114486D2336A5B53A3A3263 /* NSString+WYUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+WYUtils.h"; sourceTree = "<group>"; };
+		0F453AB8ACD35F25523297E6713308EF /* NSDate+WYExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate+WYExtension.h"; sourceTree = "<group>"; };
+		11614099B543103DA494356E06334832 /* WYUtils.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WYUtils.xcconfig; sourceTree = "<group>"; };
+		12A4EA3C6E36BE8946E1638552E19D06 /* UIColor+WYHexString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+WYHexString.h"; sourceTree = "<group>"; };
+		14253BD3C873D9693295EAEFAC00DD49 /* NSString+WYBase64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+WYBase64.m"; sourceTree = "<group>"; };
+		143E06E93AA199CC2F899F3311F040CC /* NSData+WYBase64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+WYBase64.m"; sourceTree = "<group>"; };
+		15B323AAFC011CFA787648E35ACFF3BB /* WYPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WYPageControl.m; sourceTree = "<group>"; };
+		175CABD2A37F702A3418B242FBB0A76D /* NSString+WYDecimal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+WYDecimal.h"; sourceTree = "<group>"; };
+		1762A455C6C8F1737F630D594EEF8210 /* WYUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WYUtils.h; path = WYUtils/Classes/WYUtils.h; sourceTree = "<group>"; };
 		199E15F2B26437B3BA0B7C2C9C457270 /* Pods-WYUtils_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WYUtils_Example.modulemap"; sourceTree = "<group>"; };
-		1B152229B2C9647B9977D5DDDAA127B8 /* UIImage+WYOrientation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+WYOrientation.h"; sourceTree = "<group>"; };
-		1E58A1982C80036E0CCC9CED86795E8E /* UIFont+WYUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIFont+WYUtils.h"; sourceTree = "<group>"; };
-		2147235A4D5D86041271AD4BB7759F47 /* NSData+WYUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+WYUtils.m"; sourceTree = "<group>"; };
-		2372C2AE4F8328543F5E31166C9B0D81 /* WYMacroHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WYMacroHeader.h; sourceTree = "<group>"; };
-		2580BCF4ACD9382EE6E2DA426DE38436 /* UIView+WYCorner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+WYCorner.m"; sourceTree = "<group>"; };
-		265F7ED4297105CE2F19A2E7615DA3E9 /* UIColor+WYUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WYUtils.m"; sourceTree = "<group>"; };
-		26E083849574E5642FA85C8210DB82E7 /* UIImage+WYMask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WYMask.m"; sourceTree = "<group>"; };
-		2767A013CBC00390D95273BB314851C6 /* NSString+WYHighLightColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+WYHighLightColor.h"; sourceTree = "<group>"; };
-		28C132699A8FF1104C0543B1627D0D58 /* UIFont+WYAllFonts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIFont+WYAllFonts.h"; sourceTree = "<group>"; };
-		29F31BD8D09AE9757A4F6BBC4767F780 /* WYUtils-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WYUtils-prefix.pch"; sourceTree = "<group>"; };
-		2AF2B364761BC6812666B596E71463D0 /* UIFont+WYAllFonts.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIFont+WYAllFonts.m"; sourceTree = "<group>"; };
-		2B0FEBA6B9A645AF309D524B2C05F58F /* NSData+WYHexString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+WYHexString.h"; sourceTree = "<group>"; };
-		2B5F741E1270075B381429D88B539F59 /* Pods_WYUtils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WYUtils_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DFF2087F9EAF58D81578E74D63C974A /* UIImage+WYMask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+WYMask.h"; sourceTree = "<group>"; };
+		1DF38E9519223157EC0F21D368B244BB /* NSString+WYURLEncode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+WYURLEncode.m"; sourceTree = "<group>"; };
+		1E16162701AC868621B0F145827DEE62 /* UIView+WYGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+WYGestureRecognizer.h"; sourceTree = "<group>"; };
+		257966724F3EB35E34B8AEA531CBA259 /* NSString+WYHighLightColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+WYHighLightColor.m"; sourceTree = "<group>"; };
+		2A5E13CC69CF75CDF00824FAAD9A7E05 /* UIImage+WYMask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+WYMask.h"; sourceTree = "<group>"; };
+		2B5F741E1270075B381429D88B539F59 /* Pods_WYUtils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WYUtils_Tests.framework; path = "Pods-WYUtils_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BAD7DF7CA8B4BFE8B439A6D1C642751 /* WYUtils-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WYUtils-dummy.m"; sourceTree = "<group>"; };
+		2EB280BBAD998EDB35B9AE4D75020DAA /* UIImage+WYShrink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+WYShrink.h"; sourceTree = "<group>"; };
+		2F52FCE145000E0A71E4E555B9A146EE /* UIImage+WYColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+WYColor.h"; sourceTree = "<group>"; };
+		32575359ABE4E61C2187778FA9D5D177 /* UIImage+WYSpilteNine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WYSpilteNine.m"; sourceTree = "<group>"; };
 		33EC1C85F31B3860D2E5329A223B0EA4 /* Pods-WYUtils_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WYUtils_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		359C648EF7F7ADEB1B788089E43DAF18 /* UIColor+WYHexString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+WYHexString.h"; sourceTree = "<group>"; };
-		37E21AB20C2447F0C510ED32825C28BB /* NSDate+WYUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate+WYUtils.h"; sourceTree = "<group>"; };
-		38B19BC60A66D26425F9E54C11654C53 /* UINavigationBar+WYUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+WYUtils.h"; sourceTree = "<group>"; };
-		3B1B040B311A833DB46DA188A7D45987 /* NSDate+WYUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WYUtils.m"; sourceTree = "<group>"; };
-		3D2259AD1040183AC5856EABF055E7C1 /* NSString+WYEncrypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+WYEncrypt.h"; sourceTree = "<group>"; };
-		43498323A677D2C018CCB0AA1A00BCFA /* UINavigationBar+WYBottomBorderColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+WYBottomBorderColor.m"; sourceTree = "<group>"; };
+		378676FCB180EF68859043C6107B6242 /* NSString+WYHighLightColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+WYHighLightColor.h"; sourceTree = "<group>"; };
+		38C290E684E79CCAC2BEEA367E526BCA /* NSData+WYBase64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+WYBase64.h"; sourceTree = "<group>"; };
+		403CEC1878517C66D61F50CBA7133E33 /* UIImage+WYOrientation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WYOrientation.m"; sourceTree = "<group>"; };
+		419E06DA3072DDED528C0832A10C561C /* NSString+WYUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+WYUtils.m"; sourceTree = "<group>"; };
+		42BFB6F11EF48EAE1A612B5C91142183 /* UIFont+WYUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIFont+WYUtils.h"; sourceTree = "<group>"; };
+		444A4979CE07D5FBCDC170D58311917F /* UIImage+WYMask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WYMask.m"; sourceTree = "<group>"; };
 		486C3422C0D8BFB3E555D4BCC990F764 /* Pods-WYUtils_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WYUtils_Example-Info.plist"; sourceTree = "<group>"; };
-		4CDB2AB80115372A0A46E250A66F8E56 /* NSData+WYBase64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+WYBase64.m"; sourceTree = "<group>"; };
-		4E63CA836FB425AB425E3F8C656D645A /* UIView+WYUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+WYUtils.h"; sourceTree = "<group>"; };
-		52FE489016E3090891BEACA79B677114 /* WYUtils-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WYUtils-umbrella.h"; sourceTree = "<group>"; };
-		5599856AC97140E574E49218B2B9448A /* UIImage+WYColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+WYColor.h"; sourceTree = "<group>"; };
+		48AB5C4F3A93D0D331073786FC7D8430 /* NSString+WYUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+WYUtils.h"; sourceTree = "<group>"; };
+		4A35856426CFCC4FCFDD1DCE208E52B0 /* UIImage+WYUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WYUtils.m"; sourceTree = "<group>"; };
+		4F719A383BFAFC0B9D7AF17E018F1C01 /* WYStickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WYStickerView.m; sourceTree = "<group>"; };
+		5063576C1BDEFA975CB72C470B5BE270 /* WYMaskView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WYMaskView.m; sourceTree = "<group>"; };
+		50990925192A85AB3BC6DCA11AD50A1D /* UIFont+WYAllFonts.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIFont+WYAllFonts.m"; sourceTree = "<group>"; };
+		52C74D2204C695337B86FE1A85A9659E /* UIView+WYRenderImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+WYRenderImage.m"; sourceTree = "<group>"; };
+		552ECAEB4375406044B163637F652CA0 /* WYDisplayImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WYDisplayImageView.m; sourceTree = "<group>"; };
 		55B2975DAFC39FD70A146CB1E3062BCF /* Pods-WYUtils_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WYUtils_Example-frameworks.sh"; sourceTree = "<group>"; };
-		5A4B31CE28E0C6E10A0F9DA0BDE25599 /* NSString+WYBase64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+WYBase64.h"; sourceTree = "<group>"; };
-		5EDABF30D784E0FA913BFBF433660C71 /* UIImage+WYUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+WYUtils.h"; sourceTree = "<group>"; };
-		5F0D319CA0BA2214D15ADC2BB985E58F /* UIView+WYGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+WYGestureRecognizer.m"; sourceTree = "<group>"; };
-		5F4B887389FED571DA982B758FF13EB9 /* NSString+WYEncrypt.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+WYEncrypt.m"; sourceTree = "<group>"; };
-		5FC8A20F8C34DA1127DCC8A1604092A7 /* NSString+WYURLEncode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+WYURLEncode.m"; sourceTree = "<group>"; };
-		609AAA8F7530B65AE314C5BE7C93FFBF /* WYUtils-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WYUtils-dummy.m"; sourceTree = "<group>"; };
-		62A1EABF050C8626015BF6DDFD92B502 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		65766E66053C0961652481560D364B7B /* UIImage+WYShrink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+WYShrink.h"; sourceTree = "<group>"; };
-		6695D6F18D89FF6FDDB004A2BB0EB6A8 /* NSString+WYMd5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+WYMd5.h"; sourceTree = "<group>"; };
-		6925ED1214C5E162E639E1E531B0F81B /* NSString+WYSuffix.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+WYSuffix.m"; sourceTree = "<group>"; };
-		6C0FF852C8622B968D4098E9D1ADACBC /* WYUtils.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WYUtils.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		6C101FE11ADCE9604663E12804C81659 /* NSString+WYDecimal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+WYDecimal.m"; sourceTree = "<group>"; };
-		6CFCD7684B487AE1AFEDEC8D7D7FE846 /* UIImage+WYBlur.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WYBlur.m"; sourceTree = "<group>"; };
-		6D45B18EFDF7AD74C8C9C27E0E8D3992 /* UIImage+WYColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WYColor.m"; sourceTree = "<group>"; };
-		754497BDBA93EA80BB2DD403C1ADFE4B /* WYMaskView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WYMaskView.m; sourceTree = "<group>"; };
-		758BD2E583C2A42C2B1423851BD0F95E /* WYStickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WYStickerView.m; sourceTree = "<group>"; };
+		57665F18F4127AF49D5E7945CA5BD8C1 /* WYNotHintView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WYNotHintView.h; sourceTree = "<group>"; };
+		5A1034077433C593F557CD0514246F46 /* UIImage+WYUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+WYUtils.h"; sourceTree = "<group>"; };
+		5BC0370D2FF58207BA6A8703B38FD42D /* WYStickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WYStickerView.h; sourceTree = "<group>"; };
+		64FA3093E1037A171813745AF0532CB0 /* UIView+WYRenderImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+WYRenderImage.h"; sourceTree = "<group>"; };
+		66A96058C3BE7E4E97453913432AAD77 /* UINavigationBar+WYUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+WYUtils.h"; sourceTree = "<group>"; };
+		6712B80AFA0E3B72BC3F4E29FD6237E2 /* UIView+WYGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+WYGestureRecognizer.m"; sourceTree = "<group>"; };
+		6DA66B1654D6606A4C85B211EF252BA4 /* WYNotHintView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WYNotHintView.m; sourceTree = "<group>"; };
+		716A28AE52CE7DAF1F03931D4A3D1058 /* WYDisplayImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WYDisplayImageView.h; sourceTree = "<group>"; };
+		734805D0645AB0373654C99BF6F87424 /* NSString+WYDecimal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+WYDecimal.m"; sourceTree = "<group>"; };
 		7599CEE4C6FC409F1078DD9CA18BFEF0 /* Pods-WYUtils_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WYUtils_Example.release.xcconfig"; sourceTree = "<group>"; };
 		75F3B5ECCF765F5EE5AB6929F3C1F770 /* Pods-WYUtils_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WYUtils_Tests.modulemap"; sourceTree = "<group>"; };
-		80E38DCEA0BD505943E8D6E245B2AFD2 /* UIView+WYCorner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+WYCorner.h"; sourceTree = "<group>"; };
-		89445F6234564614F631FBFDFE14C89F /* NSData+WYBase64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+WYBase64.h"; sourceTree = "<group>"; };
-		8C22C1F13A7DD39562F9BC9D1C136DA6 /* WYUtils.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WYUtils.xcconfig; sourceTree = "<group>"; };
-		8C685E12539E2D721A22A06A1480B249 /* NSData+WYEncrypt.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+WYEncrypt.m"; sourceTree = "<group>"; };
+		76EF2724DB3A384250DA6A54677CFDF8 /* UIView+WYUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+WYUtils.m"; sourceTree = "<group>"; };
+		7F0DB911E75E90C71DA370C6992291F0 /* WYUtils-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WYUtils-Info.plist"; sourceTree = "<group>"; };
+		7FA4344E790C6B6380ECCCCE78BE6860 /* NSData+WYUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+WYUtils.m"; sourceTree = "<group>"; };
+		816157DBBB86B91D30335C3BBFC89F75 /* WYPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WYPageControl.h; sourceTree = "<group>"; };
+		8203DCD55C0496EAEA40168E8722CEFA /* NSData+WYUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+WYUtils.h"; sourceTree = "<group>"; };
+		831ECBABBC97A9715446CD6593BC54B7 /* UIImage+WYOrientation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+WYOrientation.h"; sourceTree = "<group>"; };
+		86411A3818AF9636CFF4F7EA3D428EBF /* NSString+WYURLEncode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+WYURLEncode.h"; sourceTree = "<group>"; };
+		8713D852B0AAF6F205DBB56AE24A7094 /* UIImage+WYSpilteNine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+WYSpilteNine.h"; sourceTree = "<group>"; };
+		88CE7607003092E94D9EC144A954B763 /* NSData+WYEncrypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+WYEncrypt.h"; sourceTree = "<group>"; };
+		8A226A8AF3DF33670D86D99DE7A06BBC /* WYUtils-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WYUtils-prefix.pch"; sourceTree = "<group>"; };
+		8D29D1E9D835E7617DEFE02C53BB5F5F /* NSDate+WYExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WYExtension.m"; sourceTree = "<group>"; };
+		8D763EA469F033EE509F20A77F4BFFE8 /* UIFont+WYAllFonts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIFont+WYAllFonts.h"; sourceTree = "<group>"; };
 		8D7E382E2C9780111F3911662F64873E /* Pods-WYUtils_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WYUtils_Tests-Info.plist"; sourceTree = "<group>"; };
 		8F8A6F9114915F1587A901022184BCD6 /* Pods-WYUtils_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WYUtils_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		90E8850971A96E4FFA6DFAE6C895C006 /* NSDate+WYExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WYExtension.m"; sourceTree = "<group>"; };
-		91984F6119F031ECEAF9266A4621BC88 /* NSString+WYBase64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+WYBase64.m"; sourceTree = "<group>"; };
-		93AA6396228C11B700F8784C /* WYPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYPageControl.h; sourceTree = "<group>"; };
-		93AA6397228C11B700F8784C /* WYPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYPageControl.m; sourceTree = "<group>"; };
 		965CC95549BF1025308F8FD37BE9589E /* Pods-WYUtils_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WYUtils_Tests-umbrella.h"; sourceTree = "<group>"; };
-		9A22A89EF2A0DC967E2B97286AE92187 /* UIImage+WYSpilteNine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+WYSpilteNine.h"; sourceTree = "<group>"; };
+		97C5B3B33D341292EA981F31D4C43DBD /* NSData+WYHexString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+WYHexString.m"; sourceTree = "<group>"; };
 		9C95C089EC29090E8AA2BC5838B585D6 /* Pods-WYUtils_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WYUtils_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9D44F92F0923457BAD2A27E7A535B91C /* Pods-WYUtils_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WYUtils_Example-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FD7F6E41A3FD42C37CA8075042A27CF /* WYDisplayImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WYDisplayImageView.h; sourceTree = "<group>"; };
-		A17D17E09BA64E139F959EABD244119B /* WYNotHintView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WYNotHintView.m; sourceTree = "<group>"; };
-		A47C25E822BE2E34A5BAB5B308CB45B6 /* NSDate+WYExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate+WYExtension.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F03061942F4B295177B80AE2021D0FA /* NSString+WYEncrypt.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+WYEncrypt.m"; sourceTree = "<group>"; };
+		9F4CB8F22DA353E67D69B3B62ABD645E /* NSData+WYHexString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+WYHexString.h"; sourceTree = "<group>"; };
 		A8A1B36371CFB57EFEC47CEA57F4110E /* Pods-WYUtils_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WYUtils_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AC95F5304C5C2B827C7C0E795619BF3C /* WYStickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WYStickerView.h; sourceTree = "<group>"; };
-		AD14A399BFEDA6F44A863E604D52C872 /* UIImage+WYShrink.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WYShrink.m"; sourceTree = "<group>"; };
-		AEC78BC02DC191EF438BDC7D1DB60ED2 /* WYUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WYUtils.h; path = WYUtils/Classes/WYUtils.h; sourceTree = "<group>"; };
-		AF1020CA43899224EEA2914911C68498 /* UIImage+WYBlur.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+WYBlur.h"; sourceTree = "<group>"; };
-		B2FE93C5C003099850CD77F55DCC9CC0 /* WYNotHintView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WYNotHintView.h; sourceTree = "<group>"; };
-		B7F5251D23B2D7B146A8657007A06446 /* NSData+WYUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+WYUtils.h"; sourceTree = "<group>"; };
+		A94A260361F64EA9528ECE86170A7935 /* UIView+WYUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+WYUtils.h"; sourceTree = "<group>"; };
+		A9A0AA0E4B0BFD5B3EFADA8E8462803A /* WYUtils.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WYUtils.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AC6A39094A9B00B4CF531045198D1D05 /* NSString+WYMd5.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+WYMd5.m"; sourceTree = "<group>"; };
+		AF50FCD30889F493E2397B786E188F28 /* WYUtils-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WYUtils-umbrella.h"; sourceTree = "<group>"; };
+		AF99FC5BD3EE3B45C1BEAF76003AD45B /* UINavigationBar+WYBottomBorderColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+WYBottomBorderColor.m"; sourceTree = "<group>"; };
+		B047FA1D5F3DD22FD5B9C4A99DD451FC /* NSString+WYEncrypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+WYEncrypt.h"; sourceTree = "<group>"; };
+		B1E734186C445C90E9D9691B5D4ED573 /* NSString+WYSuffix.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+WYSuffix.m"; sourceTree = "<group>"; };
+		B63F9B33BB45C4F1AA1A7B3AC8D196ED /* NSDate+WYUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate+WYUtils.h"; sourceTree = "<group>"; };
+		B66BE00CD3E3FAF78FCB26D4CB557DBA /* WYMaskView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WYMaskView.h; sourceTree = "<group>"; };
 		B9A1322F6A61D71B1AEAD56671C75550 /* Pods-WYUtils_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WYUtils_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BBB59362DCDD83B03E5BC06E7E502760 /* NSString+WYHighLightColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+WYHighLightColor.m"; sourceTree = "<group>"; };
-		BCA24D6265486F63DF135DEC6C2B2399 /* WYUtils-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WYUtils-Info.plist"; sourceTree = "<group>"; };
-		C3E883D1BCEADFF00AE487FCD61B306F /* UIColor+WYHexString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WYHexString.m"; sourceTree = "<group>"; };
-		C57BE5354FD02DB8F452E104437E4947 /* UIView+WYGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+WYGestureRecognizer.h"; sourceTree = "<group>"; };
+		BD5263260DE2AC3AFC86D5021F96B87E /* WYMacroHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WYMacroHeader.h; sourceTree = "<group>"; };
+		C4348FCD5C5FE81533F1221AAFE5424C /* NSString+WYMd5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+WYMd5.h"; sourceTree = "<group>"; };
 		C5FC5B0B7F13A938CAA9874687D7AFF0 /* Pods-WYUtils_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WYUtils_Tests-dummy.m"; sourceTree = "<group>"; };
-		C95384ED9F6967329E86304B28C1382B /* UINavigationBar+WYBottomBorderColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+WYBottomBorderColor.h"; sourceTree = "<group>"; };
-		C95A5C7A12EC3EE514804BDDD4586493 /* NSString+WYSuffix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+WYSuffix.h"; sourceTree = "<group>"; };
-		C97923441B4490FB30644733C61F2E72 /* UIView+WYUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+WYUtils.m"; sourceTree = "<group>"; };
-		C9C3DAF4ED6302CD348411A51B4F18D9 /* NSData+WYHexString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+WYHexString.m"; sourceTree = "<group>"; };
-		C9F9C10EF0641715A8C68E83703C0D56 /* UIImage+WYSpilteNine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WYSpilteNine.m"; sourceTree = "<group>"; };
+		C6E1258E7076E756CE760A89A216F459 /* UIColor+WYHexString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WYHexString.m"; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D5AAE3D73779B40CFE83CF1950977AB0 /* WYDisplayImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WYDisplayImageView.m; sourceTree = "<group>"; };
-		D74C223D39ADAA52BB5474D1E3C8A54E /* UIView+WYRenderImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+WYRenderImage.h"; sourceTree = "<group>"; };
-		DD040222B2AFF23A06CFBA7B61598631 /* UIImage+WYUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WYUtils.m"; sourceTree = "<group>"; };
+		CB68B1DE8EA240FC0218191522CB879F /* UINavigationBar+WYUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+WYUtils.m"; sourceTree = "<group>"; };
+		CF7397EC4770531C3EDC185BFE680524 /* UIImage+WYShrink.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WYShrink.m"; sourceTree = "<group>"; };
+		D4089E3F9F1E801FB73C464C42AA1BA4 /* UIFont+WYUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIFont+WYUtils.m"; sourceTree = "<group>"; };
+		D461F6E21771F997DEF7FA78D43CE6E2 /* NSDate+WYUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WYUtils.m"; sourceTree = "<group>"; };
+		D55B14FD898E2F3ED9BF671D6317F042 /* UIImage+WYColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WYColor.m"; sourceTree = "<group>"; };
+		D817FE019A81DCDD66326D7FB2525630 /* UIView+WYCorner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+WYCorner.h"; sourceTree = "<group>"; };
 		DD418666200411EF73383C02B294039C /* Pods-WYUtils_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WYUtils_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		DE18D4EEC0F16ED174B4F29FC35E36B3 /* NSString+WYURLEncode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+WYURLEncode.h"; sourceTree = "<group>"; };
-		DF23D072FBF58473C488105306580DFD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		E1D3B524DDB346E040C025667450441D /* UINavigationBar+WYUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+WYUtils.m"; sourceTree = "<group>"; };
-		E3F7CE905664568CA2BE4C5F9120C56A /* NSString+WYUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+WYUtils.m"; sourceTree = "<group>"; };
-		EB6BD38ED507431B13CAD34A3FC6D61E /* UIImage+WYOrientation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WYOrientation.m"; sourceTree = "<group>"; };
+		DE666C807971BDE780989DAC7C55122A /* UIColor+WYUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+WYUtils.h"; sourceTree = "<group>"; };
+		E56CD30B7E6205A487A9A24208B581AD /* UINavigationBar+WYBottomBorderColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+WYBottomBorderColor.h"; sourceTree = "<group>"; };
+		E7DA19A5EF9E94FD41F3A4AEC0105EDF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E8A71413824E641E2FA6C51515F8FD22 /* UIImage+WYBlur.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+WYBlur.h"; sourceTree = "<group>"; };
+		ED2925359D8229ACEB0DBB809F17FA29 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		EE7FC002DADFC972A66F5605124D86B1 /* UIView+WYCorner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+WYCorner.m"; sourceTree = "<group>"; };
 		F0756A1A879B8BD836CBB922F70A6356 /* Pods-WYUtils_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WYUtils_Example-umbrella.h"; sourceTree = "<group>"; };
-		F0B3E42CD61FA5259CE3C2BB39DD2D30 /* UIView+WYRenderImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+WYRenderImage.m"; sourceTree = "<group>"; };
-		F8E06FC53193914CA68D1E3AD8C2C2B7 /* UIColor+WYUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+WYUtils.h"; sourceTree = "<group>"; };
-		F99EBDB9F301DF75581573B7E732EB43 /* UIFont+WYUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIFont+WYUtils.m"; sourceTree = "<group>"; };
-		FF64AA10E15A80E468151DF4AE028373 /* NSString+WYMd5.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+WYMd5.m"; sourceTree = "<group>"; };
+		F5CF8009D39BDC3CC021CADC72F1ECDD /* NSData+WYEncrypt.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+WYEncrypt.m"; sourceTree = "<group>"; };
+		FCADE65AD43893BDEABE5D93B5BCF5EF /* UIColor+WYUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WYUtils.m"; sourceTree = "<group>"; };
+		FCC7554600D45CFC2048BA3C396248EC /* NSString+WYSuffix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+WYSuffix.h"; sourceTree = "<group>"; };
+		FE3CFEA932A0C8A0CC63BF9506CF3A43 /* NSString+WYBase64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+WYBase64.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,105 +245,130 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		071AE100F9428B0C086BFAAAEFD4F197 /* WYUtils */ = {
+		258BAEA657EAF058001FDACB502D7B96 /* NSData */ = {
 			isa = PBXGroup;
 			children = (
-				AEC78BC02DC191EF438BDC7D1DB60ED2 /* WYUtils.h */,
-				66DB6E501F86CA891DAE665CFBCEBB4E /* Macro */,
-				3F4C880EF3AF242E0D9C5AB045D82F1D /* NSData */,
-				0CC99CBFBE6895FFC9049B421BD92AA2 /* NSDate */,
-				C0D41A15DE7B01F512304E693F61EE87 /* NSString */,
-				49FB38343FA109DB87800192AB796DEE /* Pod */,
-				2FF9397B9DD42C0BDD21E37D72145CF1 /* Support Files */,
-				709A8BF51FA63DC02E0D5249E944B1F9 /* UIColor */,
-				DF68E1C49C4512CC4E8ED1E41814B62C /* UIFont */,
-				E02C8F98EC03ACEC116521601069E898 /* UIImage */,
-				D1F91710D1873F89F0BF27C90FCC29DA /* UINavigationBar */,
-				DED5DA3289794DE9AE87D626FD689CFE /* UIView */,
-			);
-			name = WYUtils;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		0CC99CBFBE6895FFC9049B421BD92AA2 /* NSDate */ = {
-			isa = PBXGroup;
-			children = (
-				A47C25E822BE2E34A5BAB5B308CB45B6 /* NSDate+WYExtension.h */,
-				90E8850971A96E4FFA6DFAE6C895C006 /* NSDate+WYExtension.m */,
-				37E21AB20C2447F0C510ED32825C28BB /* NSDate+WYUtils.h */,
-				3B1B040B311A833DB46DA188A7D45987 /* NSDate+WYUtils.m */,
-			);
-			name = NSDate;
-			path = WYUtils/Classes/NSDate;
-			sourceTree = "<group>";
-		};
-		2FF9397B9DD42C0BDD21E37D72145CF1 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				023D3A227CB45A0C874F5C2AFE73BA7A /* WYUtils.modulemap */,
-				8C22C1F13A7DD39562F9BC9D1C136DA6 /* WYUtils.xcconfig */,
-				609AAA8F7530B65AE314C5BE7C93FFBF /* WYUtils-dummy.m */,
-				BCA24D6265486F63DF135DEC6C2B2399 /* WYUtils-Info.plist */,
-				29F31BD8D09AE9757A4F6BBC4767F780 /* WYUtils-prefix.pch */,
-				52FE489016E3090891BEACA79B677114 /* WYUtils-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/WYUtils";
-			sourceTree = "<group>";
-		};
-		36C5E939983D18113D9F09CCABDAC65D /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				071AE100F9428B0C086BFAAAEFD4F197 /* WYUtils */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		3F4C880EF3AF242E0D9C5AB045D82F1D /* NSData */ = {
-			isa = PBXGroup;
-			children = (
-				89445F6234564614F631FBFDFE14C89F /* NSData+WYBase64.h */,
-				4CDB2AB80115372A0A46E250A66F8E56 /* NSData+WYBase64.m */,
-				0734ECE3C32E20ED3445232D41C9686B /* NSData+WYEncrypt.h */,
-				8C685E12539E2D721A22A06A1480B249 /* NSData+WYEncrypt.m */,
-				2B0FEBA6B9A645AF309D524B2C05F58F /* NSData+WYHexString.h */,
-				C9C3DAF4ED6302CD348411A51B4F18D9 /* NSData+WYHexString.m */,
-				B7F5251D23B2D7B146A8657007A06446 /* NSData+WYUtils.h */,
-				2147235A4D5D86041271AD4BB7759F47 /* NSData+WYUtils.m */,
+				38C290E684E79CCAC2BEEA367E526BCA /* NSData+WYBase64.h */,
+				143E06E93AA199CC2F899F3311F040CC /* NSData+WYBase64.m */,
+				88CE7607003092E94D9EC144A954B763 /* NSData+WYEncrypt.h */,
+				F5CF8009D39BDC3CC021CADC72F1ECDD /* NSData+WYEncrypt.m */,
+				9F4CB8F22DA353E67D69B3B62ABD645E /* NSData+WYHexString.h */,
+				97C5B3B33D341292EA981F31D4C43DBD /* NSData+WYHexString.m */,
+				8203DCD55C0496EAEA40168E8722CEFA /* NSData+WYUtils.h */,
+				7FA4344E790C6B6380ECCCCE78BE6860 /* NSData+WYUtils.m */,
 			);
 			name = NSData;
 			path = WYUtils/Classes/NSData;
 			sourceTree = "<group>";
 		};
-		49FB38343FA109DB87800192AB796DEE /* Pod */ = {
+		36C5E939983D18113D9F09CCABDAC65D /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DF23D072FBF58473C488105306580DFD /* LICENSE */,
-				62A1EABF050C8626015BF6DDFD92B502 /* README.md */,
-				6C0FF852C8622B968D4098E9D1ADACBC /* WYUtils.podspec */,
+				52B4DA1DDB90641394937D066056532C /* WYUtils */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		443A0B34A062B38D7A497C1B418D18F3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0ABE54EDC492116CFD8C034BA2534510 /* WYUtils.modulemap */,
+				11614099B543103DA494356E06334832 /* WYUtils.xcconfig */,
+				2BAD7DF7CA8B4BFE8B439A6D1C642751 /* WYUtils-dummy.m */,
+				7F0DB911E75E90C71DA370C6992291F0 /* WYUtils-Info.plist */,
+				8A226A8AF3DF33670D86D99DE7A06BBC /* WYUtils-prefix.pch */,
+				AF50FCD30889F493E2397B786E188F28 /* WYUtils-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/WYUtils";
+			sourceTree = "<group>";
+		};
+		52B4DA1DDB90641394937D066056532C /* WYUtils */ = {
+			isa = PBXGroup;
+			children = (
+				1762A455C6C8F1737F630D594EEF8210 /* WYUtils.h */,
+				DF5DDF39040EF1675F41C47365EAB3F4 /* Macro */,
+				258BAEA657EAF058001FDACB502D7B96 /* NSData */,
+				D7F1519605FF193C0252C24049DF8D5C /* NSDate */,
+				6A08EA3D862EA519FC793E1E4CA84FEF /* NSString */,
+				61905B6FC1D260851A47AC8A70723F2C /* Pod */,
+				443A0B34A062B38D7A497C1B418D18F3 /* Support Files */,
+				E513F4DF7CD07C61DACCC32A3A9A6986 /* UIColor */,
+				7B6679B5A3D89F0981F5F372D23A7D6F /* UIFont */,
+				7B74972FCD0C56245900FFFF17CB953C /* UIImage */,
+				A9881D2D4CCCCD55A58FD4AF4E28079E /* UINavigationBar */,
+				977A3EA6E4023B9630DC4DCA3DD43525 /* UIView */,
+			);
+			name = WYUtils;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		61905B6FC1D260851A47AC8A70723F2C /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				ED2925359D8229ACEB0DBB809F17FA29 /* LICENSE */,
+				E7DA19A5EF9E94FD41F3A4AEC0105EDF /* README.md */,
+				A9A0AA0E4B0BFD5B3EFADA8E8462803A /* WYUtils.podspec */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		66DB6E501F86CA891DAE665CFBCEBB4E /* Macro */ = {
+		6A08EA3D862EA519FC793E1E4CA84FEF /* NSString */ = {
 			isa = PBXGroup;
 			children = (
-				2372C2AE4F8328543F5E31166C9B0D81 /* WYMacroHeader.h */,
+				FE3CFEA932A0C8A0CC63BF9506CF3A43 /* NSString+WYBase64.h */,
+				14253BD3C873D9693295EAEFAC00DD49 /* NSString+WYBase64.m */,
+				175CABD2A37F702A3418B242FBB0A76D /* NSString+WYDecimal.h */,
+				734805D0645AB0373654C99BF6F87424 /* NSString+WYDecimal.m */,
+				B047FA1D5F3DD22FD5B9C4A99DD451FC /* NSString+WYEncrypt.h */,
+				9F03061942F4B295177B80AE2021D0FA /* NSString+WYEncrypt.m */,
+				378676FCB180EF68859043C6107B6242 /* NSString+WYHighLightColor.h */,
+				257966724F3EB35E34B8AEA531CBA259 /* NSString+WYHighLightColor.m */,
+				C4348FCD5C5FE81533F1221AAFE5424C /* NSString+WYMd5.h */,
+				AC6A39094A9B00B4CF531045198D1D05 /* NSString+WYMd5.m */,
+				FCC7554600D45CFC2048BA3C396248EC /* NSString+WYSuffix.h */,
+				B1E734186C445C90E9D9691B5D4ED573 /* NSString+WYSuffix.m */,
+				86411A3818AF9636CFF4F7EA3D428EBF /* NSString+WYURLEncode.h */,
+				1DF38E9519223157EC0F21D368B244BB /* NSString+WYURLEncode.m */,
+				48AB5C4F3A93D0D331073786FC7D8430 /* NSString+WYUtils.h */,
+				419E06DA3072DDED528C0832A10C561C /* NSString+WYUtils.m */,
 			);
-			name = Macro;
-			path = WYUtils/Classes/Macro;
+			name = NSString;
+			path = WYUtils/Classes/NSString;
 			sourceTree = "<group>";
 		};
-		709A8BF51FA63DC02E0D5249E944B1F9 /* UIColor */ = {
+		7B6679B5A3D89F0981F5F372D23A7D6F /* UIFont */ = {
 			isa = PBXGroup;
 			children = (
-				359C648EF7F7ADEB1B788089E43DAF18 /* UIColor+WYHexString.h */,
-				C3E883D1BCEADFF00AE487FCD61B306F /* UIColor+WYHexString.m */,
-				F8E06FC53193914CA68D1E3AD8C2C2B7 /* UIColor+WYUtils.h */,
-				265F7ED4297105CE2F19A2E7615DA3E9 /* UIColor+WYUtils.m */,
+				8D763EA469F033EE509F20A77F4BFFE8 /* UIFont+WYAllFonts.h */,
+				50990925192A85AB3BC6DCA11AD50A1D /* UIFont+WYAllFonts.m */,
+				42BFB6F11EF48EAE1A612B5C91142183 /* UIFont+WYUtils.h */,
+				D4089E3F9F1E801FB73C464C42AA1BA4 /* UIFont+WYUtils.m */,
 			);
-			name = UIColor;
-			path = WYUtils/Classes/UIColor;
+			name = UIFont;
+			path = WYUtils/Classes/UIFont;
+			sourceTree = "<group>";
+		};
+		7B74972FCD0C56245900FFFF17CB953C /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				E8A71413824E641E2FA6C51515F8FD22 /* UIImage+WYBlur.h */,
+				061C76A7E7E1DDA87909DC86A0580897 /* UIImage+WYBlur.m */,
+				2F52FCE145000E0A71E4E555B9A146EE /* UIImage+WYColor.h */,
+				D55B14FD898E2F3ED9BF671D6317F042 /* UIImage+WYColor.m */,
+				2A5E13CC69CF75CDF00824FAAD9A7E05 /* UIImage+WYMask.h */,
+				444A4979CE07D5FBCDC170D58311917F /* UIImage+WYMask.m */,
+				831ECBABBC97A9715446CD6593BC54B7 /* UIImage+WYOrientation.h */,
+				403CEC1878517C66D61F50CBA7133E33 /* UIImage+WYOrientation.m */,
+				2EB280BBAD998EDB35B9AE4D75020DAA /* UIImage+WYShrink.h */,
+				CF7397EC4770531C3EDC185BFE680524 /* UIImage+WYShrink.m */,
+				8713D852B0AAF6F205DBB56AE24A7094 /* UIImage+WYSpilteNine.h */,
+				32575359ABE4E61C2187778FA9D5D177 /* UIImage+WYSpilteNine.m */,
+				5A1034077433C593F557CD0514246F46 /* UIImage+WYUtils.h */,
+				4A35856426CFCC4FCFDD1DCE208E52B0 /* UIImage+WYUtils.m */,
+			);
+			name = UIImage;
+			path = WYUtils/Classes/UIImage;
 			sourceTree = "<group>";
 		};
 		86A0E54EFE81CC4DFD7B0297EA7B033F /* Pods-WYUtils_Example */ = {
@@ -379,12 +404,50 @@
 			path = "Target Support Files/Pods-WYUtils_Tests";
 			sourceTree = "<group>";
 		};
+		977A3EA6E4023B9630DC4DCA3DD43525 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				D817FE019A81DCDD66326D7FB2525630 /* UIView+WYCorner.h */,
+				EE7FC002DADFC972A66F5605124D86B1 /* UIView+WYCorner.m */,
+				1E16162701AC868621B0F145827DEE62 /* UIView+WYGestureRecognizer.h */,
+				6712B80AFA0E3B72BC3F4E29FD6237E2 /* UIView+WYGestureRecognizer.m */,
+				64FA3093E1037A171813745AF0532CB0 /* UIView+WYRenderImage.h */,
+				52C74D2204C695337B86FE1A85A9659E /* UIView+WYRenderImage.m */,
+				A94A260361F64EA9528ECE86170A7935 /* UIView+WYUtils.h */,
+				76EF2724DB3A384250DA6A54677CFDF8 /* UIView+WYUtils.m */,
+				716A28AE52CE7DAF1F03931D4A3D1058 /* WYDisplayImageView.h */,
+				552ECAEB4375406044B163637F652CA0 /* WYDisplayImageView.m */,
+				B66BE00CD3E3FAF78FCB26D4CB557DBA /* WYMaskView.h */,
+				5063576C1BDEFA975CB72C470B5BE270 /* WYMaskView.m */,
+				57665F18F4127AF49D5E7945CA5BD8C1 /* WYNotHintView.h */,
+				6DA66B1654D6606A4C85B211EF252BA4 /* WYNotHintView.m */,
+				816157DBBB86B91D30335C3BBFC89F75 /* WYPageControl.h */,
+				15B323AAFC011CFA787648E35ACFF3BB /* WYPageControl.m */,
+				5BC0370D2FF58207BA6A8703B38FD42D /* WYStickerView.h */,
+				4F719A383BFAFC0B9D7AF17E018F1C01 /* WYStickerView.m */,
+			);
+			name = UIView;
+			path = WYUtils/Classes/UIView;
+			sourceTree = "<group>";
+		};
 		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		A9881D2D4CCCCD55A58FD4AF4E28079E /* UINavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				E56CD30B7E6205A487A9A24208B581AD /* UINavigationBar+WYBottomBorderColor.h */,
+				AF99FC5BD3EE3B45C1BEAF76003AD45B /* UINavigationBar+WYBottomBorderColor.m */,
+				66A96058C3BE7E4E97453913432AAD77 /* UINavigationBar+WYUtils.h */,
+				CB68B1DE8EA240FC0218191522CB879F /* UINavigationBar+WYUtils.m */,
+			);
+			name = UINavigationBar;
+			path = WYUtils/Classes/UINavigationBar;
 			sourceTree = "<group>";
 		};
 		BC74157379707A899FAC5C3B67F36DD8 /* Products */ = {
@@ -395,30 +458,6 @@
 				00F2876656207824ACB8AC1227DAFDF3 /* WYUtils.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C0D41A15DE7B01F512304E693F61EE87 /* NSString */ = {
-			isa = PBXGroup;
-			children = (
-				5A4B31CE28E0C6E10A0F9DA0BDE25599 /* NSString+WYBase64.h */,
-				91984F6119F031ECEAF9266A4621BC88 /* NSString+WYBase64.m */,
-				05269177E36EA93652C731369F294F80 /* NSString+WYDecimal.h */,
-				6C101FE11ADCE9604663E12804C81659 /* NSString+WYDecimal.m */,
-				3D2259AD1040183AC5856EABF055E7C1 /* NSString+WYEncrypt.h */,
-				5F4B887389FED571DA982B758FF13EB9 /* NSString+WYEncrypt.m */,
-				2767A013CBC00390D95273BB314851C6 /* NSString+WYHighLightColor.h */,
-				BBB59362DCDD83B03E5BC06E7E502760 /* NSString+WYHighLightColor.m */,
-				6695D6F18D89FF6FDDB004A2BB0EB6A8 /* NSString+WYMd5.h */,
-				FF64AA10E15A80E468151DF4AE028373 /* NSString+WYMd5.m */,
-				C95A5C7A12EC3EE514804BDDD4586493 /* NSString+WYSuffix.h */,
-				6925ED1214C5E162E639E1E531B0F81B /* NSString+WYSuffix.m */,
-				DE18D4EEC0F16ED174B4F29FC35E36B3 /* NSString+WYURLEncode.h */,
-				5FC8A20F8C34DA1127DCC8A1604092A7 /* NSString+WYURLEncode.m */,
-				0D2ED4F2C114486D2336A5B53A3A3263 /* NSString+WYUtils.h */,
-				E3F7CE905664568CA2BE4C5F9120C56A /* NSString+WYUtils.m */,
-			);
-			name = NSString;
-			path = WYUtils/Classes/NSString;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -432,18 +471,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		D1F91710D1873F89F0BF27C90FCC29DA /* UINavigationBar */ = {
-			isa = PBXGroup;
-			children = (
-				C95384ED9F6967329E86304B28C1382B /* UINavigationBar+WYBottomBorderColor.h */,
-				43498323A677D2C018CCB0AA1A00BCFA /* UINavigationBar+WYBottomBorderColor.m */,
-				38B19BC60A66D26425F9E54C11654C53 /* UINavigationBar+WYUtils.h */,
-				E1D3B524DDB346E040C025667450441D /* UINavigationBar+WYUtils.m */,
-			);
-			name = UINavigationBar;
-			path = WYUtils/Classes/UINavigationBar;
-			sourceTree = "<group>";
-		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,64 +479,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DED5DA3289794DE9AE87D626FD689CFE /* UIView */ = {
+		D7F1519605FF193C0252C24049DF8D5C /* NSDate */ = {
 			isa = PBXGroup;
 			children = (
-				80E38DCEA0BD505943E8D6E245B2AFD2 /* UIView+WYCorner.h */,
-				2580BCF4ACD9382EE6E2DA426DE38436 /* UIView+WYCorner.m */,
-				C57BE5354FD02DB8F452E104437E4947 /* UIView+WYGestureRecognizer.h */,
-				5F0D319CA0BA2214D15ADC2BB985E58F /* UIView+WYGestureRecognizer.m */,
-				D74C223D39ADAA52BB5474D1E3C8A54E /* UIView+WYRenderImage.h */,
-				F0B3E42CD61FA5259CE3C2BB39DD2D30 /* UIView+WYRenderImage.m */,
-				4E63CA836FB425AB425E3F8C656D645A /* UIView+WYUtils.h */,
-				C97923441B4490FB30644733C61F2E72 /* UIView+WYUtils.m */,
-				9FD7F6E41A3FD42C37CA8075042A27CF /* WYDisplayImageView.h */,
-				D5AAE3D73779B40CFE83CF1950977AB0 /* WYDisplayImageView.m */,
-				0B85C56474304820555811E0D0C69AA2 /* WYMaskView.h */,
-				754497BDBA93EA80BB2DD403C1ADFE4B /* WYMaskView.m */,
-				B2FE93C5C003099850CD77F55DCC9CC0 /* WYNotHintView.h */,
-				A17D17E09BA64E139F959EABD244119B /* WYNotHintView.m */,
-				AC95F5304C5C2B827C7C0E795619BF3C /* WYStickerView.h */,
-				758BD2E583C2A42C2B1423851BD0F95E /* WYStickerView.m */,
-				93AA6396228C11B700F8784C /* WYPageControl.h */,
-				93AA6397228C11B700F8784C /* WYPageControl.m */,
+				0F453AB8ACD35F25523297E6713308EF /* NSDate+WYExtension.h */,
+				8D29D1E9D835E7617DEFE02C53BB5F5F /* NSDate+WYExtension.m */,
+				B63F9B33BB45C4F1AA1A7B3AC8D196ED /* NSDate+WYUtils.h */,
+				D461F6E21771F997DEF7FA78D43CE6E2 /* NSDate+WYUtils.m */,
 			);
-			name = UIView;
-			path = WYUtils/Classes/UIView;
+			name = NSDate;
+			path = WYUtils/Classes/NSDate;
 			sourceTree = "<group>";
 		};
-		DF68E1C49C4512CC4E8ED1E41814B62C /* UIFont */ = {
+		DF5DDF39040EF1675F41C47365EAB3F4 /* Macro */ = {
 			isa = PBXGroup;
 			children = (
-				28C132699A8FF1104C0543B1627D0D58 /* UIFont+WYAllFonts.h */,
-				2AF2B364761BC6812666B596E71463D0 /* UIFont+WYAllFonts.m */,
-				1E58A1982C80036E0CCC9CED86795E8E /* UIFont+WYUtils.h */,
-				F99EBDB9F301DF75581573B7E732EB43 /* UIFont+WYUtils.m */,
+				BD5263260DE2AC3AFC86D5021F96B87E /* WYMacroHeader.h */,
 			);
-			name = UIFont;
-			path = WYUtils/Classes/UIFont;
+			name = Macro;
+			path = WYUtils/Classes/Macro;
 			sourceTree = "<group>";
 		};
-		E02C8F98EC03ACEC116521601069E898 /* UIImage */ = {
+		E513F4DF7CD07C61DACCC32A3A9A6986 /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
-				AF1020CA43899224EEA2914911C68498 /* UIImage+WYBlur.h */,
-				6CFCD7684B487AE1AFEDEC8D7D7FE846 /* UIImage+WYBlur.m */,
-				5599856AC97140E574E49218B2B9448A /* UIImage+WYColor.h */,
-				6D45B18EFDF7AD74C8C9C27E0E8D3992 /* UIImage+WYColor.m */,
-				2DFF2087F9EAF58D81578E74D63C974A /* UIImage+WYMask.h */,
-				26E083849574E5642FA85C8210DB82E7 /* UIImage+WYMask.m */,
-				1B152229B2C9647B9977D5DDDAA127B8 /* UIImage+WYOrientation.h */,
-				EB6BD38ED507431B13CAD34A3FC6D61E /* UIImage+WYOrientation.m */,
-				65766E66053C0961652481560D364B7B /* UIImage+WYShrink.h */,
-				AD14A399BFEDA6F44A863E604D52C872 /* UIImage+WYShrink.m */,
-				9A22A89EF2A0DC967E2B97286AE92187 /* UIImage+WYSpilteNine.h */,
-				C9F9C10EF0641715A8C68E83703C0D56 /* UIImage+WYSpilteNine.m */,
-				5EDABF30D784E0FA913BFBF433660C71 /* UIImage+WYUtils.h */,
-				DD040222B2AFF23A06CFBA7B61598631 /* UIImage+WYUtils.m */,
+				12A4EA3C6E36BE8946E1638552E19D06 /* UIColor+WYHexString.h */,
+				C6E1258E7076E756CE760A89A216F459 /* UIColor+WYHexString.m */,
+				DE666C807971BDE780989DAC7C55122A /* UIColor+WYUtils.h */,
+				FCADE65AD43893BDEABE5D93B5BCF5EF /* UIColor+WYUtils.m */,
 			);
-			name = UIImage;
-			path = WYUtils/Classes/UIImage;
+			name = UIColor;
+			path = WYUtils/Classes/UIColor;
 			sourceTree = "<group>";
 		};
 		E9B1E44A4A77FF6B8AEC078B029A274B /* Targets Support Files */ = {
@@ -524,48 +524,49 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9D21C59C61F827A53CB01393AE5EF47F /* Headers */ = {
+		D5CDC0FFE71BDCFDBAD4814C4399A4AC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2190DBC4D1D1E7591B4DC5A6EF9B6C54 /* NSData+WYBase64.h in Headers */,
-				7E06195EC097453DC5B848DDBCDD9EEF /* NSData+WYEncrypt.h in Headers */,
-				ED53C44FACEF242E7DBFCA1E12E234CD /* NSData+WYHexString.h in Headers */,
-				715E18564BCAAE3BC97A2CA67755768A /* NSData+WYUtils.h in Headers */,
-				FDE42274903D8955D984B28C74371CBF /* NSDate+WYExtension.h in Headers */,
-				95F81CE2F3991AF88B4F8D75F97AE2C8 /* NSDate+WYUtils.h in Headers */,
-				26B0586F30EF71E95DD7C04DBFB7CB36 /* NSString+WYBase64.h in Headers */,
-				A7EBEF41C2708E2ADE32BBEC0602C116 /* NSString+WYDecimal.h in Headers */,
-				65775D2FC80D9851ECE42CAD9BEA04AC /* NSString+WYEncrypt.h in Headers */,
-				6E61759A5375ADC931F401856C811AD8 /* NSString+WYHighLightColor.h in Headers */,
-				83719E21C7314683B6E6A06EDD5701DA /* NSString+WYMd5.h in Headers */,
-				C7B176943F5B861C141153A94A1B7E8A /* NSString+WYSuffix.h in Headers */,
-				376BBAC886457C857A5F9111B8464FFD /* NSString+WYURLEncode.h in Headers */,
-				EB0DF98D986DEA7AE7BBA8E6DCDB38E3 /* NSString+WYUtils.h in Headers */,
-				C48775E8F79F922781101B92FAA89D07 /* UIColor+WYHexString.h in Headers */,
-				A24EB0A29C775E4970705AED6BEE642D /* UIColor+WYUtils.h in Headers */,
-				C8B5181EBF6897EAD4AC11A57BD57E15 /* UIFont+WYAllFonts.h in Headers */,
-				E08CE46F4D28B6EC84021DAD86A2064F /* UIFont+WYUtils.h in Headers */,
-				A398058F75021A7304947A20BA2522D9 /* UIImage+WYBlur.h in Headers */,
-				4570CEB8C92D60493D3A981F8B207ED8 /* UIImage+WYColor.h in Headers */,
-				DA28BC9348E3B5D5C398D7F9C86108F3 /* UIImage+WYMask.h in Headers */,
-				51FCDA740C4A0A495F4A74F90FC5FF02 /* UIImage+WYOrientation.h in Headers */,
-				812478F89F71CE1008DD402BA43B156F /* UIImage+WYShrink.h in Headers */,
-				00C4946D3A586365862A3349A4DCA2C7 /* UIImage+WYSpilteNine.h in Headers */,
-				0A3FCBF3EDC25DAF93B1E340BFECFD40 /* UIImage+WYUtils.h in Headers */,
-				4F95886F25BDE83BE7552542F256C122 /* UINavigationBar+WYBottomBorderColor.h in Headers */,
-				6ABF1106DEE88E512A3301DBEBA85644 /* UINavigationBar+WYUtils.h in Headers */,
-				F5E1C6083C6B99F683C6D716ADDA2649 /* UIView+WYCorner.h in Headers */,
-				C817C33C59F2B236A8A69B28B4BB9FA1 /* UIView+WYGestureRecognizer.h in Headers */,
-				588B17C193CF1F1C10198270D151AA66 /* UIView+WYRenderImage.h in Headers */,
-				12BF2A0FD109C8FB208118ACCFBF52B2 /* UIView+WYUtils.h in Headers */,
-				B2D8C263E84FEDF94E593008ADF70F8D /* WYDisplayImageView.h in Headers */,
-				BCEDAF5143AC39F7817DC7DEBCB56F4C /* WYMacroHeader.h in Headers */,
-				26EA384735062122A1F1649D9C4F80E9 /* WYMaskView.h in Headers */,
-				AF24A3AF8D19858AC4934216D5F1BB5B /* WYNotHintView.h in Headers */,
-				A2DD8F4E5DC74699E47EE9CDAF4CA931 /* WYStickerView.h in Headers */,
-				47EFC8ED3BD33F146A0D1F508CE36100 /* WYUtils-umbrella.h in Headers */,
-				BABE7502745B70F256A0970A5511097B /* WYUtils.h in Headers */,
+				B6F89190047B3E92A83B9715D45E489E /* NSData+WYBase64.h in Headers */,
+				2DE74C820D5019A1B6368FBAB55E5A34 /* NSData+WYEncrypt.h in Headers */,
+				7B0C0329AC2762D9CE70F1C25CE61FD8 /* NSData+WYHexString.h in Headers */,
+				D0D5766C1F53FA6AD811A4A59F51AFF2 /* NSData+WYUtils.h in Headers */,
+				265E44669FB04C217101FBE1421FA06A /* NSDate+WYExtension.h in Headers */,
+				F82666FE722D10EF753106215DE54BB5 /* NSDate+WYUtils.h in Headers */,
+				1E74CF1B2B22BAC405AF3280B98B9EBA /* NSString+WYBase64.h in Headers */,
+				15BE4312239A9708B034EC547844B25A /* NSString+WYDecimal.h in Headers */,
+				E076E5630BC53544B72F5470B9048A8A /* NSString+WYEncrypt.h in Headers */,
+				3FDCFF57E81D41EABF90C5EB666E941E /* NSString+WYHighLightColor.h in Headers */,
+				9A866E76123F013299D9C543D7B2A81C /* NSString+WYMd5.h in Headers */,
+				81111114B5CA13517743971669AE0A0B /* NSString+WYSuffix.h in Headers */,
+				7A33F3A160AC8587514F3B254048E1D4 /* NSString+WYURLEncode.h in Headers */,
+				4E923F86072758196C3C7D925259E01C /* NSString+WYUtils.h in Headers */,
+				83951F092CDCEE46D17D33A5C329DC84 /* UIColor+WYHexString.h in Headers */,
+				5BC79F3410B2D04C8AAF64917CE22741 /* UIColor+WYUtils.h in Headers */,
+				00B588DAF4962E8EB6088D5E2C729BDA /* UIFont+WYAllFonts.h in Headers */,
+				3817885B70A282E86902CEC91B320598 /* UIFont+WYUtils.h in Headers */,
+				4CBE712F1B02A7EFD27E1B5D80D3AF72 /* UIImage+WYBlur.h in Headers */,
+				C78BCD203EF34709691BDDD1D483ACE8 /* UIImage+WYColor.h in Headers */,
+				D349BBA5FFCEB5FECDB5084275D60223 /* UIImage+WYMask.h in Headers */,
+				CA70A6BCDE7CF3F47A2AB2B275AE9029 /* UIImage+WYOrientation.h in Headers */,
+				A9E6B5D4723CE51C7519800849FB65C3 /* UIImage+WYShrink.h in Headers */,
+				28B4C86E9759109624DE6C084169A035 /* UIImage+WYSpilteNine.h in Headers */,
+				DAEBDC271B0B20094E3776F1FAFD576B /* UIImage+WYUtils.h in Headers */,
+				D01FD7C00B1E129594BCDCB15BDCE8D3 /* UINavigationBar+WYBottomBorderColor.h in Headers */,
+				F60AD3202D2215A92E52BEB6C6E2207C /* UINavigationBar+WYUtils.h in Headers */,
+				D316C7708A03A173898D2BCC9F112638 /* UIView+WYCorner.h in Headers */,
+				E04A2ED001E4AC6D47A0A1201C4773BA /* UIView+WYGestureRecognizer.h in Headers */,
+				EB7B280566DB0062642CAAABF1D52BAC /* UIView+WYRenderImage.h in Headers */,
+				B8E33B227092EB988B528C27E0CF0DBF /* UIView+WYUtils.h in Headers */,
+				F5E0AA04F856EA7F821BDAED07DABA17 /* WYDisplayImageView.h in Headers */,
+				38E00EF35CF2E643E3F5DD75E8F46400 /* WYMacroHeader.h in Headers */,
+				DF605F6AC2E4F39ACE6A2CCB1CCA511D /* WYMaskView.h in Headers */,
+				738915886B2344ACD459114740DD4279 /* WYNotHintView.h in Headers */,
+				A6F75E59893CC206B1C6F0099EDCF24F /* WYPageControl.h in Headers */,
+				5BB6056B6FECFE07CB5D5250E33BA9C6 /* WYStickerView.h in Headers */,
+				AB865CA59E263E5A463CF7FE0D00F0E6 /* WYUtils-umbrella.h in Headers */,
+				EB0540DDF6A29A26166D7F922686E949 /* WYUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,7 +583,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A18903191B87CF8AA129AC960210FB74 /* Pods-WYUtils_Example-umbrella.h in Headers */,
-				93AA6398228C11B700F8784C /* WYPageControl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,8 +631,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E446297722B6B4ABD6C3471255B160C /* Build configuration list for PBXNativeTarget "WYUtils" */;
 			buildPhases = (
-				9D21C59C61F827A53CB01393AE5EF47F /* Headers */,
-				54610414FE434740991CECBAE869E1A7 /* Sources */,
+				D5CDC0FFE71BDCFDBAD4814C4399A4AC /* Headers */,
+				C54E8B11CF8393A111611DD5278CA6C3 /* Sources */,
 				67EB255A187BC51FC260BA16B2D9EC89 /* Frameworks */,
 				C1F39EC271EA66710B6C8AA675F9261D /* Resources */,
 			);
@@ -659,7 +659,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -703,51 +702,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93AA6399228C11B700F8784C /* WYPageControl.m in Sources */,
 				EAED6204958E65B94CF45A9BA3648E75 /* Pods-WYUtils_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		54610414FE434740991CECBAE869E1A7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				606C1DD38CEB2E9A9B8FC87BE0AE85DC /* NSData+WYBase64.m in Sources */,
-				C2C483FF57AD2A5AD1695E951A53260A /* NSData+WYEncrypt.m in Sources */,
-				A83D238FF0E4F47F032CDC913162EBC3 /* NSData+WYHexString.m in Sources */,
-				F823459D82038EE18FB7AB5418AE6236 /* NSData+WYUtils.m in Sources */,
-				DCBE681B764DFB404726EF5F90E44796 /* NSDate+WYExtension.m in Sources */,
-				82327E44064AC5F8DCE2BFDE5227A69E /* NSDate+WYUtils.m in Sources */,
-				750200A91148AEE37C18B2FCC4076D27 /* NSString+WYBase64.m in Sources */,
-				CB06E2C53CEDAE5F02D8DDCBDD9249E2 /* NSString+WYDecimal.m in Sources */,
-				7AD3F94DE74D507DEED31C34A327EC56 /* NSString+WYEncrypt.m in Sources */,
-				8CA4619732E9B49D15F16AB6C256A527 /* NSString+WYHighLightColor.m in Sources */,
-				CA033ABAB9AF018508790F4427461ADD /* NSString+WYMd5.m in Sources */,
-				2C1038854C7B050184A9C909EB9DFF78 /* NSString+WYSuffix.m in Sources */,
-				3FACC439D67DC4E5E456CB08CE2717E9 /* NSString+WYURLEncode.m in Sources */,
-				C9534F8F1EF40B4DEC612A7C8771791D /* NSString+WYUtils.m in Sources */,
-				0A5292413682853427DE9C326954A156 /* UIColor+WYHexString.m in Sources */,
-				021A2576F973D5F123CE6DDA253E3042 /* UIColor+WYUtils.m in Sources */,
-				293D82764F31258625ACAABBDD27FAFB /* UIFont+WYAllFonts.m in Sources */,
-				A4B81E1C883A7E8F09560456EF83E48B /* UIFont+WYUtils.m in Sources */,
-				15449B791E3F879F06341E5FF9BE2CE6 /* UIImage+WYBlur.m in Sources */,
-				951F2BB5FC8B5B181C84F24FAD0B280D /* UIImage+WYColor.m in Sources */,
-				9287D5E502E6734AAA94AF0CD7C2F192 /* UIImage+WYMask.m in Sources */,
-				DDF42B18F4E6812DAC6232D6BFFCE6C7 /* UIImage+WYOrientation.m in Sources */,
-				7BEDDC52C4AC048C0D9CE9D603A9A0D0 /* UIImage+WYShrink.m in Sources */,
-				39CF7B4997D55F251FC517F5539C475F /* UIImage+WYSpilteNine.m in Sources */,
-				146C205617A12CFCA138D682F671BDA2 /* UIImage+WYUtils.m in Sources */,
-				5315BCB816E189FEB562783228EA567D /* UINavigationBar+WYBottomBorderColor.m in Sources */,
-				54922814D22934957FBB8F2CFA8F27CD /* UINavigationBar+WYUtils.m in Sources */,
-				83B66BBFB6FBAB75CE3460738D31ABA1 /* UIView+WYCorner.m in Sources */,
-				CF46363A3D2F28F1452A4A4DE3EB617E /* UIView+WYGestureRecognizer.m in Sources */,
-				05F3AD0E5E69F9DB6FE0CD24CAB06B74 /* UIView+WYRenderImage.m in Sources */,
-				A04B4CEA885AA1D8AFF5C9956A55BBB4 /* UIView+WYUtils.m in Sources */,
-				39CC8ABEAB398A42C638C0018B0D17C5 /* WYDisplayImageView.m in Sources */,
-				E72F66CE9099F568E415E6918F4E9600 /* WYMaskView.m in Sources */,
-				5797D889BB1E0E493E8105BBAD1F80F9 /* WYNotHintView.m in Sources */,
-				AFEEADF0209C082F87C40CEA5D51C416 /* WYStickerView.m in Sources */,
-				C77C8697736BAA20347B9789BBDBEE76 /* WYUtils-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,6 +711,50 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED0BF1C9C387F222AE834CD0100341C3 /* Pods-WYUtils_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C54E8B11CF8393A111611DD5278CA6C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9457F8C7543020F4A215635BD0592582 /* NSData+WYBase64.m in Sources */,
+				3AF3B646136D074AB252344E2B5F2225 /* NSData+WYEncrypt.m in Sources */,
+				E6C6034DEB42EB20B87C121CD160516A /* NSData+WYHexString.m in Sources */,
+				B13D40618CE33358C2703F878B2A622C /* NSData+WYUtils.m in Sources */,
+				9D9240AF177D6A93F2BDA6F74042C6A9 /* NSDate+WYExtension.m in Sources */,
+				DDD83316CE1C77715134307421FEA604 /* NSDate+WYUtils.m in Sources */,
+				EE9D12CDBDA06C8E39068E50EACBE991 /* NSString+WYBase64.m in Sources */,
+				23E0BB17AACD9EBF26315A27C4DB346B /* NSString+WYDecimal.m in Sources */,
+				4A11CF21345E4D47350B55BC538E8440 /* NSString+WYEncrypt.m in Sources */,
+				6E34B0BC8122711F9ED006E73950B921 /* NSString+WYHighLightColor.m in Sources */,
+				982635D127711743A2646B02C4C665C1 /* NSString+WYMd5.m in Sources */,
+				86F0C30B27B50A0CE82E2BF95E159375 /* NSString+WYSuffix.m in Sources */,
+				369BDEBE0202A29ED966D361A70EDDD6 /* NSString+WYURLEncode.m in Sources */,
+				01BD8C7B2D6512FE66CE8DC38417DA7C /* NSString+WYUtils.m in Sources */,
+				9BF85E22DCF9C9528BB55E55A2EDE37A /* UIColor+WYHexString.m in Sources */,
+				090DF12947CBF630B961B1A911EC0301 /* UIColor+WYUtils.m in Sources */,
+				226EFA69676DA7B8E8CC35064CA912E0 /* UIFont+WYAllFonts.m in Sources */,
+				394AD122CFC0909FFF62F2FA4C4D887F /* UIFont+WYUtils.m in Sources */,
+				AF19C9DE35FBE1F0EE0626E5A6952F84 /* UIImage+WYBlur.m in Sources */,
+				29F9447A059ADBEC3E7936839AF96D5C /* UIImage+WYColor.m in Sources */,
+				9A45779CA24AC67ABA4C63008290A89F /* UIImage+WYMask.m in Sources */,
+				2A4880034F09020CBB6AB01DE9F347CA /* UIImage+WYOrientation.m in Sources */,
+				96EB1D5F6619BD259BE358D4E96DF7A5 /* UIImage+WYShrink.m in Sources */,
+				304BABDCBD8BE21CB78D41B36D488E11 /* UIImage+WYSpilteNine.m in Sources */,
+				2F7596211D52A910D7B32DF75CF20B16 /* UIImage+WYUtils.m in Sources */,
+				42B0F811BF133D78CC65A67E102C9822 /* UINavigationBar+WYBottomBorderColor.m in Sources */,
+				591EC2EC9D3049386CBD8D1237B56216 /* UINavigationBar+WYUtils.m in Sources */,
+				E36059A30E396CBEF0EE0E7C6D462B80 /* UIView+WYCorner.m in Sources */,
+				BBCB34B542417E7F2EE1A854EF21F5CB /* UIView+WYGestureRecognizer.m in Sources */,
+				EEE7151C6F45748646F1BB9B67ADD8AD /* UIView+WYRenderImage.m in Sources */,
+				C6CEA194FA098099D2846C84B0CCE912 /* UIView+WYUtils.m in Sources */,
+				BA03939600A32C54D53FF7628B91B911 /* WYDisplayImageView.m in Sources */,
+				E7E410DF2E281523FDD2F4C8973BEEB9 /* WYMaskView.m in Sources */,
+				2481DF0A26B9DEF23DD854B544959AF8 /* WYNotHintView.m in Sources */,
+				5CE33153627CAF1A36D0CAC5AE19ACDB /* WYPageControl.m in Sources */,
+				45CDDA3B304E6613D409601F6B1932F3 /* WYStickerView.m in Sources */,
+				BC65B03A20FDA445E6F0FD38A9A80E5A /* WYUtils-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -779,7 +778,7 @@
 /* Begin XCBuildConfiguration section */
 		17E2BA1715215EC05541DB392D8497F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C22C1F13A7DD39562F9BC9D1C136DA6 /* WYUtils.xcconfig */;
+			baseConfigurationReference = 11614099B543103DA494356E06334832 /* WYUtils.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1007,7 +1006,7 @@
 		};
 		F0C2CB196A0E4AE7F5BDADB91650628A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C22C1F13A7DD39562F9BC9D1C136DA6 /* WYUtils.xcconfig */;
+			baseConfigurationReference = 11614099B543103DA494356E06334832 /* WYUtils.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1089,7 +1088,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
