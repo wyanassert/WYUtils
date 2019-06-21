@@ -1,6 +1,6 @@
 {
   "name": "WYUtils",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "summary": "Some Utils For Myself.",
   "description": "Basical Utils For Myself. Will not require for Auth of iOS. And will not use runtime for security.",
   "homepage": "https://github.com/wyanassert/WYUtils",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/wyanassert/WYUtils.git",
-    "tag": "0.3.5"
+    "tag": "0.3.6"
   },
   "platforms": {
     "ios": "8.0"
