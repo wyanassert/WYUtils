@@ -44,6 +44,8 @@
     self.textColor = self.borderColor;
     [super drawTextInRect:rect];
     
+    self.textColor = textColor;
+    
     self.shadowOffset = shadowOffset;
 }
 
