@@ -15,6 +15,7 @@
 #import "WYMaskView.h"
 #import "WYNotHintView.h"
 #import "WYPageControl.h"
+#import "WYExchangeWidgetView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

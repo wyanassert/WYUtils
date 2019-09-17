@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WYUtils'
-  s.version          = '0.3.8'
+  s.version          = '0.4.0'
   s.summary          = 'Some Utils For Myself.'
 
 # This description is used to generate tags and improve search results.
