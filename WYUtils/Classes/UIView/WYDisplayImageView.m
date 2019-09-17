@@ -8,11 +8,11 @@
 #import "WYDisplayImageView.h"
 #import "WYMacroHeader.h"
 
-#define kWYInitialZoom 2
+#define kWYInitialZoom 3
 
 @interface WYDisplayImageView () <UIScrollViewDelegate>
 
-@property (nonatomic, strong) UIImageView  *imageview;
+@property (nonatomic, strong) UIImageView  *imageView;
 @property (nonatomic, retain) UIScrollView *contentView;
 
 @property (nonatomic, strong) UIImage      *image;
@@ -27,9 +27,7 @@
     if (self) {
         _predictSize = size;
         _image = image;
-        [self initContentView];
-        [self initImageView];
-        [self configGesture];
+        [self configView];
         [self setImageViewData:image];
     }
     return self;
@@ -41,94 +39,69 @@
     [self setImageViewData:image];
 }
 
-- (void)initContentView {
+- (void)configView {
     self.backgroundColor = [UIColor grayColor];
+    self.showsHorizontalScrollIndicator = NO;
+    self.showsVerticalScrollIndicator = NO;
     
-    self.contentView = [[UIScrollView alloc] initWithFrame:CGRectInset(self.bounds, 0, 0)];
-    self.contentView.delegate = self;
-    self.contentView.showsHorizontalScrollIndicator = NO;
-    self.contentView.showsVerticalScrollIndicator = NO;
-    [self addSubview:self.contentView];
-}
-
-- (void)initImageView {
-    self.imageview = [[UIImageView alloc] initWithFrame:self.bounds];
-    self.imageview.frame = CGRectMake(0, 0, self.predictSize.width * kWYInitialZoom, self.predictSize.height * kWYInitialZoom);
-    self.imageview.userInteractionEnabled = YES;
-    [self.contentView addSubview:self.imageview];
-}
-
-- (void)configGesture {
-    // Add gesture,double tap zoom imageView.
-    UITapGestureRecognizer *doubleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                       action:@selector(handleDoubleTap:)];
-    [doubleTapGesture setNumberOfTapsRequired:2];
-    [self.imageview addGestureRecognizer:doubleTapGesture];
-    
-    float minimumScale = self.frame.size.width / self.imageview.frame.size.width;
+    float minimumScale = self.frame.size.width / self.imageView.frame.size.width;
     [self.contentView setMinimumZoomScale:minimumScale];
     [self.contentView setZoomScale:minimumScale];
     
-    self.showsHorizontalScrollIndicator = NO;
-    self.showsVerticalScrollIndicator = NO;
+    [self addSubview:self.contentView];
+    [self.contentView addSubview:self.imageView];
 }
 
+#pragma mark - View cycle && Override
+- (void)dealloc {
+    _contentView = nil;
+    _imageView = nil;
+}
 
-- (void)setFrame:(CGRect)frame
-{
+- (void)setFrame:(CGRect)frame {
     [super setFrame:frame];
-    _contentView.frame = CGRectInset(self.bounds, 0, 0);
-    self.imageview.frame = CGRectMake(0, 0, self.predictSize.width  * kWYInitialZoom, self.predictSize.height * kWYInitialZoom);
-    float minimumScale = self.frame.size.width / _imageview.frame.size.width;
-    [_contentView setMinimumZoomScale:minimumScale];
-    [_contentView setZoomScale:minimumScale];
+    self.contentView.frame = CGRectInset(self.bounds, 0, 0);
+    self.imageView.frame = CGRectMake(0, 0, self.predictSize.width  * kWYInitialZoom, self.predictSize.height * kWYInitialZoom);
+    float minimumScale = self.frame.size.width / self.imageView.frame.size.width;
+    [self.contentView setMinimumZoomScale:minimumScale];
+    [self.contentView setZoomScale:minimumScale];
 }
 
-- (void)setNotReloadFrame:(CGRect)frame
-{
+- (void)setNotReloadFrame:(CGRect)frame {
     [super setFrame:frame];
-    
 }
 
-
-- (void)setBounds:(CGRect)bounds
-{
+- (void)setBounds:(CGRect)bounds {
     [super setBounds:bounds];
-    _contentView.frame = self.bounds;
-    self.imageview.frame = CGRectMake(0, 0, self.predictSize.width * kWYInitialZoom, self.predictSize.height * kWYInitialZoom);
-    float minimumScale = self.frame.size.width / _imageview.frame.size.width;
-    [_contentView setMinimumZoomScale:minimumScale];
-    [_contentView setZoomScale:minimumScale];
+    self.contentView.frame = self.bounds;
+    self.imageView.frame = CGRectMake(0, 0, self.predictSize.width * kWYInitialZoom, self.predictSize.height * kWYInitialZoom);
+    float minimumScale = self.frame.size.width / self.imageView.frame.size.width;
+    [self.contentView setMinimumZoomScale:minimumScale];
+    [self.contentView setZoomScale:minimumScale];
 }
 
-- (void)setImageViewData:(UIImage *)imageData
-{
-    _imageview.image= imageData;
+- (void)setImageViewData:(UIImage *)imageData {
+    self.imageView.image= imageData;
     if (imageData == nil) {
         return;
     }
-    
     CGRect rect  = CGRectZero;
     CGFloat scale = 1.0f;
     CGFloat w = 0.0f;
     CGFloat h = 0.0f;
     
     if(imageData.size.width && imageData.size.height) {
-        if(self.contentView.frame.size.width > self.contentView.frame.size.height)
-        {
-            
+        if(self.contentView.frame.size.width > self.contentView.frame.size.height) {
             w = self.contentView.frame.size.width;
             h = w*imageData.size.height/imageData.size.width;
-            if(h < self.contentView.frame.size.height){
+            if(h < self.contentView.frame.size.height) {
                 h = self.contentView.frame.size.height;
                 w = h*imageData.size.width/imageData.size.height;
             }
-            
-        }else{
-            
+        } else {
             h = self.contentView.frame.size.height;
             w = h*imageData.size.width/imageData.size.height;
-            if(w < self.contentView.frame.size.width){
+            if(w < self.contentView.frame.size.width) {
                 w = self.contentView.frame.size.width;
                 h = w*imageData.size.height/imageData.size.width;
             }
@@ -137,7 +110,6 @@
     } else {
         rect.size = self.predictSize;
     }
-    
     CGFloat scale_w = w / imageData.size.width;
     CGFloat scale_h = h / imageData.size.height;
     if (w > self.frame.size.width || h > self.frame.size.height) {
@@ -145,49 +117,49 @@
         scale_h = h / self.frame.size.height;
         if (scale_w > scale_h) {
             scale = 1/scale_w;
-        }else{
+        } else {
             scale = 1/scale_h;
         }
     }
-    
     if (w <= self.frame.size.width || h <= self.frame.size.height) {
         scale_w = w / self.frame.size.width;
         scale_h = h / self.frame.size.height;
         if (scale_w > scale_h) {
             scale = scale_h;
-        }else{
+        } else {
             scale = scale_w;
         }
     }
     
-    @synchronized(self){
-        _imageview.frame = rect;
-        [_contentView setZoomScale:0.6 animated:YES];
+    @synchronized(self) {
+        self.imageView.frame = rect;
+        [self.contentView setZoomScale:0.4 animated:YES];
         [self setNeedsLayout];
-        
     }
-    
 }
 
-- (void)setImageViewData:(UIImage *)imageData rect:(CGRect)rect
-{
-    
+- (void)setImageViewData:(UIImage *)imageData rect:(CGRect)rect {
     self.frame = rect;
     [self setImageViewData:imageData];
 }
 
 
-#pragma mark - Zoom methods
-
-- (void)handleDoubleTap:(UIGestureRecognizer *)gesture
-{
-    float newScale = _contentView.zoomScale * 1.2;
-    CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gesture locationInView:_imageview]];
-    [_contentView zoomToRect:zoomRect animated:YES];
+#pragma mark - Action
+- (void)handleSingleTap {
+    if(self.clickImageBlock) {
+        self.clickImageBlock(self, self.image);
+    }
 }
 
-- (CGRect)zoomRectForScale:(float)scale withCenter:(CGPoint)center
-{
+#pragma mark - Zoom methods
+
+- (void)handleDoubleTap:(UIGestureRecognizer *)gesture {
+    float newScale = self.contentView.zoomScale * 1.2;
+    CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gesture locationInView:self.imageView]];
+    [self.contentView zoomToRect:zoomRect animated:YES];
+}
+
+- (CGRect)zoomRectForScale:(float)scale withCenter:(CGPoint)center {
     CGRect zoomRect;
     if (scale == 0) {
         scale = 1;
@@ -202,42 +174,55 @@
 
 #pragma mark - UIScrollViewDelegate
 
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
-{
-    return _imageview;
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return self.imageView;
 }
 
-- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale
-{
-    
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale {
     [scrollView setZoomScale:scale animated:NO];
 }
 
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     
 }
 
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     CGPoint touch = [[touches anyObject] locationInView:self.superview];
-    self.imageview.center = touch;
-    
+    self.imageView.center = touch;
 }
 
-#pragma mark - View cycle
-- (void)dealloc
-{
-    
-    _contentView = nil;
-    _imageview = nil;
+#pragma mark - Getter
+- (UIImageView *)imageView {
+    if (!_imageView) {
+        _imageView = [[UIImageView alloc] init];
+        _imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+        _imageView.frame = CGRectMake(0, 0, self.predictSize.width * kWYInitialZoom, self.predictSize.height * kWYInitialZoom);
+        _imageView.userInteractionEnabled = YES;
+        UITapGestureRecognizer *doubleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
+        [doubleTapGesture setNumberOfTapsRequired:2];
+        [_imageView addGestureRecognizer:doubleTapGesture];
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap)];
+        [_imageView addGestureRecognizer:tapGesture];
+    }
+    return _imageView;
 }
+
+- (UIScrollView *)contentView {
+    if (!_contentView) {
+        _contentView = [[UIScrollView alloc] init];
+        _contentView = [[UIScrollView alloc] initWithFrame:CGRectInset(self.bounds, 0, 0)];
+        _contentView.delegate = self;
+        _contentView.showsHorizontalScrollIndicator = NO;
+        _contentView.showsVerticalScrollIndicator = NO;
+    }
+    return _contentView;
+}
+
 @end
 
