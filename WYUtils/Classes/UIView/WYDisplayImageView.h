@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WYDisplayImageView : UIView
+@interface WYDisplayImageView : UIScrollView
 
 - (instancetype)initWithImage:(UIImage *)image andSize:(CGSize)size;
 - (void)loadImage:(UIImage *)image withSize:(CGSize)size;
