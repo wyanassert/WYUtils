@@ -154,9 +154,15 @@
 #pragma mark - Zoom methods
 
 - (void)handleDoubleTap:(UIGestureRecognizer *)gesture {
-    float newScale = self.contentView.zoomScale * 1.2;
-    CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gesture locationInView:self.imageView]];
-    [self.contentView zoomToRect:zoomRect animated:YES];
+    if(self.contentView.zoomScale < self.contentView.maximumZoomScale) {
+        float newScale = self.contentView.zoomScale * 1.2;
+        CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gesture locationInView:self.imageView]];
+        [self.contentView zoomToRect:zoomRect animated:YES];
+    } else {
+        float newScale = self.contentView.minimumZoomScale/self.contentView.maximumZoomScale;
+        CGRect zoomRect = [self zoomRectForScale:newScale withCenter:[gesture locationInView:self.imageView]];
+        [self.contentView zoomToRect:zoomRect animated:YES];
+    }
 }
 
 - (CGRect)zoomRectForScale:(float)scale withCenter:(CGPoint)center {
