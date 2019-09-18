@@ -56,8 +56,8 @@
         CGFloat deltaX = newPoint.x-startPoint.x;
         CGFloat deltaY = newPoint.y-startPoint.y;
         btn.center = CGPointMake(btn.center.x+deltaX,btn.center.y+deltaY);
-    
-        NSInteger index = [self indexOfPoint:btn.center withButton:btn];
+        CGPoint judgePoint = CGPointMake(btn.frame.origin.x + newPoint.x, btn.frame.origin.y + newPoint.y);
+        NSInteger index = [self indexOfPoint:judgePoint withButton:btn];
         
         if (index < 0) {
             contain = NO;
@@ -70,30 +70,27 @@
         [UIView animateWithDuration:0.2 animations:^{
             btn.transform = CGAffineTransformIdentity;
             btn.alpha = 1.0;
-            if (!contain && !_tempView)
+            if (!self->contain && !self->_tempView)
             {
-                btn.center = originPoint;
+                btn.center = self->originPoint;
             } else {
-                btn.frame = _tempView.frame;
-                _tempView.frame = originFrame;
-                [self didExchangeView1:btn andView2:_tempView];
+                btn.frame = self->_tempView.frame;
+                self->_tempView.frame = self->originFrame;
+                [self didExchangeView1:btn andView2:self->_tempView];
             }
-            _tempView = nil;
         } completion:^(BOOL finished) {
+            self->_tempView = nil;
+            self->contain = NO;
             [self didEndLongPress];
         }];
     }
 }
 
-- (NSInteger)indexOfPoint:(CGPoint)point withButton:(UIView *)btn
-{
-    for (NSInteger i = 0;i<_itemsList.count;i++)
-    {
+- (NSInteger)indexOfPoint:(CGPoint)point withButton:(UIView *)btn {
+    for (NSInteger i = 0; i < _itemsList.count; i++) {
         UIView *button = _itemsList[i];
-        if (button != btn)
-        {
-            if (CGRectContainsPoint(button.frame, point))
-            {
+        if (button != btn) {
+            if (CGRectContainsPoint(button.frame, point)) {
                 return i;
             }
         }
