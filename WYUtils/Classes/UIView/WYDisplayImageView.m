@@ -17,6 +17,7 @@
 
 @property (nonatomic, strong) UIImage      *image;
 @property (nonatomic, assign) CGSize       predictSize;
+@property (nonatomic, strong) UIBezierPath         *maskPath;
 
 @end
 
@@ -52,7 +53,39 @@
     [self.contentView addSubview:self.imageView];
 }
 
+- (void)loadMaskWithPath:(UIBezierPath *)path {
+    self.maskPath = path;
+    if(path == nil) {
+        self.layer.mask = nil;
+    } else {
+        CAShapeLayer *maskLayer = [CAShapeLayer layer];
+        maskLayer.frame = self.bounds;
+        maskLayer.path = path.CGPath;
+        self.layer.mask = maskLayer;
+    }
+}
+
 #pragma mark - View cycle && Override
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    if (!self.isUserInteractionEnabled || self.isHidden || self.alpha <= 0.01) {
+        return nil;
+    }
+    if ([self pointInside:point withEvent:event]) {
+        if(!CGPathContainsPoint(self.maskPath.CGPath, nil, point, YES)) {
+            return nil;
+        }
+        for (UIView *subview in [self.subviews reverseObjectEnumerator]) {
+            CGPoint convertedPoint = [subview convertPoint:point fromView:self];
+            UIView *hitTestView = [subview hitTest:convertedPoint withEvent:event];
+            if (hitTestView) {
+                return hitTestView;
+            }
+        }
+        return self;
+    }
+    return nil;
+}
+
 - (void)dealloc {
     _contentView = nil;
     _imageView = nil;
