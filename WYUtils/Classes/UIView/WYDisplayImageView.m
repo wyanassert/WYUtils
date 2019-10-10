@@ -71,7 +71,7 @@
         return nil;
     }
     if ([self pointInside:point withEvent:event]) {
-        if(!CGPathContainsPoint(self.maskPath.CGPath, nil, point, YES)) {
+        if(self.maskPath && !CGPathContainsPoint(self.maskPath.CGPath, nil, point, YES)) {
             return nil;
         }
         for (UIView *subview in [self.subviews reverseObjectEnumerator]) {
