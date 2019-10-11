@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithImage:(UIImage *)image andSize:(CGSize)size;
 - (void)loadImage:(UIImage *)image withSize:(CGSize)size;
 - (void)loadMaskWithPath:(UIBezierPath *)path;
+- (void)resetZoom;
 @property (nonatomic, copy) void(^clickImageBlock)(WYDisplayImageView *displayView, UIImage *image);
 
 @end

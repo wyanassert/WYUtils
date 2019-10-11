@@ -35,7 +35,6 @@
 }
 
 - (void)loadImage:(UIImage *)image withSize:(CGSize)size {
-    _predictSize = size;
     _image = image;
     [self setImageViewData:image];
 }
@@ -45,12 +44,12 @@
     self.showsHorizontalScrollIndicator = NO;
     self.showsVerticalScrollIndicator = NO;
     
+    [self.contentView addSubview:self.imageView];
+    
     float minimumScale = self.frame.size.width / self.imageView.frame.size.width;
     [self.contentView setMinimumZoomScale:minimumScale];
-    [self.contentView setZoomScale:minimumScale];
     
     [self addSubview:self.contentView];
-    [self.contentView addSubview:self.imageView];
 }
 
 - (void)loadMaskWithPath:(UIBezierPath *)path {
@@ -63,6 +62,10 @@
         maskLayer.path = path.CGPath;
         self.layer.mask = maskLayer;
     }
+}
+
+- (void)resetZoom {
+    [self.contentView setZoomScale:1.0/kWYInitialZoom animated:YES];
 }
 
 #pragma mark - View cycle && Override
@@ -93,11 +96,8 @@
 
 - (void)setFrame:(CGRect)frame {
     [super setFrame:frame];
+    _predictSize = frame.size;
     self.contentView.frame = CGRectInset(self.bounds, 0, 0);
-    self.imageView.frame = CGRectMake(0, 0, self.predictSize.width  * kWYInitialZoom, self.predictSize.height * kWYInitialZoom);
-    float minimumScale = self.frame.size.width / self.imageView.frame.size.width;
-    [self.contentView setMinimumZoomScale:minimumScale];
-    [self.contentView setZoomScale:minimumScale];
 }
 
 - (void)setNotReloadFrame:(CGRect)frame {
@@ -107,19 +107,15 @@
 - (void)setBounds:(CGRect)bounds {
     [super setBounds:bounds];
     self.contentView.frame = self.bounds;
-    self.imageView.frame = CGRectMake(0, 0, self.predictSize.width * kWYInitialZoom, self.predictSize.height * kWYInitialZoom);
-    float minimumScale = self.frame.size.width / self.imageView.frame.size.width;
-    [self.contentView setMinimumZoomScale:minimumScale];
-    [self.contentView setZoomScale:minimumScale];
 }
 
 - (void)setImageViewData:(UIImage *)imageData {
+    BOOL isNewImage = imageData != self.imageView.image;
     self.imageView.image= imageData;
     if (imageData == nil) {
         return;
     }
     CGRect rect  = CGRectZero;
-    CGFloat scale = 1.0f;
     CGFloat w = 0.0f;
     CGFloat h = 0.0f;
     
@@ -139,34 +135,16 @@
                 h = w*imageData.size.height/imageData.size.width;
             }
         }
-        rect.size = CGSizeMake(w, h);
+        rect.size = CGSizeMake(w * self.contentView.zoomScale * kWYInitialZoom, h * self.contentView.zoomScale * kWYInitialZoom);
     } else {
-        rect.size = self.predictSize;
-    }
-    CGFloat scale_w = w / imageData.size.width;
-    CGFloat scale_h = h / imageData.size.height;
-    if (w > self.frame.size.width || h > self.frame.size.height) {
-        scale_w = w / self.frame.size.width;
-        scale_h = h / self.frame.size.height;
-        if (scale_w > scale_h) {
-            scale = 1/scale_w;
-        } else {
-            scale = 1/scale_h;
-        }
-    }
-    if (w <= self.frame.size.width || h <= self.frame.size.height) {
-        scale_w = w / self.frame.size.width;
-        scale_h = h / self.frame.size.height;
-        if (scale_w > scale_h) {
-            scale = scale_h;
-        } else {
-            scale = scale_w;
-        }
+        rect.size = CGSizeMake(self.predictSize.width, self.predictSize.height);
     }
     
     @synchronized(self) {
         self.imageView.frame = rect;
-        [self.contentView setZoomScale:0.4 animated:YES];
+        if(isNewImage) {
+            [self.contentView setZoomScale:1.0/kWYInitialZoom animated:YES];
+        }
         [self setNeedsLayout];
     }
 }
