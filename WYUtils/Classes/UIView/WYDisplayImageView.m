@@ -66,6 +66,8 @@
 
 - (void)resetZoom {
     [self.contentView setZoomScale:1.0/kWYInitialZoom animated:YES];
+    
+    self.contentView.contentOffset = CGPointMake((self.contentView.contentSize.width - WYWIDTH(self.contentView))/2, (self.contentView.contentSize.height - WYHEIGHT(self.contentView))/2);
 }
 
 #pragma mark - View cycle && Override
@@ -142,8 +144,9 @@
     
     @synchronized(self) {
         self.imageView.frame = rect;
+        self.contentView.contentSize = rect.size;
         if(isNewImage) {
-            [self.contentView setZoomScale:1.0/kWYInitialZoom animated:YES];
+            [self resetZoom];
         }
         [self setNeedsLayout];
     }
