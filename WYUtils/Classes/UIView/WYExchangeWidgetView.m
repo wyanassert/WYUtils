@@ -90,7 +90,11 @@
     for (NSInteger i = 0; i < _itemsList.count; i++) {
         UIView *button = _itemsList[i];
         if (button != btn) {
-            if (CGRectContainsPoint(button.frame, point)) {
+//            if (CGRectContainsPoint(button.frame, point)) {
+//                return i;
+//            }
+            CGPoint convertedPoint = [button convertPoint:point fromView:self];
+            if([button hitTest:convertedPoint withEvent:nil]) {
                 return i;
             }
         }
