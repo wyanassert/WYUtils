@@ -30,6 +30,7 @@
 #import "UIFont+WYAllFonts.h"
 #import "UIFont+WYUtils.h"
 #import "UIImage+WYBlur.h"
+#import "UIImage+WYCache.h"
 #import "UIImage+WYColor.h"
 #import "UIImage+WYMask.h"
 #import "UIImage+WYOrientation.h"

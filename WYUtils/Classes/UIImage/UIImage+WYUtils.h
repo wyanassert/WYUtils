@@ -13,6 +13,7 @@
 #import "UIImage+WYSpilteNine.h"
 #import "UIImage+WYMask.h"
 #import "UIImage+WYShrink.h"
+#import "UIImage+WYCache.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
