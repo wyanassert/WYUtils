@@ -11,8 +11,8 @@
 
 @class WYStickerView;
 
-typedef void(^WYSizeChangedBlock)(WYStickerView *stickerView, CGSize resultSize);
-typedef void(^WYCancelBlock)(WYStickerView *stickerView);
+typedef void(^WYSizeChangedBlock)(WYStickerView * _Nonnull stickerView, CGSize resultSize);
+typedef void(^WYCancelBlock)(WYStickerView * _Nonnull stickerView);
 
 NS_ASSUME_NONNULL_BEGIN
 

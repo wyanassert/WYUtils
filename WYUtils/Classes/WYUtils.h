@@ -20,4 +20,6 @@
 
 #import "WYMacroHeader.h"
 
+#import "WYSyncTaskManager.h"
+
 #endif /* WYUtils_h */

@@ -16,4 +16,8 @@
 
 + (UIImage *)wy_fixOrientation:(UIImage *)srcImage;
 
++ (UIImage *)wy_flipImage:(UIImage *)image;
+
++ (UIImage *)wy_rotateImage:(UIImage *)image oriention:(UIImageOrientation)oriention;
+
 @end

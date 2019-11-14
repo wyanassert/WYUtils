@@ -161,4 +161,32 @@
     CGImageRelease(cgimg);
     return img;
 }
+
++ (UIImage *)wy_flipImage:(UIImage *)image {
+    UIGraphicsBeginImageContext(image.size);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGContextTranslateCTM(ctx, image.size.width, image.size.height);
+    CGContextScaleCTM(ctx, -1, -1);
+    CGContextDrawImage(UIGraphicsGetCurrentContext(),CGRectMake(0.,0., image.size.width, image.size.height),image.CGImage);
+    UIImage *flippedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return flippedImage;
+}
+
++ (UIImage *)wy_rotateImage:(UIImage *)image oriention:(UIImageOrientation)oriention {
+    if(oriention >= UIImageOrientationUp && oriention <= UIImageOrientationRight && image.size.width) {
+        CGSize size = image.size;
+        if(oriention == UIImageOrientationLeft || oriention == UIImageOrientationRight) {
+            size = CGSizeMake(size.height, size.width);
+        }
+        UIGraphicsBeginImageContext(size);
+        [[UIImage imageWithCGImage:[image CGImage] scale:image.scale orientation:oriention] drawInRect:CGRectMake(0,0,size.width ,size.height)];
+        UIImage* flippedImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return flippedImage;
+    } else {
+        return image;
+    }
+}
+
 @end

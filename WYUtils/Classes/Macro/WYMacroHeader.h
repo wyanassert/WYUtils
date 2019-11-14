@@ -101,4 +101,44 @@ dispatch_async(queue, block);\
 #define wy_dispatch_main_async_safe(block) wy_dispatch_queue_async_safe(dispatch_get_main_queue(), block)
 #endif
 
+// Color
+#ifndef WYColorFromHexWithAlpha
+#define WYColorFromHexWithAlpha(hexValue,a) [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0 green:((float)((hexValue & 0xFF00) >> 8))/255.0 blue:((float)(hexValue & 0xFF))/255.0 alpha:a]
+#endif
+
+#ifndef WYColorFromHex
+#define WYColorFromHex(hexValue)            WYColorFromHexWithAlpha(hexValue,1.0)
+#endif
+
+#ifndef WYColorFromRGBA
+#define WYColorFromRGBA(r,g,b,a)            [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#endif
+
+#ifndef WYColorFromRGB
+#define WYColorFromRGB(r,g,b)               WYColorFromRGBA(r,g,b,1.0)
+#endif
+
+#ifndef WYColorFromHSB
+#define WYColorFromHSB(h,s,b)               [UIColor colorWithHue:h saturation:s brightness:b alpha:1.0f]
+#endif
+
+#ifndef WY_SINGLETON_AS
+
+#define WY_SINGLETON_AS( __class ) \
++ (__class *) sharedInstance;
+
+#endif
+
+#ifndef WY_SINGLETON_DEF
+
+#define WY_SINGLETON_DEF( __class ) \
++ (__class *) sharedInstance \
+{ \
+static dispatch_once_t once; \
+static __class * __singleton__; \
+dispatch_once(&once, ^{ __singleton__ = [[__class alloc] init]; } ); \
+return __singleton__; \
+}
+#endif
+
 #endif /* WYMacroHeader_h */
