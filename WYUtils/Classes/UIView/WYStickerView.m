@@ -9,10 +9,12 @@
 #import "WYMacroHeader.h"
 #import "UIView+WYGestureRecognizer.h"
 
-@interface WYStickerView ()
+@interface WYStickerView () <UIGestureRecognizerDelegate>
 
 @property (nonatomic, copy  ) WYCancelBlock      wyCancelBlock;
 @property (nonatomic, copy  ) WYSizeChangedBlock wyChangeBlock;
+@property (nonatomic, strong) UIPanGestureRecognizer         *movePanGesture;
+@property (nonatomic, strong) UIPanGestureRecognizer         *scalePanGesture;
 @property (nonatomic, assign) CGFloat            wyMinWidth;
 
 @end
@@ -40,9 +42,12 @@
     
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(wy_stickerDidPanAction:)];
     [self addGestureRecognizer:pan];
-    
+    pan.delegate = self;
+    self.movePanGesture = pan;
     UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(wy_userDidPinchRoateAction:)];
     UIRotationGestureRecognizer *rotate = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(wy_userDidPinchRoateAction:)];
+    pinch.delegate = self;
+    rotate.delegate = self;
     [self addGestureRecognizer:pinch];
     [self addGestureRecognizer:rotate];
 }
@@ -65,17 +70,37 @@
     changeView.userInteractionEnabled = YES;
     UIPanGestureRecognizer *pangesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(wy_stickerPanZoomAction:)];
     [changeView addGestureRecognizer:pangesture];
+    self.scalePanGesture = pangesture;
+}
+
+- (void)configGesture:(UIGestureRecognizer *)gesture begin:(BOOL)begin {
+    if(gesture.state == UIGestureRecognizerStateBegan && begin) {
+        [self userWillAction];
+    } else if(gesture.state == UIGestureRecognizerStateEnded && !begin) {
+        [self userDidAction];
+    }
+}
+
+- (void)userWillAction {
+    
+}
+
+- (void)userDidAction {
+    
 }
 
 
 #pragma mark - Action
 - (void)wy_cancelAction {
+    [self userWillAction];
     if(self.wyCancelBlock) {
         self.wyCancelBlock(self);
     }
+    [self userDidAction];
 }
 
 - (void)wy_stickerDidPanAction:(UIPanGestureRecognizer *)pan {
+    [self configGesture:pan begin:YES];
     UIGestureRecognizerState state = [pan state];
     
     if (state == UIGestureRecognizerStateBegan || state == UIGestureRecognizerStateChanged) {
@@ -86,9 +111,11 @@
         pan.view.transform = transform;
         [pan setTranslation:CGPointZero inView:pan.view];
     }
+    [self configGesture:pan begin:NO];
 }
 
 - (void)wy_userDidPinchRoateAction:(UIGestureRecognizer *)gesture {
+    [self configGesture:gesture begin:YES];
     if([gesture respondsToSelector:@selector(rotation)]) {
         [self setTransform:CGAffineTransformRotate(self.transform, [(UIRotationGestureRecognizer *)gesture rotation])];
         [(UIRotationGestureRecognizer *)gesture setRotation:0];
@@ -109,9 +136,11 @@
         self.transform = transform;
         [(UIPinchGestureRecognizer *)gesture setScale:1.0];
     }
+    [self configGesture:gesture begin:NO];
 }
 
 - (void)wy_stickerPanZoomAction:(UIPanGestureRecognizer *)pan {
+    [self configGesture:pan begin:YES];
     UIGestureRecognizerState state = [pan state];
     
     if (state == UIGestureRecognizerStateBegan || state == UIGestureRecognizerStateChanged) {
@@ -153,7 +182,16 @@
         }
         [self setTransform:CGAffineTransformMakeRotation(isWise?-angle:angle)];
     }
+    [self configGesture:pan begin:NO];
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gesture1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)gesture2 {
+    if(self.movePanGesture == gesture1 && self.scalePanGesture == gesture1) {
+        return NO;
+    }
+    return YES;
 }
 
 @end
+
 
