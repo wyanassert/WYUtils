@@ -141,4 +141,22 @@ return __singleton__; \
 }
 #endif
 
+#define kWYDocumentPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
+#define kWYTempPath NSTemporaryDirectory()
+#define kWYCachePath [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
+
+#define kWYPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define kWYPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+#define kWYStringEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
+#define kWYArrayEmpty(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0)
+#define kWYDictEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
+#define kWYObjectEmpty(_object) (_object == nil \
+|| [_object isKindOfClass:[NSNull class]] \
+|| ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \
+|| ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))
+
+#define kWYAppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+#define kWYSystemVersion [[UIDevice currentDevice] systemVersion]
+
 #endif /* WYMacroHeader_h */

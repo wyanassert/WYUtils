@@ -9,12 +9,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void (^TapActionBlock)(UITapGestureRecognizer *gestureRecoginzer);
+typedef void (^LongPressActionBlock)(UILongPressGestureRecognizer *gestureRecoginzer);
+
 @interface UIView (WYGestureRecognizer)
 
 - (void)wy_addPanAction;
 - (void)wy_addPinchAction;
 - (void)wy_addRotateAction;
-
+- (void)wy_addTapActionWithBlock:(TapActionBlock)block;
+- (void)wy_addLongPressActionWithBlock:(LongPressActionBlock)block;
 @end
 
 NS_ASSUME_NONNULL_END

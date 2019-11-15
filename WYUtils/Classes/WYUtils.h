@@ -17,8 +17,10 @@
 #import "UIFont+WYUtils.h"
 #import "UILabel+WYUtils.h"
 #import "UINavigationBar+WYUtils.h"
+#import "UIDevice+WYUtils.h"
 
 #import "WYMacroHeader.h"
+#import "WYSerializeKit.h"
 
 #import "WYSyncTaskManager.h"
 
