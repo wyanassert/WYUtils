@@ -186,7 +186,7 @@
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gesture1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)gesture2 {
-    if(self.movePanGesture == gesture1 && self.scalePanGesture == gesture1) {
+    if(self.movePanGesture == gesture1 && self.scalePanGesture == gesture2) {
         return NO;
     }
     return YES;
