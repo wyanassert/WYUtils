@@ -11,6 +11,7 @@
 #import "NSData+WYUtils.h"
 #import "NSDate+WYUtils.h"
 #import "NSString+WYUtils.h"
+#import "NSObject+WYUtils.h"
 #import "UIColor+WYUtils.h"
 #import "UIImage+WYUtils.h"
 #import "UIView+WYUtils.h"
