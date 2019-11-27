@@ -1,16 +1,23 @@
 PODS:
+  - Masonry (1.1.0)
   - WYUtils (0.5.5)
 
 DEPENDENCIES:
+  - Masonry
   - WYUtils (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Masonry
 
 EXTERNAL SOURCES:
   WYUtils:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   WYUtils: 1dc846df2d6f11c101a99e7e4411082718bea542
 
-PODFILE CHECKSUM: 99b55afe6246b6c71b0c7b5fe6028cfe47c3d7ab
+PODFILE CHECKSUM: bd73e7c47ba5b100493bdab9697b67f74b5aa2c4
 
 COCOAPODS: 1.7.1
