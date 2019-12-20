@@ -45,13 +45,32 @@ WY_SINGLETON_DEF(WYSyncTaskManager)
     return [self innerAddTaskWithCompletion:syncBolck taskIdentifier:taskIdentifier completeBlock:completeBlock];
 }
 
+- (WYSyncToken *)addAsyncTaskWithCompletion:(WYAsyncBlock)asyncBolck taskIdentifier:(NSString *)taskIdentifier completeBlock:(WYSyncCompletedBlock)completeBlock {
+    if(taskIdentifier.length == 0 || !asyncBolck) {
+        if(completeBlock) {
+            completeBlock(NO, taskIdentifier);
+        }
+        return nil;
+    }
+    return [self innerAddAsyncTaskWithCompletion:asyncBolck taskIdentifier:taskIdentifier completeBlock:completeBlock];
+}
+
 - (void)cancelTaskForResource:(WYSyncToken *)token {
+    [self cancelTaskForResource:token completion:nil];
+}
+
+- (void)cancelTaskForResource:(WYSyncToken *)token completion:(nullable void (^)(BOOL))block {
     if(token) {
         dispatch_barrier_async(self.barrierQueue, ^{
             WYSyncOperation *operation = self.syncOperations[token.indexKey];
             BOOL canceled = [operation cancel:token.renderCancelToken];
             if (canceled) {
                 [self.syncOperations removeObjectForKey:token.indexKey];
+            }
+            if(block) {
+                wy_dispatch_main_async_safe(^{
+                    block(canceled);
+                });
             }
         });
     }
@@ -63,6 +82,16 @@ WY_SINGLETON_DEF(WYSyncTaskManager)
     __weak typeof(self)weakSelf = self;
     return [self addCompleteBlock:completeBlock forTaskIdentifier:taskIdentifier createCallback:^WYSyncOperation *{
         WYSyncOperation *operation = [[WYSyncOperation alloc] initWithCompletion:syncBolck indexKey:taskIdentifier];
+        operation.queuePriority = NSOperationQueuePriorityVeryHigh;
+        [weakSelf.syncQueue addOperation:operation];
+        return operation;
+    }];
+}
+
+- (WYSyncToken *)innerAddAsyncTaskWithCompletion:(WYAsyncBlock)asyncBolck taskIdentifier:(NSString *)taskIdentifier completeBlock:(nonnull WYSyncCompletedBlock)completeBlock {
+    __weak typeof(self)weakSelf = self;
+    return [self addCompleteBlock:completeBlock forTaskIdentifier:taskIdentifier createCallback:^WYSyncOperation *{
+        WYSyncOperation *operation = [[WYSyncOperation alloc] initWithAsyncCompletion:asyncBolck izndexKey:taskIdentifier];
         operation.queuePriority = NSOperationQueuePriorityVeryHigh;
         [weakSelf.syncQueue addOperation:operation];
         return operation;

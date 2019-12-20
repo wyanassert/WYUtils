@@ -11,12 +11,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 #define WYSyncOperationCancelToken NSMutableDictionary*
 
+@class WYSyncOperation;
+
 typedef BOOL(^WYSyncBlock)(void);
 typedef void(^WYSyncCompletedBlock)(BOOL success, NSString *indexKey);
+typedef void(^WYAsyncBlock)(WYSyncOperation * __nonnull operation, WYSyncCompletedBlock completeBlock);
 
 @interface WYSyncOperation : NSOperation
 
 - (instancetype)initWithCompletion:(WYSyncBlock)syncBlock indexKey:(NSString *)indexKey;
+- (instancetype)initWithAsyncCompletion:(WYAsyncBlock)asyncBlock izndexKey:(NSString *)indexKey;
 
 - (WYSyncOperationCancelToken _Nonnull)addHandlersForCompleted:(WYSyncCompletedBlock)completedBlock;
 

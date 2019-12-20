@@ -17,7 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 WY_SINGLETON_AS(WYSyncTaskManager)
 
 - (WYSyncToken *)addTaskWithCompletion:(WYSyncBlock)syncBolck taskIdentifier:(NSString *)taskIdentifier completeBlock:(WYSyncCompletedBlock)completeBlock;
+- (WYSyncToken *)addAsyncTaskWithCompletion:(WYAsyncBlock)asyncBolck taskIdentifier:(NSString *)taskIdentifier completeBlock:(WYSyncCompletedBlock)completeBlock;
 - (void)cancelTaskForResource:(WYSyncToken *)token;
+- (void)cancelTaskForResource:(WYSyncToken *)token completion:(nullable void (^)(BOOL didCancel))block;
 
 @end
 

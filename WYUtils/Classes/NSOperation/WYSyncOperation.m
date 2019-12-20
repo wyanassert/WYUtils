@@ -17,6 +17,7 @@ static NSString *const kWYCompleteCallbackKey = @"complete";
 @property (strong, nonatomic, nonnull ) dispatch_queue_t barrierQueue;
 
 @property (nonatomic, copy) WYSyncBlock syncBlock;
+@property (nonatomic, copy) WYAsyncBlock asyncBlock;
 @property (nonatomic, strong) NSString         *indexKey;
 
 @end
@@ -31,12 +32,26 @@ static NSString *const kWYCompleteCallbackKey = @"complete";
     if (self) {
         _syncBlock = syncBlock;
         _indexKey = indexKey;
-        _callbackBlocks = [NSMutableArray array];
-        _executing = NO;
-        _finished = NO;
-        _barrierQueue = dispatch_queue_create("com.wyutils.WYSyncOperation", DISPATCH_QUEUE_CONCURRENT);
+        [self commonInit];
     }
     return self;
+}
+
+- (instancetype)initWithAsyncCompletion:(WYAsyncBlock)asyncBlock izndexKey:(NSString *)indexKey {
+    self = [super init];
+    if(self) {
+        _asyncBlock = asyncBlock;
+        _indexKey = indexKey;
+        [self commonInit];
+    }
+    return self;
+}
+
+- (void)commonInit {
+    _callbackBlocks = [NSMutableArray array];
+    _executing = NO;
+    _finished = NO;
+    _barrierQueue = dispatch_queue_create("com.wyutils.WYSyncOperation", DISPATCH_QUEUE_CONCURRENT);
 }
 
 - (void)dealloc {
@@ -129,9 +144,19 @@ static NSString *const kWYCompleteCallbackKey = @"complete";
         BOOL success = NO;
         if(self.syncBlock) {
             success = self.syncBlock();
+            [self callCompletionBlocks:success indexKey:self.indexKey];
+            [self done];
+        } else if(self.asyncBlock) {
+            __weak typeof(self)weakSelf = self;
+            self.asyncBlock(self, ^(BOOL success, NSString * _Nonnull indexKey) {
+                __strong typeof(weakSelf)self = weakSelf;
+                [self callCompletionBlocks:success indexKey:self.indexKey];
+                [self done];
+            });
+        } else {
+            [self callCompletionBlocks:success indexKey:self.indexKey];
+            [self done];
         }
-        [self callCompletionBlocks:success indexKey:self.indexKey];
-        [self done];
     }
 }
 
