@@ -114,11 +114,11 @@ static NSString *const kWYCompleteCallbackKey = @"complete";
     [self reset];
 }
 
-- (void)callCompletionBlocks:(BOOL)success indexKey:(NSString *)indexKey {
+- (void)callCompletionBlocks:(BOOL)success indexKey:(NSString *)indexKey result:(id)result {
     NSArray<WYSyncCompletedBlock> *completionBlocks = [self callbacksForKey:kWYCompleteCallbackKey];
     wy_dispatch_main_async_safe(^{
         for(WYSyncCompletedBlock compelteBlock in completionBlocks) {
-            compelteBlock(success, indexKey);
+            compelteBlock(success, indexKey, result);
         }
     });
 }
@@ -144,17 +144,17 @@ static NSString *const kWYCompleteCallbackKey = @"complete";
         BOOL success = NO;
         if(self.syncBlock) {
             success = self.syncBlock();
-            [self callCompletionBlocks:success indexKey:self.indexKey];
+            [self callCompletionBlocks:success indexKey:self.indexKey result:nil];
             [self done];
         } else if(self.asyncBlock) {
             __weak typeof(self)weakSelf = self;
-            self.asyncBlock(self, ^(BOOL success, NSString * _Nonnull indexKey) {
+            self.asyncBlock(self, ^(BOOL success, NSString * _Nonnull indexKey, id result) {
                 __strong typeof(weakSelf)self = weakSelf;
-                [self callCompletionBlocks:success indexKey:self.indexKey];
+                [self callCompletionBlocks:success indexKey:self.indexKey result:result];
                 [self done];
             });
         } else {
-            [self callCompletionBlocks:success indexKey:self.indexKey];
+            [self callCompletionBlocks:success indexKey:self.indexKey result:nil];
             [self done];
         }
     }

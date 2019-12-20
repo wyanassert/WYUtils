@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class WYSyncOperation;
 
 typedef BOOL(^WYSyncBlock)(void);
-typedef void(^WYSyncCompletedBlock)(BOOL success, NSString *indexKey);
+typedef void(^WYSyncCompletedBlock)(BOOL success, NSString *indexKey, id __nullable result);
 typedef void(^WYAsyncBlock)(WYSyncOperation * __nonnull operation, WYSyncCompletedBlock completeBlock);
 
 @interface WYSyncOperation : NSOperation

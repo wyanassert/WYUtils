@@ -37,7 +37,7 @@ WY_SINGLETON_DEF(WYSyncTaskManager)
 - (WYSyncToken *)addTaskWithCompletion:(WYSyncBlock)syncBolck taskIdentifier:(NSString *)taskIdentifier completeBlock:(nonnull WYSyncCompletedBlock)completeBlock {
     if(taskIdentifier.length == 0 || !syncBolck) {
         if(completeBlock) {
-            completeBlock(NO, taskIdentifier);
+            completeBlock(NO, taskIdentifier, nil);
         }
         return nil;
     }
@@ -48,7 +48,7 @@ WY_SINGLETON_DEF(WYSyncTaskManager)
 - (WYSyncToken *)addAsyncTaskWithCompletion:(WYAsyncBlock)asyncBolck taskIdentifier:(NSString *)taskIdentifier completeBlock:(WYSyncCompletedBlock)completeBlock {
     if(taskIdentifier.length == 0 || !asyncBolck) {
         if(completeBlock) {
-            completeBlock(NO, taskIdentifier);
+            completeBlock(NO, taskIdentifier, nil);
         }
         return nil;
     }
