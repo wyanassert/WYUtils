@@ -31,6 +31,14 @@
 #define WX_DESIGN_HEIGHT (812)
 #endif
 
+#ifndef WZ_DESIGN_WIDTH
+#define WZ_DESIGN_WIDTH (414)
+#endif
+
+#ifndef WZ_DESIGN_HEIGHT
+#define WZ_DESIGN_HEIGHT (896)
+#endif
+
 #ifndef WY_SCREEN_WIDTH
 #define WY_SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 #endif
@@ -77,6 +85,26 @@
 
 #ifndef WXMINSIZE
 #define WXMINSIZE(x, y) CGSizeMake(WXMIN(x), WXMIN(y))
+#endif
+
+#ifndef WZX //Apply For iPhone11 Pro Max 414*896
+#define WZX(x)  ((x) * WY_SCREEN_WIDTH / WZ_DESIGN_WIDTH)
+#endif
+
+#ifndef WZY
+#define WZY(y)  ((y) * WY_SCREEN_HEIGHT / WZ_DESIGN_HEIGHT)
+#endif
+
+#ifndef WZSIZE
+#define WZSIZE(x, y) CGSizeMake(WZX(x), WZY(y))
+#endif
+
+#ifndef WZMIN
+#define WZMIN(x) (x<0?MAX(WZX(x), WZY(x)):MIN(WZX(x), WZY(x)))
+#endif
+
+#ifndef WZMINSIZE
+#define WZMINSIZE(x, y) CGSizeMake(WZMIN(x), WZMIN(y))
 #endif
 
 //execute time interval
