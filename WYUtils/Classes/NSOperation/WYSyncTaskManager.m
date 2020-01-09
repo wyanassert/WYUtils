@@ -83,7 +83,6 @@ WY_SINGLETON_DEF(WYSyncTaskManager)
     return [self addCompleteBlock:completeBlock forTaskIdentifier:taskIdentifier createCallback:^WYSyncOperation *{
         WYSyncOperation *operation = [[WYSyncOperation alloc] initWithCompletion:syncBolck indexKey:taskIdentifier];
         operation.queuePriority = NSOperationQueuePriorityVeryHigh;
-        [weakSelf.syncQueue addOperation:operation];
         return operation;
     }];
 }
@@ -93,7 +92,6 @@ WY_SINGLETON_DEF(WYSyncTaskManager)
     return [self addCompleteBlock:completeBlock forTaskIdentifier:taskIdentifier createCallback:^WYSyncOperation *{
         WYSyncOperation *operation = [[WYSyncOperation alloc] initWithAsyncCompletion:asyncBolck izndexKey:taskIdentifier];
         operation.queuePriority = NSOperationQueuePriorityVeryHigh;
-        [weakSelf.syncQueue addOperation:operation];
         return operation;
     }];
 }
@@ -103,8 +101,10 @@ WY_SINGLETON_DEF(WYSyncTaskManager)
     
     dispatch_barrier_sync(self.barrierQueue, ^{
         WYSyncOperation *operation = self.syncOperations[indexKey];
+        WYSyncOperationCancelToken renderCancelToken;
         if(!operation) {
             operation = createBlock();
+            renderCancelToken = [operation addHandlersForCompleted:completeBlock];
             self.syncOperations[indexKey] = operation;
             __weak WYSyncOperation *woperation = operation;
             operation.completionBlock = ^{
@@ -118,9 +118,10 @@ WY_SINGLETON_DEF(WYSyncTaskManager)
                     };
                 });
             };
+            [self.syncQueue addOperation:operation];
+        } else {
+            renderCancelToken = [operation addHandlersForCompleted:completeBlock];
         }
-
-        WYSyncOperationCancelToken renderCancelToken = [operation addHandlersForCompleted:completeBlock];
         token = [WYSyncToken new];
         token.indexKey = indexKey;
         token.renderCancelToken = renderCancelToken;
@@ -131,3 +132,4 @@ WY_SINGLETON_DEF(WYSyncTaskManager)
 
 
 @end
+
