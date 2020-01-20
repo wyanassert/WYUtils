@@ -1,6 +1,6 @@
 PODS:
   - Masonry (1.1.0)
-  - WYUtils (0.5.5)
+  - WYUtils (0.6.1)
 
 DEPENDENCIES:
   - Masonry
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  WYUtils: 1dc846df2d6f11c101a99e7e4411082718bea542
+  WYUtils: 54c78f3eff2e4563c41224fb4aa0c4a98dc46427
 
 PODFILE CHECKSUM: bd73e7c47ba5b100493bdab9697b67f74b5aa2c4
 

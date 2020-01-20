@@ -16,6 +16,7 @@
 #import "WYNotHintView.h"
 #import "WYPageControl.h"
 #import "WYExchangeWidgetView.h"
+#import "WYCustomButton.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
