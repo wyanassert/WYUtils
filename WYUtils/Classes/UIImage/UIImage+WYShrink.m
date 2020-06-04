@@ -10,11 +10,14 @@
 @implementation UIImage (WYShrink)
 
 - (UIImage *)wy_shrinkImageWithRecommendSize:(CGSize)targetSize {
-    
+    return [self wy_shrinkImageWithRecommendSize:targetSize withScale:1];
+}
+
+- (UIImage *)wy_shrinkImageWithRecommendSize:(CGSize)targetSize withScale:(CGFloat)sizeScale {
     if(self.size.width * self.scale > targetSize.width || self.size.height * self.scale > targetSize.height) {
         CGFloat scale = MAX(self.size.width * self.scale / targetSize.width, self.size.height * self.scale/targetSize.height);
         CGSize size = CGSizeMake(self.size.width * self.scale / scale, self.size.height * self.scale / scale);
-        UIGraphicsBeginImageContextWithOptions(size, NO, 1.0);
+        UIGraphicsBeginImageContextWithOptions(size, NO, sizeScale);
         [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
         UIImage * img = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
@@ -22,6 +25,10 @@
     } else {
         return self;
     }
+}
+
+- (UIImage *)wy_shrinkImageWithRecommendSizeForScale:(CGSize)targetSize {
+    return [self wy_shrinkImageWithRecommendSize:targetSize withScale:UIScreen.mainScreen.scale];
 }
 
 + (UIImage *)wy_imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize {

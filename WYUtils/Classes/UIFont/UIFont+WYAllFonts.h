@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIFont (WYAllFonts)
 
-- (NSMutableArray<NSString *> *)wy_allFonts;
++ (NSMutableArray<NSString *> *)wy_allFonts;
 
 @end
 

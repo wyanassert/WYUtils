@@ -67,6 +67,14 @@
 #define WYMINSIZE(x, y) CGSizeMake(WYMIN(x), WYMIN(y))
 #endif
 
+#ifndef WYXSIZE
+#define WYXSIZE(x, y) CGSizeMake(WYX(x), WYX(y))
+#endif
+
+#ifndef WYYSIZE
+#define WYYSIZE(x, y) CGSizeMake(WYY(x), WYY(y))
+#endif
+
 #ifndef WXX //Apply For iPhoneX 375*812
 #define WXX(x)  ((x) * WY_SCREEN_WIDTH / WX_DESIGN_WIDTH)
 #endif
@@ -87,6 +95,14 @@
 #define WXMINSIZE(x, y) CGSizeMake(WXMIN(x), WXMIN(y))
 #endif
 
+#ifndef WXXSIZE
+#define WXXSIZE(x, y) CGSizeMake(WXX(x), WXX(y))
+#endif
+
+#ifndef WXYSIZE
+#define WXYSIZE(x, y) CGSizeMake(WXY(x), WXY(y))
+#endif
+
 #ifndef WZX //Apply For iPhone11 Pro Max 414*896
 #define WZX(x)  ((x) * WY_SCREEN_WIDTH / WZ_DESIGN_WIDTH)
 #endif
@@ -105,6 +121,14 @@
 
 #ifndef WZMINSIZE
 #define WZMINSIZE(x, y) CGSizeMake(WZMIN(x), WZMIN(y))
+#endif
+
+#ifndef WZXSIZE
+#define WZXSIZE(x, y) CGSizeMake(WZX(x), WZX(y))
+#endif
+
+#ifndef WZYSIZE
+#define WZYSIZE(x, y) CGSizeMake(WZY(x), WZY(y))
 #endif
 
 //execute time interval

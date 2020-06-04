@@ -9,7 +9,7 @@
 
 @implementation UIFont (WYAllFonts)
 
-- (NSMutableArray<NSString *> *)wy_allFonts {
++ (NSMutableArray<NSString *> *)wy_allFonts {
     NSArray *array = [UIFont familyNames];
     NSString *familyName ;
     NSMutableArray<NSString *> *fontNames = [[NSMutableArray alloc] init];
