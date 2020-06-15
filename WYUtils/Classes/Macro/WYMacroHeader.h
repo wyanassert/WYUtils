@@ -15,6 +15,8 @@
 #define WYBOTTOM(view) (view.frame.origin.y + view.frame.size.height)
 #define WYRIGHT(view) (view.frame.origin.x + view.frame.size.width)
 
+#define WYStatusBarHeight MIN([[UIApplication sharedApplication] statusBarFrame].size.width, [[UIApplication sharedApplication] statusBarFrame].size.height)
+
 #ifndef WY_DESIGN_WIDTH
 #define WY_DESIGN_WIDTH (375)
 #endif
