@@ -3,6 +3,7 @@ use_frameworks!
 target 'WYUtils_Example' do
   pod 'WYUtils', :path => '../'
   pod 'Masonry'
+  pod 'Reveal-SDK', '~> 19', :configurations => ['Debug']
 
   target 'WYUtils_Tests' do
     inherit! :search_paths

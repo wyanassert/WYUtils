@@ -23,6 +23,8 @@
 #import "WYMacroHeader.h"
 #import "WYSerializeKit.h"
 
+#import "WYWeakProxy.h"
+
 #import "WYSyncTaskManager.h"
 
 #import "WYBaseCollectionReusableView.h"
