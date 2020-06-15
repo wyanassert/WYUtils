@@ -1,18 +1,18 @@
 //
-//  WYBaseViewController.m
+//  WYExampleViewController.m
 //  WYUtils_Example
 //
 //  Created by wyan on 2019/11/27.
 //  Copyright © 2019 wyanassert. All rights reserved.
 //
 
-#import "WYBaseViewController.h"
+#import "WYExampleViewController.h"
 
-@interface WYBaseViewController ()
+@interface WYExampleViewController ()
 
 @end
 
-@implementation WYBaseViewController
+@implementation WYExampleViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

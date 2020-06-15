@@ -1,5 +1,5 @@
 //
-//  WYBaseViewController.h
+//  WYExampleViewController.h
 //  WYUtils_Example
 //
 //  Created by wyan on 2019/11/27.
@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "WYHomeCollectionViewCell.h"
+#import "WYBaseViewController.h"
+#import "WYUtils.h"
+#import "Masonry.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WYBaseViewController : UIViewController
+@interface WYExampleViewController : WYBaseViewController
 
 @property (nonatomic, assign) WYHomeType         homeType;
 

@@ -7,8 +7,11 @@
 //
 
 #import "WYViewViewController.h"
+#import "WYWaveViewController.h"
 
-@interface WYViewViewController ()
+@interface WYViewViewController () <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
+
+@property (nonatomic, strong) UICollectionView         *collectionView;
 
 @end
 
@@ -17,16 +20,60 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self configView];
 }
 
-/*
-#pragma mark - Navigation
+- (void)configView {
+    [self.view addSubview:self.collectionView];
+    [self.collectionView setFrame:self.view.bounds];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
 
+#pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+        case WYViewTypeWave: {
+            WYWaveViewController *vc = [[WYWaveViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+
+
+#pragma mark - UICollectionViewDataSource
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return WYViewTypeCount;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    WYViewSubItemCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[WYViewSubItemCollectionViewCell reuseIdentifier] forIndexPath:indexPath];
+    [cell loadState:indexPath.row];
+    return cell;
+}
+
+#pragma mark - Getter
+- (UICollectionView *)collectionView {
+    if(!_collectionView) {
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        flowLayout.itemSize = CGSizeMake(WY_SCREEN_WIDTH, WXX(40));
+        flowLayout.minimumLineSpacing = WXX(10);
+        flowLayout.minimumInteritemSpacing = WXX(10);
+        flowLayout.sectionInset = UIEdgeInsetsMake(WYDeviceNaviHeight, 0, WYDeviceBottomHeight + WXY(10), 0);
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+        
+        _collectionView.backgroundColor = [UIColor clearColor];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+     
+        [_collectionView registerClass:[WYViewSubItemCollectionViewCell class] forCellWithReuseIdentifier:[WYViewSubItemCollectionViewCell reuseIdentifier]];
+    }
+    return _collectionView;
+}
 @end

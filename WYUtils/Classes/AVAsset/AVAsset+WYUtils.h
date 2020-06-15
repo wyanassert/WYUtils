@@ -6,6 +6,7 @@
 //
 
 #import <AVFoundation/AVFoundation.h>
+#import "AVAsset+WYVideoThumbnail.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

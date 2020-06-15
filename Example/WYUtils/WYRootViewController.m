@@ -6,7 +6,7 @@
 //  Copyright (c) 2018 wyanassert. All rights reserved.
 //
 
-#import "WYViewController.h"
+#import "WYRootViewController.h"
 #import "WYExamplePubHeader.h"
 #import "WYHomeCollectionViewCell.h"
 #import "WYColorViewController.h"
@@ -21,15 +21,15 @@
 #import "WYOperationViewController.h"
 #import "WYStringViewController.h"
 #import "WYViewViewController.h"
-#import "WYBaseViewController.h"
+#import "WYExampleViewController.h"
 
-@interface WYViewController () <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
+@interface WYRootViewController () <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
 @property (nonatomic, strong) UICollectionView         *collectionView;
 
 @end
 
-@implementation WYViewController
+@implementation WYRootViewController
 
 - (void)viewDidLoad
 {
@@ -80,10 +80,9 @@
         @"NavigationBar",
         @"View",
     ][indexPath.row];
-    self.title = descText;
     Class class = NSClassFromString(className);
-    WYBaseViewController *vc = [[class alloc] init];
-    vc.title = descText;
+    WYExampleViewController *vc = [[class alloc] init];
+    vc.base_title = descText;
     vc.homeType = indexPath.row;
     [self.navigationController pushViewController:vc animated:YES];
 }

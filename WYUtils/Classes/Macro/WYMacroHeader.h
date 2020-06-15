@@ -15,8 +15,6 @@
 #define WYBOTTOM(view) (view.frame.origin.y + view.frame.size.height)
 #define WYRIGHT(view) (view.frame.origin.x + view.frame.size.width)
 
-#define WYStatusBarHeight MIN([[UIApplication sharedApplication] statusBarFrame].size.width, [[UIApplication sharedApplication] statusBarFrame].size.height)
-
 #ifndef WY_DESIGN_WIDTH
 #define WY_DESIGN_WIDTH (375)
 #endif
@@ -199,8 +197,30 @@ return __singleton__; \
 #define kWYTempPath NSTemporaryDirectory()
 #define kWYCachePath [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
 
+#pragma mark iOS Version
+
+#define WY_IOS_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define WY_IOS_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define WY_IOS_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define WY_IOS_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define WY_IOS_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+#define WY_IOS_SDK_MORE_THAN_OR_EQUAL(__num) [UIDevice currentDevice].systemVersion.floatValue >= (__num)
+#define WY_IOS_SDK_MORE_THAN(__num) [UIDevice currentDevice].systemVersion.floatValue > (__num)
+#define WY_IOS_SDK_LESS_THAN(__num) [UIDevice currentDevice].systemVersion.floatValue < (__num)
+
 #define kWYPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define kWYPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+#define WY_TARGETED_DEVICE_IS_IPHONE_X   (kWYPhone && (WY_SCREEN_HEIGHT == 812 || WY_SCREEN_HEIGHT == 896))
+#define WY_TARGETED_DEVICE_IS_IPAD_iOS12 (kWYPad && WY_IOS_VERSION_GREATER_THAN_OR_EQUAL_TO(@"12.0"))
+
+//iPhone X 适配的
+#define WYDeviceNaviHeight      (WY_TARGETED_DEVICE_IS_IPHONE_X ? 88 : WY_TARGETED_DEVICE_IS_IPAD_iOS12 ? 70 : 64)
+#define WYDeviceTabbarHeight    (WY_TARGETED_DEVICE_IS_IPHONE_X ? 83 : 49)
+#define WYDeviceBottomHeight    (WY_TARGETED_DEVICE_IS_IPHONE_X ? 34 : 0)
+
+#define WYStatusBarHeight MIN([[UIApplication sharedApplication] statusBarFrame].size.width, [[UIApplication sharedApplication] statusBarFrame].size.height)
 
 #define kWYStringEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
 #define kWYArrayEmpty(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0)

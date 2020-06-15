@@ -25,4 +25,15 @@
 
 #import "WYSyncTaskManager.h"
 
+#import "WYBaseCollectionReusableView.h"
+#import "WYBaseCollectionViewCell.h"
+#import "WYBaseTabBarController.h"
+#import "WYBaseTableViewCell.h"
+#import "WYBaseTableViewHeaderFooterView.h"
+#import "WYBaseView.h"
+#import "WYBaseViewController.h"
+#import "WYNavigationItemType.h"
+#import "WYSafeNavigationController.h"
+#import "WYTabBar.h"
+
 #endif /* WYUtils_h */

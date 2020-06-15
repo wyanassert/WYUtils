@@ -14,7 +14,7 @@
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* WYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* WYAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* WYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* WYViewController.m */; };
+		6003F5A7195388D20070C39A /* WYRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* WYRootViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -22,6 +22,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		93286056249759F4006A4605 /* WYViewSubItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93286055249759F4006A4605 /* WYViewSubItemCollectionViewCell.m */; };
+		9328605924975E24006A4605 /* WYWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9328605824975E24006A4605 /* WYWaveViewController.m */; };
 		93887341238E7F9200F26E68 /* WYHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93887340238E7F9200F26E68 /* WYHomeCollectionViewCell.m */; };
 		9388735B238E87C100F26E68 /* WYColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9388735A238E87C100F26E68 /* WYColorViewController.m */; };
 		9388735E238E87CF00F26E68 /* WYDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9388735D238E87CF00F26E68 /* WYDataViewController.m */; };
@@ -35,7 +37,7 @@
 		93887376238E880F00F26E68 /* WYViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93887375238E880F00F26E68 /* WYViewViewController.m */; };
 		9388737A238E88DE00F26E68 /* WYDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93887379238E88DE00F26E68 /* WYDateViewController.m */; };
 		9388737E238E899A00F26E68 /* WYFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9388737D238E899A00F26E68 /* WYFontViewController.m */; };
-		93887381238E8D9E00F26E68 /* WYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93887380238E8D9E00F26E68 /* WYBaseViewController.m */; };
+		93887381238E8D9E00F26E68 /* WYExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93887380238E8D9E00F26E68 /* WYExampleViewController.m */; };
 		CF658823FEA36F27C76A4DAC /* Pods_WYUtils_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD71252413ABAD0C397F28E2 /* Pods_WYUtils_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,8 +66,8 @@
 		6003F59B195388D20070C39A /* WYUtils-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WYUtils-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* WYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* WYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* WYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* WYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYViewController.m; sourceTree = "<group>"; };
+		6003F5A5195388D20070C39A /* WYRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYRootViewController.h; sourceTree = "<group>"; };
+		6003F5A6195388D20070C39A /* WYRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYRootViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* WYUtils_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYUtils_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -75,6 +77,10 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6720BB22617E9A3ED039E5BC /* Pods-WYUtils_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYUtils_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYUtils_Tests/Pods-WYUtils_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		93286054249759F4006A4605 /* WYViewSubItemCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYViewSubItemCollectionViewCell.h; sourceTree = "<group>"; };
+		93286055249759F4006A4605 /* WYViewSubItemCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYViewSubItemCollectionViewCell.m; sourceTree = "<group>"; };
+		9328605724975E24006A4605 /* WYWaveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYWaveViewController.h; sourceTree = "<group>"; };
+		9328605824975E24006A4605 /* WYWaveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYWaveViewController.m; sourceTree = "<group>"; };
 		9388733F238E7F9200F26E68 /* WYHomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYHomeCollectionViewCell.h; sourceTree = "<group>"; };
 		93887340238E7F9200F26E68 /* WYHomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYHomeCollectionViewCell.m; sourceTree = "<group>"; };
 		93887342238E817A00F26E68 /* WYExamplePubHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYExamplePubHeader.h; sourceTree = "<group>"; };
@@ -102,8 +108,8 @@
 		93887379238E88DE00F26E68 /* WYDateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYDateViewController.m; sourceTree = "<group>"; };
 		9388737C238E899A00F26E68 /* WYFontViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYFontViewController.h; sourceTree = "<group>"; };
 		9388737D238E899A00F26E68 /* WYFontViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYFontViewController.m; sourceTree = "<group>"; };
-		9388737F238E8D9E00F26E68 /* WYBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYBaseViewController.h; sourceTree = "<group>"; };
-		93887380238E8D9E00F26E68 /* WYBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYBaseViewController.m; sourceTree = "<group>"; };
+		9388737F238E8D9E00F26E68 /* WYExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYExampleViewController.h; sourceTree = "<group>"; };
+		93887380238E8D9E00F26E68 /* WYExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYExampleViewController.m; sourceTree = "<group>"; };
 		AEA00F096C437DC490F35821 /* Pods_WYUtils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WYUtils_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E7C5064C47AD98D4AF3665 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F82E36ED5EC379098CB0B363 /* WYUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WYUtils.podspec; path = ../WYUtils.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -186,13 +192,13 @@
 			children = (
 				6003F59C195388D20070C39A /* WYAppDelegate.h */,
 				6003F59D195388D20070C39A /* WYAppDelegate.m */,
-				6003F5A5195388D20070C39A /* WYViewController.h */,
-				6003F5A6195388D20070C39A /* WYViewController.m */,
+				6003F5A5195388D20070C39A /* WYRootViewController.h */,
+				6003F5A6195388D20070C39A /* WYRootViewController.m */,
 				93887342238E817A00F26E68 /* WYExamplePubHeader.h */,
 				9388733F238E7F9200F26E68 /* WYHomeCollectionViewCell.h */,
 				93887340238E7F9200F26E68 /* WYHomeCollectionViewCell.m */,
-				9388737F238E8D9E00F26E68 /* WYBaseViewController.h */,
-				93887380238E8D9E00F26E68 /* WYBaseViewController.m */,
+				9388737F238E8D9E00F26E68 /* WYExampleViewController.h */,
+				93887380238E8D9E00F26E68 /* WYExampleViewController.m */,
 				93887343238E875300F26E68 /* SubItems */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -311,6 +317,10 @@
 			children = (
 				93887374238E880F00F26E68 /* WYViewViewController.h */,
 				93887375238E880F00F26E68 /* WYViewViewController.m */,
+				9328605724975E24006A4605 /* WYWaveViewController.h */,
+				9328605824975E24006A4605 /* WYWaveViewController.m */,
+				93286054249759F4006A4605 /* WYViewSubItemCollectionViewCell.h */,
+				93286055249759F4006A4605 /* WYViewSubItemCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -417,7 +427,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = WY;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = wyanassert;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
@@ -551,11 +561,13 @@
 				9388737E238E899A00F26E68 /* WYFontViewController.m in Sources */,
 				93887373238E880700F26E68 /* WYStringViewController.m in Sources */,
 				9388736A238E87F000F26E68 /* WYNavigationBarViewController.m in Sources */,
-				93887381238E8D9E00F26E68 /* WYBaseViewController.m in Sources */,
+				93887381238E8D9E00F26E68 /* WYExampleViewController.m in Sources */,
 				9388736D238E87F900F26E68 /* WYObejectViewController.m in Sources */,
-				6003F5A7195388D20070C39A /* WYViewController.m in Sources */,
+				6003F5A7195388D20070C39A /* WYRootViewController.m in Sources */,
 				9388737A238E88DE00F26E68 /* WYDateViewController.m in Sources */,
+				9328605924975E24006A4605 /* WYWaveViewController.m in Sources */,
 				93887376238E880F00F26E68 /* WYViewViewController.m in Sources */,
+				93286056249759F4006A4605 /* WYViewSubItemCollectionViewCell.m in Sources */,
 				9388735B238E87C100F26E68 /* WYColorViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
@@ -611,23 +623,37 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -651,22 +677,36 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

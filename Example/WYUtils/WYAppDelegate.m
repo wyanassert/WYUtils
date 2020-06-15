@@ -7,7 +7,7 @@
 //
 
 #import "WYAppDelegate.h"
-#import "WYViewController.h"
+#import "WYRootViewController.h"
 
 @implementation WYAppDelegate
 
@@ -15,7 +15,7 @@
 {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[WYViewController alloc] init]];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[WYRootViewController alloc] init]];
     [self.window makeKeyAndVisible];
     return YES;
 }
