@@ -7,6 +7,7 @@
 
 #import <AVFoundation/AVFoundation.h>
 #import "AVAsset+WYVideoThumbnail.h"
+#import "AVAsset+WYTrim.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

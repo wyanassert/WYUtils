@@ -19,6 +19,7 @@
 #import "UILabel+WYUtils.h"
 #import "UINavigationBar+WYUtils.h"
 #import "UIDevice+WYUtils.h"
+#import "AVAsset+WYUtils.h"
 
 #import "WYMacroHeader.h"
 #import "WYSerializeKit.h"
