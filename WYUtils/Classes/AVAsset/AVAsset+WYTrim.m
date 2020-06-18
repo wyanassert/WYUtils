@@ -6,8 +6,58 @@
 //
 
 #import "AVAsset+WYTrim.h"
+#import "WYMacroHeader.h"
 
 @implementation AVAsset (WYTrim)
+
++ (void)wy_blurVideo:(NSURL *)videoFileInput output:(NSURL *)videoFileOutput blurRadius:(CGFloat)blurRadius completion:(void (^)(bool))completion {
+    if (!videoFileInput || blurRadius <= 0) {
+        if (completion) {
+            completion(NO);
+        }
+        return;
+    }
+    
+    AVURLAsset *asset = [AVURLAsset URLAssetWithURL:videoFileInput options:nil];
+    AVAssetExportSession *session = [[AVAssetExportSession alloc] initWithAsset:asset presetName:AVAssetExportPresetHighestQuality];
+    AVMutableVideoComposition *videoComposition = [AVMutableVideoComposition videoCompositionWithAsset:[AVAsset assetWithURL:videoFileInput] applyingCIFiltersWithHandler:^(AVAsynchronousCIImageFilteringRequest * _Nonnull request) {
+        
+        CIImage *ciImage = [request.sourceImage imageByClampingToExtent];
+        
+        CIFilter *filter = [CIFilter filterWithName:@"CIGaussianBlur"];
+        [filter setValue:ciImage forKey:kCIInputImageKey];
+        //设置模糊程度
+        [filter setValue:@(blurRadius) forKey: kCIInputRadiusKey];
+        
+        CIImage *output = [filter.outputImage imageByCroppingToRect:request.sourceImage.extent];
+        if (output) {
+            [request finishWithImage:output context:nil];
+        }
+    }];
+    
+    session.outputURL = videoFileOutput;
+    session.outputFileType = AVFileTypeMPEG4;
+    session.shouldOptimizeForNetworkUse = YES;
+    session.videoComposition = videoComposition;
+    [session exportAsynchronouslyWithCompletionHandler:^{
+        wy_dispatch_main_async_safe(^{
+            switch ([session status]) {
+                case AVAssetExportSessionStatusCompleted: {
+                    if (completion) completion(YES);
+                    break;
+                }
+                case AVAssetExportSessionStatusFailed:
+                case AVAssetExportSessionStatusCancelled:{
+                    if (completion) completion(NO);
+                    break;
+                }
+                default:
+                    if (completion) completion(NO);
+                    break;
+            }
+        });
+    }];
+}
 
 + (void)wy_adjustAudio:(NSURL *)audioFileInput toLength:(CGFloat)length output:(NSURL *)audioFileOutput completion:(void (^)(bool))completion {
     [[NSFileManager defaultManager] removeItemAtURL:audioFileOutput error:NULL];
