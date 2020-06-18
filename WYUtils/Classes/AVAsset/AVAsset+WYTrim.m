@@ -93,15 +93,17 @@
         session.timeRange = exportTimeRange;
         
         [session exportAsynchronouslyWithCompletionHandler:^{
-            if (session.status == AVAssetExportSessionStatusCompleted) {
-                if(completion) {
-                    completion(YES);
+            wy_dispatch_main_async_safe(^{
+                if (session.status == AVAssetExportSessionStatusCompleted) {
+                    if(completion) {
+                        completion(YES);
+                    }
+                } else {
+                    if(completion) {
+                        completion(NO);
+                    }
                 }
-            } else {
-                if(completion) {
-                    completion(NO);
-                }
-            }
+            });
         }];
     } else {
         if(completion) {
@@ -145,15 +147,17 @@
     exportSession.timeRange = exportTimeRange;
 
     [exportSession exportAsynchronouslyWithCompletionHandler:^{
-         if (AVAssetExportSessionStatusCompleted == exportSession.status) {
-             if(completion) {
-                 completion(YES);
-             }
-         } else if (AVAssetExportSessionStatusFailed == exportSession.status) {
-             if(completion) {
-                 completion(NO);
-             }
-         }
+        wy_dispatch_main_async_safe(^{
+            if (AVAssetExportSessionStatusCompleted == exportSession.status) {
+                if(completion) {
+                    completion(YES);
+                }
+            } else if (AVAssetExportSessionStatusFailed == exportSession.status) {
+                if(completion) {
+                    completion(NO);
+                }
+            }
+        });
      }];
 }
 
