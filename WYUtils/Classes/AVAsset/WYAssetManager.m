@@ -24,7 +24,7 @@
 
 WYDEF_SINGLETON(WYAssetManager)
 
-- (void)wy_adjustVideo:(NSURL *)videoFileInput output:(NSURL *)videoFileOutput targetRatio:(CGFloat)ratio blurRadius:(CGFloat)blurRadius completion:(void (^)(bool))completion {
+- (void)wy_adjustVideo:(NSURL *)videoFileInput output:(NSURL *)videoFileOutput targetRatio:(CGFloat)ratio blurRadius:(CGFloat)blurRadius progress:(void (^)(CGFloat progress))progressBlock completion:(void (^)(bool))completion {
     if (!videoFileInput || blurRadius <= 0 || ratio <= 0) {
         if (completion) {
             completion(NO);
@@ -32,6 +32,7 @@ WYDEF_SINGLETON(WYAssetManager)
         return;
     }
     AVURLAsset *asset = [AVURLAsset URLAssetWithURL:videoFileInput options:nil];
+    CGFloat videoDuration = CMTimeGetSeconds(asset.duration);
     AVAssetTrack *videoTrack = [asset tracksWithMediaType:AVMediaTypeVideo].firstObject;
     CGSize videoSize = [videoTrack wy_size];
     CGFloat videoRatio = videoSize.width/videoSize.height;
@@ -70,6 +71,7 @@ WYDEF_SINGLETON(WYAssetManager)
                 // read sampleData
                 CMSampleBufferRef nextSampleBuffer = [self->_videoTrackOutput copyNextSampleBuffer];
                 CMTime presentationTime = CMSampleBufferGetPresentationTimeStamp(nextSampleBuffer);
+                CGFloat currTime = CMTimeGetSeconds(asset.duration);
                 if (nextSampleBuffer) {
                     @autoreleasepool {
                         CGImageRef tmpImageRef = [self imageFromSampleBuffer:nextSampleBuffer];
@@ -79,6 +81,11 @@ WYDEF_SINGLETON(WYAssetManager)
                         BOOL result = [self appendPixelBufferAdaptor:self->_avAdaptor withImage:createImageRef atTime:presentationTime size:CGSizeMake(renderSize.width, renderSize.height)];
                         CGImageRelease(createImageRef);
                         videoComplete = !result;
+                        wy_dispatch_main_async_safe(^{
+                            if(progressBlock) {
+                                progressBlock(currTime/videoDuration);
+                            }
+                        });
                     }
                     while (self->_videoWriterInput.readyForMoreMediaData == FALSE) {
                         NSDate *maxDate = [NSDate dateWithTimeIntervalSinceNow:0.1];
