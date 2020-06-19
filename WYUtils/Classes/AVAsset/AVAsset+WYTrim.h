@@ -11,8 +11,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AVAsset (WYTrim)
 
-+ (void)wy_blurVideo:(NSURL *)videoFileInput output:(NSURL *)videoFileOutput blurRadius:(CGFloat)blurRadius completion:(void (^)(bool success))completion;
-
 + (void)wy_adjustAudio:(NSURL *)audioFileInput toLength:(CGFloat)length output:(NSURL *)audioFileOutput completion:(void (^)(bool success))completion;
 
 + (void)wy_trimAudio:(NSURL *)audioFileInput output:(NSURL *)audioFileOutput start:(CGFloat)start end:(CGFloat)end completion:(void (^)(bool success))completion;

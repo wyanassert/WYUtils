@@ -28,6 +28,7 @@
     CGImageRef cgImage = [context createCGImage:result fromRect:[inputImage extent]];
     
     UIImage *retVal = [UIImage imageWithCGImage:cgImage];
+    CGImageRelease(cgImage);
     return retVal;
 }
 

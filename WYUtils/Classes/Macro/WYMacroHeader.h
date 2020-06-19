@@ -140,6 +140,25 @@
 #define WYTOCK   NSLog(@"Time: %lf", (CACurrentMediaTime() - startTime));startTime = CACurrentMediaTime();
 #endif
 
+#ifndef WYAS_SINGLETON
+
+#define WYAS_SINGLETON( __class ) \
++ (__class *) sharedInstance;
+
+#endif
+
+#ifndef WYDEF_SINGLETON
+
+#define WYDEF_SINGLETON( __class ) \
++ (__class *) sharedInstance \
+{ \
+static dispatch_once_t once; \
+static __class * __singleton__; \
+dispatch_once(&once, ^{ __singleton__ = [[__class alloc] init]; } ); \
+return __singleton__; \
+}
+#endif
+
 #ifndef wy_dispatch_queue_async_safe
 #define wy_dispatch_queue_async_safe(queue, block)\
 if (dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL) == dispatch_queue_get_label(queue)) {\
