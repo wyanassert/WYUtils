@@ -12,6 +12,10 @@
 
 @implementation AVAsset (WYBlur)
 
++ (void)wy_renderVideo:(NSURL *)videoFileInput output:(NSURL *)videoFileOutput targetRatio:(CGFloat)ratio  progress:(CGImageRef _Nullable(^)(CGFloat progress, CGFloat currentTime, CGFloat totalTime, CGImageRef currImageRef, CGSize renderSize))progressBlock completion:(void (^)(bool success))completion {
+    [[WYAssetManager sharedInstance] wy_renderVideo:videoFileInput output:videoFileOutput targetRatio:ratio progress:progressBlock completion:completion];
+}
+
 + (void)wy_adjustVideo:(NSURL *)videoFileInput output:(NSURL *)videoFileOutput targetRatio:(CGFloat)ratio blurRadius:(CGFloat)blurRadius progress:(void (^)(CGFloat progress))progressBlock completion:(void (^)(bool))completion {
     NSString *cacheFile = [kWYTempPath stringByAppendingPathComponent:@"tmpBlurVideo.mp4"];
     NSURL *tmpUrl = [NSURL fileURLWithPath:cacheFile];
@@ -19,6 +23,7 @@
         if(progressBlock) {
             progressBlock(progress * 0.95);
         }
+        NSLog(@"%f", progress);
     } completion:^(bool success) {
         if(progressBlock) {
             progressBlock(1);

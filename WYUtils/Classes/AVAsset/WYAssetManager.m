@@ -18,11 +18,100 @@
 @property (nonatomic, strong) AVAssetWriterInput *videoWriterInput;
 @property (nonatomic, strong) AVAssetWriterInputPixelBufferAdaptor *avAdaptor;
 
+@property (nonatomic, assign) CGFloat         emptyTime;
+@property (nonatomic, assign) CGFloat         lastTime;
+
 @end
 
 @implementation WYAssetManager
 
 WYDEF_SINGLETON(WYAssetManager)
+
+- (void)wy_renderVideo:(NSURL *)videoFileInput output:(NSURL *)videoFileOutput targetRatio:(CGFloat)ratio  progress:(CGImageRef _Nullable(^)(CGFloat progress, CGFloat currentTime, CGFloat totalTime, CGImageRef currImageRef, CGSize renderSize))progressBlock completion:(void (^)(bool success))completion {
+    if (!videoFileInput || ratio <= 0) {
+        if (completion) {
+            completion(NO);
+        }
+        return;
+    }
+    
+    self.emptyTime = 0;
+    self.lastTime = 0;
+    
+    AVURLAsset *asset = [AVURLAsset URLAssetWithURL:videoFileInput options:nil];
+    CGFloat videoDuration = CMTimeGetSeconds(asset.duration);
+    AVAssetTrack *videoTrack = [asset tracksWithMediaType:AVMediaTypeVideo].firstObject;
+    CGSize videoSize = [videoTrack wy_size];
+    CGFloat videoRatio = videoSize.width/videoSize.height;
+    CGSize renderSize = videoSize;
+    if(videoRatio < ratio) {
+        renderSize = CGSizeMake(videoSize.height*ratio, videoSize.height);
+    } else {
+        renderSize = CGSizeMake(videoSize.width, videoSize.width/ratio);
+    }
+    [[NSFileManager defaultManager] removeItemAtURL:videoFileOutput error:nil];
+    
+    [self setUpAssetReader:asset];
+    [self setUpAssetWritter:videoFileOutput renderSize:renderSize];
+    
+    dispatch_queue_t dispatchQueue = dispatch_queue_create("com.tapharmonic.WriterQueue", DISPATCH_QUEUE_SERIAL);
+    dispatch_set_target_queue(dispatchQueue, dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_HIGH, 0));
+    
+    __weak typeof(self)weakSelf = self;
+    //read sampleData From AVAssetReaderOutput, and then render, finally append data to avAdaptor
+    [_videoWriterInput requestMediaDataWhenReadyOnQueue:dispatchQueue usingBlock:^{
+        __strong typeof(weakSelf)self = weakSelf;
+        BOOL videoComplete = NO;
+        while (self->_videoWriterInput.readyForMoreMediaData == FALSE) {
+          NSDate *maxDate = [NSDate dateWithTimeIntervalSinceNow:0.1];
+          [[NSRunLoop currentRunLoop] runUntilDate:maxDate];
+        }
+        while ([self->_videoWriterInput isReadyForMoreMediaData] && !videoComplete){
+            // read sampleData
+            CMSampleBufferRef nextSampleBuffer = [self->_videoTrackOutput copyNextSampleBuffer];
+            CMTime presentationTime = CMSampleBufferGetPresentationTimeStamp(nextSampleBuffer);
+            CGFloat currTime = CMTimeGetSeconds(presentationTime);
+            if (nextSampleBuffer && currTime <= videoDuration) {
+                @autoreleasepool {
+                    CGImageRef tmpImageRef = [self imageFromSampleBuffer:nextSampleBuffer];
+                    CFRelease(nextSampleBuffer);
+                    nextSampleBuffer = NULL;
+                    CGImageRef createImageRef = progressBlock(currTime/videoDuration, currTime, videoDuration, tmpImageRef, renderSize);
+                    if(createImageRef != NULL) {
+                        CMTime currentTime = CMTimeMake((currTime - self.emptyTime) * presentationTime.timescale, presentationTime.timescale);
+                        BOOL result = [self appendPixelBufferAdaptor:self->_avAdaptor withImage:createImageRef atTime:currentTime size:CGSizeMake(renderSize.width, renderSize.height)];
+                        CGImageRelease(createImageRef);
+                        videoComplete = !result;
+                    } else {
+                        self.emptyTime += currTime - self.lastTime;
+                    }
+                    self.lastTime = currTime;
+                }
+                while (self->_videoWriterInput.readyForMoreMediaData == FALSE) {
+                    NSDate *maxDate = [NSDate dateWithTimeIntervalSinceNow:0.1];
+                    [[NSRunLoop currentRunLoop] runUntilDate:maxDate];
+                }
+            } else {
+                videoComplete = YES;
+            }
+        }
+        [self->_videoWriterInput markAsFinished];
+        [self->_assetWriter finishWritingWithCompletionHandler:^{
+            __strong typeof(weakSelf)self = weakSelf;
+            AVAssetWriterStatus status = self->_assetWriter.status;
+            if (status == AVAssetWriterStatusCompleted) {
+                if(completion) {
+                    completion(YES);
+                }
+            } else {
+                if(completion) {
+                    completion(NO);
+                }
+            }
+            self->_assetWriter = nil;
+        }];
+    }];
+}
 
 - (void)wy_adjustVideo:(NSURL *)videoFileInput output:(NSURL *)videoFileOutput targetRatio:(CGFloat)ratio blurRadius:(CGFloat)blurRadius progress:(void (^)(CGFloat progress))progressBlock completion:(void (^)(bool))completion {
     if (!videoFileInput || blurRadius <= 0 || ratio <= 0) {
@@ -71,8 +160,8 @@ WYDEF_SINGLETON(WYAssetManager)
                 // read sampleData
                 CMSampleBufferRef nextSampleBuffer = [self->_videoTrackOutput copyNextSampleBuffer];
                 CMTime presentationTime = CMSampleBufferGetPresentationTimeStamp(nextSampleBuffer);
-                CGFloat currTime = CMTimeGetSeconds(asset.duration);
-                if (nextSampleBuffer) {
+                CGFloat currTime = CMTimeGetSeconds(presentationTime);
+                if (nextSampleBuffer && currTime <= videoDuration) {
                     @autoreleasepool {
                         CGImageRef tmpImageRef = [self imageFromSampleBuffer:nextSampleBuffer];
                         CFRelease(nextSampleBuffer);
