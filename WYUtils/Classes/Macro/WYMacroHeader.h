@@ -252,4 +252,15 @@ return __singleton__; \
 #define kWYAppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
 #define kWYSystemVersion [[UIDevice currentDevice] systemVersion]
 
+// 把为nil的字符串返回@""
+#define WY_AVOID_NIL_STRING(x) ((x) ?: @"")
+#define WY_AVOID_NIL_DIC(x) ((x) ?: @{})
+#define WY_AVOID_NIL_ARRAY(x) ((x) ?: @[])
+
+
+// 判断当前运行在主线程
+#define ASSERT_MAIN_THREAD ASSERT([NSThread currentThread] == [NSThread mainThread]);
+#define ASSERT_NO_MAIN_THREAD() ASSERT([NSThread currentThread] != [NSThread mainThread])
+
+
 #endif /* WYMacroHeader_h */

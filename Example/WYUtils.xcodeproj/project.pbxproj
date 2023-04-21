@@ -24,6 +24,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		93286056249759F4006A4605 /* WYViewSubItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93286055249759F4006A4605 /* WYViewSubItemCollectionViewCell.m */; };
 		9328605924975E24006A4605 /* WYWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9328605824975E24006A4605 /* WYWaveViewController.m */; };
+		936A420529F2A00000DDE8F2 /* WYTextViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 936A420429F2A00000DDE8F2 /* WYTextViewViewController.m */; };
 		93887341238E7F9200F26E68 /* WYHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93887340238E7F9200F26E68 /* WYHomeCollectionViewCell.m */; };
 		9388735B238E87C100F26E68 /* WYColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9388735A238E87C100F26E68 /* WYColorViewController.m */; };
 		9388735E238E87CF00F26E68 /* WYDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9388735D238E87CF00F26E68 /* WYDataViewController.m */; };
@@ -81,6 +82,8 @@
 		93286055249759F4006A4605 /* WYViewSubItemCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYViewSubItemCollectionViewCell.m; sourceTree = "<group>"; };
 		9328605724975E24006A4605 /* WYWaveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYWaveViewController.h; sourceTree = "<group>"; };
 		9328605824975E24006A4605 /* WYWaveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYWaveViewController.m; sourceTree = "<group>"; };
+		936A420329F2A00000DDE8F2 /* WYTextViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYTextViewViewController.h; sourceTree = "<group>"; };
+		936A420429F2A00000DDE8F2 /* WYTextViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYTextViewViewController.m; sourceTree = "<group>"; };
 		9388733F238E7F9200F26E68 /* WYHomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYHomeCollectionViewCell.h; sourceTree = "<group>"; };
 		93887340238E7F9200F26E68 /* WYHomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYHomeCollectionViewCell.m; sourceTree = "<group>"; };
 		93887342238E817A00F26E68 /* WYExamplePubHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYExamplePubHeader.h; sourceTree = "<group>"; };
@@ -248,9 +251,19 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		936A420229F29FEF00DDE8F2 /* UItextView */ = {
+			isa = PBXGroup;
+			children = (
+				936A420329F2A00000DDE8F2 /* WYTextViewViewController.h */,
+				936A420429F2A00000DDE8F2 /* WYTextViewViewController.m */,
+			);
+			path = UItextView;
+			sourceTree = "<group>";
+		};
 		93887343238E875300F26E68 /* SubItems */ = {
 			isa = PBXGroup;
 			children = (
+				936A420229F29FEF00DDE8F2 /* UItextView */,
 				93887355238E878E00F26E68 /* Color */,
 				9388734F238E878D00F26E68 /* Data */,
 				93887377238E88D800F26E68 /* Date */,
@@ -487,14 +500,16 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WYUtils_Example/Pods-WYUtils_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BlocksKit/BlocksKit.framework",
+				"${BUILT_PRODUCTS_DIR}/LookinServer/LookinServer.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${PODS_ROOT}/Reveal-SDK/RevealServer-19/iOS/RevealServer.framework",
 				"${BUILT_PRODUCTS_DIR}/WYUtils/WYUtils.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BlocksKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LookinServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WYUtils.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,6 +584,7 @@
 				9388737A238E88DE00F26E68 /* WYDateViewController.m in Sources */,
 				9328605924975E24006A4605 /* WYWaveViewController.m in Sources */,
 				93887376238E880F00F26E68 /* WYViewViewController.m in Sources */,
+				936A420529F2A00000DDE8F2 /* WYTextViewViewController.m in Sources */,
 				93286056249759F4006A4605 /* WYViewSubItemCollectionViewCell.m in Sources */,
 				9388735B238E87C100F26E68 /* WYColorViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

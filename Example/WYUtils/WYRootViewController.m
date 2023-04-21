@@ -22,6 +22,7 @@
 #import "WYStringViewController.h"
 #import "WYViewViewController.h"
 #import "WYExampleViewController.h"
+#import "WYTextViewViewController.h"
 
 @interface WYRootViewController () <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
@@ -64,6 +65,7 @@
         @"WYLabelViewController",
         @"WYNavigationBarViewController",
         @"WYViewViewController",
+        @"WYTextViewViewController",
     ][indexPath.row];
     
     NSString *descText = @[
@@ -79,6 +81,7 @@
         @"Label",
         @"NavigationBar",
         @"View",
+        @"TextView",
     ][indexPath.row];
     Class class = NSClassFromString(className);
     WYExampleViewController *vc = [[class alloc] init];
@@ -109,7 +112,7 @@
         flowLayout.itemSize = WYMINSIZE(150, 150);
         flowLayout.minimumLineSpacing = WYMIN(20);
         flowLayout.minimumInteritemSpacing = WYMIN(20);
-        flowLayout.sectionInset = UIEdgeInsetsMake(WYMIN(20), WYMIN(22), WYMIN(17), WYMIN(22));
+        flowLayout.sectionInset = UIEdgeInsetsMake(WYMIN(20) + WYDeviceNaviHeight, WYMIN(22), WYMIN(17), WYMIN(22));
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
         
         _collectionView.backgroundColor = [UIColor clearColor];

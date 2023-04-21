@@ -71,6 +71,7 @@
         @"Label",
         @"NavigationBar",
         @"View",
+        @"TextView",
     ][cellData];
     self.titleLabel.text = descText;
     NSString *allText = [NSString stringWithFormat:@"Select for\n%@", descText];

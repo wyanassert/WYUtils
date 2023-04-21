@@ -23,6 +23,7 @@ typedef NS_ENUM(NSUInteger, WYHomeType) {
     WYHomeTypeLabel,
     WYHomeTypeNavigationBar,
     WYHomeTypeView,
+    WYHomeTypeTextView,
     WYHomeTypeCount
 };
 
