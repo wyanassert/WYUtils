@@ -263,4 +263,17 @@ return __singleton__; \
 #define ASSERT_NO_MAIN_THREAD() ASSERT([NSThread currentThread] != [NSThread mainThread])
 
 
+/* 宏字符串操作，避免在宏里面嵌套使用宏带来的问题 */
+#define WY_STRING_CONCAT(A, B) WY_STRING_CONCAT_(A, B)
+#define WY_STRING_CONCAT_(A, B) A ## B
+// Weak Strong
+#define WY_WEAK_SELF(VAR) \
+__weak __typeof__(VAR) WY_STRING_CONCAT(VAR, _weak_) = (VAR)
+
+#define WY_STRONG_SELF(VAR) \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+__strong __typeof__(VAR) VAR = WY_STRING_CONCAT(VAR, _weak_) \
+_Pragma("clang diagnostic pop")
+
 #endif /* WYMacroHeader_h */
