@@ -8,6 +8,7 @@
 
 #import "WYViewViewController.h"
 #import "WYWaveViewController.h"
+#import "WYGravityMotionViewController.h"
 
 @interface WYViewViewController () <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
@@ -38,7 +39,11 @@
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
-            
+        case WYViewTypeGravity: {
+            WYGravityMotionViewController *vc = [[WYGravityMotionViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
         default:
             break;
     }
