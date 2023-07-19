@@ -22,6 +22,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		9313AAB72A67C9E70053F1A1 /* WYALLFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9313AAB62A67C9E70053F1A1 /* WYALLFontViewController.m */; };
+		9313AABD2A67CAD90053F1A1 /* WYFontCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9313AABC2A67CAD90053F1A1 /* WYFontCollectionViewCell.m */; };
 		93286056249759F4006A4605 /* WYViewSubItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93286055249759F4006A4605 /* WYViewSubItemCollectionViewCell.m */; };
 		9328605924975E24006A4605 /* WYWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9328605824975E24006A4605 /* WYWaveViewController.m */; };
 		936A420529F2A00000DDE8F2 /* WYTextViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 936A420429F2A00000DDE8F2 /* WYTextViewViewController.m */; };
@@ -79,6 +81,10 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6720BB22617E9A3ED039E5BC /* Pods-WYUtils_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYUtils_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYUtils_Tests/Pods-WYUtils_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9313AAB52A67C9E70053F1A1 /* WYALLFontViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYALLFontViewController.h; sourceTree = "<group>"; };
+		9313AAB62A67C9E70053F1A1 /* WYALLFontViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYALLFontViewController.m; sourceTree = "<group>"; };
+		9313AABB2A67CAD90053F1A1 /* WYFontCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYFontCollectionViewCell.h; sourceTree = "<group>"; };
+		9313AABC2A67CAD90053F1A1 /* WYFontCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYFontCollectionViewCell.m; sourceTree = "<group>"; };
 		93286054249759F4006A4605 /* WYViewSubItemCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYViewSubItemCollectionViewCell.h; sourceTree = "<group>"; };
 		93286055249759F4006A4605 /* WYViewSubItemCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYViewSubItemCollectionViewCell.m; sourceTree = "<group>"; };
 		9328605724975E24006A4605 /* WYWaveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYWaveViewController.h; sourceTree = "<group>"; };
@@ -393,6 +399,10 @@
 			children = (
 				9388737C238E899A00F26E68 /* WYFontViewController.h */,
 				9388737D238E899A00F26E68 /* WYFontViewController.m */,
+				9313AABB2A67CAD90053F1A1 /* WYFontCollectionViewCell.h */,
+				9313AABC2A67CAD90053F1A1 /* WYFontCollectionViewCell.m */,
+				9313AAB52A67C9E70053F1A1 /* WYALLFontViewController.h */,
+				9313AAB62A67C9E70053F1A1 /* WYALLFontViewController.m */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -580,9 +590,11 @@
 				93887367238E87E500F26E68 /* WYLabelViewController.m in Sources */,
 				93887364238E87DE00F26E68 /* WYImageViewController.m in Sources */,
 				93887370238E880000F26E68 /* WYOperationViewController.m in Sources */,
+				9313AAB72A67C9E70053F1A1 /* WYALLFontViewController.m in Sources */,
 				93B358582A5FA80000E52D7A /* WYGravityMotionViewController.m in Sources */,
 				9388737E238E899A00F26E68 /* WYFontViewController.m in Sources */,
 				93887373238E880700F26E68 /* WYStringViewController.m in Sources */,
+				9313AABD2A67CAD90053F1A1 /* WYFontCollectionViewCell.m in Sources */,
 				9388736A238E87F000F26E68 /* WYNavigationBarViewController.m in Sources */,
 				93887381238E8D9E00F26E68 /* WYExampleViewController.m in Sources */,
 				9388736D238E87F900F26E68 /* WYObejectViewController.m in Sources */,

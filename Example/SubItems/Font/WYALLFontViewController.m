@@ -1,27 +1,29 @@
 //
-//  WYFontViewController.m
+//  WYALLFontViewController.m
 //  WYUtils_Example
 //
-//  Created by wyan on 2019/11/27.
-//  Copyright © 2019 wyanassert. All rights reserved.
+//  Created by wyan on 2023/7/19.
+//  Copyright © 2023 wyanassert. All rights reserved.
 //
 
-#import "WYFontViewController.h"
-#import "WYFontCollectionViewCell.h"
 #import "WYALLFontViewController.h"
+#import "WYFontCollectionViewCell.h"
 
-@interface WYFontViewController ()<UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
+@interface WYALLFontViewController ()<UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
 @property (nonatomic, strong) UICollectionView         *collectionView;
 
+@property (nonatomic, strong) NSArray<NSString *> *fonts;
+
 @end
 
-@implementation WYFontViewController
+@implementation WYALLFontViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.fonts = [UIFont wy_allFonts];
     [self configView];
 }
 - (void)configView {
@@ -32,15 +34,8 @@
 
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    switch (indexPath.row) {
-        case WYFontTypeAllFont: {
-            WYALLFontViewController *vc = [[WYALLFontViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        default:
-            break;
-    }
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    pasteboard.string = self.fonts[indexPath.row];
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
@@ -48,12 +43,13 @@
 
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return WYFontTypeCount;
+    return self.fonts.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     WYFontCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[WYFontCollectionViewCell reuseIdentifier] forIndexPath:indexPath];
-    [cell loadState:indexPath.row];
+    NSString *fontName = self.fonts[indexPath.row];
+    [cell loadText:[@"字体: " stringByAppendingString:fontName] fontName:fontName];
     return cell;
 }
 
