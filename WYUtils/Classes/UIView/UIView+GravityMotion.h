@@ -36,6 +36,9 @@
 /// 停止跟随陀螺仪水平移动
 - (void)gm_stop;
 
+/// 重置进入的位置
+- (void)gm_resetInitialStatus;
+
 @property (nonatomic, strong, nullable) CMMotionManager *motionManager;
 
 @property (nonatomic, assign) float lastGravityX;

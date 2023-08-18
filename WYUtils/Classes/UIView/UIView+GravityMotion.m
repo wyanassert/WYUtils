@@ -51,16 +51,24 @@ static NSString *const kGravityMotionPositionAnimation = @"kGravityMotionPositio
                 x = MAX(-1, MIN(1, x)); // 补偿值 超过上下限也不管了, 安卓也没管
                 y = MAX(-1, MIN(1, y));
 //                NSLog(@"UIView+GravityMotion-2 %.2f, %.2f", x, y);
-                CGFloat maxX = MAX(0, MIN(1, maxAngleDx / 180));
+                CGFloat maxX = MAX(0, MIN(1, maxAngleDx / 90.f));
+                CGFloat minX = MAX(0, MIN(1, 20.0 / 90.f)); // 默认 20 度才开始动
                 if (maxX > 0)
                 {
-                    x = MAX(-1.f, MIN(1.f, x / maxX));
+                    x = [self calValue:x
+                              maxValue:maxX
+                              minValue:minX
+                              maxScale:1];
                 }
 
-                CGFloat maxY = MAX(0, MIN(1, maxAngleDy / 180));
+                CGFloat maxY = MAX(0, MIN(1, maxAngleDy / 90.f));
+                CGFloat minY = MAX(0, MIN(1, 20.0 / 90.f)); // 20度开始动
                 if (maxY > 0)
                 {
-                    y = MAX(-1.f, MIN(1.f, y / maxY));
+                    y = [self calValue:y
+                              maxValue:maxY
+                              minValue:minY
+                              maxScale:1];
                 }
                 
                 [self gm_updateWithGravityX:x
@@ -108,62 +116,24 @@ static NSString *const kGravityMotionPositionAnimation = @"kGravityMotionPositio
                 x = MAX(-1, MIN(1, x)); // 补偿值 超过上下限也不管了, 安卓也没管
                 y = MAX(-1, MIN(1, y));
 //                NSLog(@"UIView+GravityMotion-2 %.2f, %.2f", x, y);
-                CGFloat maxX = MAX(0, MIN(1, maxXAngel / 90));
-                CGFloat minX = MAX(0, MIN(1, 5 / 90)); // 默认 5 度才开始动
+                CGFloat maxX = MAX(0, MIN(1, maxXAngel / 90.f));
+                CGFloat minX = MAX(0, MIN(1, 5.0 / 90.f)); // 默认 5 度才开始动
                 if (maxX > 0 && minX >= 0 && maxX > minX)
                 {
-                    if (fabs(x) <= minX)
-                    {
-                        x = 0;
-                    }
-                    else if (fabs(x) >= maxX)
-                    {
-                        if (x > 0)
-                        {
-                            x = maxX;
-                        }
-                        else
-                        {
-                            x = - maxX;
-                        }
-                    }
-                    else if (x > 0)
-                    {
-                        x = (fabs(x) - minX) / (maxX - minX) * maxX;
-                    }
-                    else
-                    {
-                        x = - (fabs(x) - minX) / (maxX - minX) * maxX;;
-                    }
+                    x = [self calValue:x
+                              maxValue:maxX
+                              minValue:minX
+                              maxScale:maxX];
                 }
 
-                CGFloat maxY = MAX(0, MIN(1, maxYAngel / 90));
-                CGFloat minY = MAX(0, MIN(1, 5 / 90)); // 5度开始动
+                CGFloat maxY = MAX(0, MIN(1, maxYAngel / 90.f));
+                CGFloat minY = MAX(0, MIN(1, 5.0 / 90.f)); // 5度开始动
                 if (maxY > 0 && minY >= 0 && maxY > minY)
                 {
-                    if (fabs(y) <= minY)
-                    {
-                        y = 0;
-                    }
-                    else if (fabs(y) >= maxY)
-                    {
-                        if (y > 0)
-                        {
-                            y = maxY;
-                        }
-                        else
-                        {
-                            y = - maxY;
-                        }
-                    }
-                    else if (y > 0)
-                    {
-                        y = (fabs(y) - minY) / (maxY - minY) * maxY;
-                    }
-                    else
-                    {
-                        y = - (fabs(y) - minY) / (maxY - minY) * maxY;;
-                    }
+                    y = [self calValue:y
+                              maxValue:maxY
+                              minValue:minY
+                              maxScale:maxX];
                 }
                 if (xAngel > 0)
                 {
@@ -185,6 +155,13 @@ static NSString *const kGravityMotionPositionAnimation = @"kGravityMotionPositio
     self.motionManager = nil;
 }
 
+- (void)gm_resetInitialStatus
+{
+    self.initialGravityX = nil;
+    self.initialGravityY = nil;
+    [self gm_rotateWithGravityX:0 gravityY:0];
+}
+
 #pragma mark - Private
 // gravityX 取值-1->1
 // gravityY 取值-1->1
@@ -195,6 +172,7 @@ static NSString *const kGravityMotionPositionAnimation = @"kGravityMotionPositio
 {
     CGFloat transformX = (gravityX - self.lastGravityX) * maxHorizontalOffset;
     CGFloat transformY = (gravityY - self.lastGravityY) * maxVerticalOffset;
+    transformY = -transformY; // 更加自然
     self.transform = CGAffineTransformTranslate(self.transform, transformX, transformY);
     self.lastGravityX = gravityX;
     self.lastGravityY = gravityY;
@@ -210,6 +188,42 @@ static NSString *const kGravityMotionPositionAnimation = @"kGravityMotionPositio
     transform = CATransform3DRotate(transform, gravityX * M_PI_2, 0, 1, 0);
     transform = CATransform3DRotate(transform, gravityY * M_PI_2, 1, 0, 0);
     self.layer.transform = transform;
+}
+
+- (CGFloat)calValue:(CGFloat)value
+           maxValue:(CGFloat)maxV
+           minValue:(CGFloat)minV
+           maxScale:(CGFloat)maxScale
+{
+    if (fabs(value) <= minV)
+    {
+        value = 0;
+    }
+    else if (fabs(value) >= maxV)
+    {
+        if (value > 0)
+        {
+            value = maxScale;
+        }
+        else
+        {
+            value = - maxScale;
+        }
+    }
+    else
+    {
+        CGFloat currScale = (fabs(value) - minV) / (maxV - minV); // 0~1
+        currScale = pow(currScale, 1.2); // 让变化开始的稍微慢一点
+        if (value > 0)
+        {
+            value = currScale * maxScale;
+        }
+        else
+        {
+            value = - currScale * maxScale;
+        }
+    }
+    return value;
 }
 
 #pragma mark - Getter & Setter
@@ -266,4 +280,3 @@ static NSString *const kGravityMotionPositionAnimation = @"kGravityMotionPositio
 
 
 @end
-

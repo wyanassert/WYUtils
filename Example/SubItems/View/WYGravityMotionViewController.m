@@ -26,50 +26,51 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = UIColor.blackColor;
     
-//    [self.view addSubview:self.backImageView];
-//    [self.backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(-100, -200, -100, -200));
-//    }];
-//
-//    {
-//        UIView *redView = [[UIView alloc] init];
-//        redView.backgroundColor = UIColor.redColor;
-//        [self.backImageView addSubview:redView];
-//        [redView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.left.top.equalTo(self.backImageView);
-//            make.width.height.mas_equalTo(50);
-//        }];
-//    }
-//
-//    {
-//        UIView *redView = [[UIView alloc] init];
-//        redView.backgroundColor = UIColor.redColor;
-//        [self.backImageView addSubview:redView];
-//        [redView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.right.top.equalTo(self.backImageView);
-//            make.width.height.mas_equalTo(100);
-//        }];
-//    }
-//
-//    {
-//        UIView *redView = [[UIView alloc] init];
-//        redView.backgroundColor = UIColor.redColor;
-//        [self.backImageView addSubview:redView];
-//        [redView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.left.bottom.equalTo(self.backImageView);
-//            make.width.height.mas_equalTo(50);
-//        }];
-//    }
-//
-//    {
-//        UIView *redView = [[UIView alloc] init];
-//        redView.backgroundColor = UIColor.redColor;
-//        [self.backImageView addSubview:redView];
-//        [redView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.right.bottom.equalTo(self.backImageView);
-//            make.width.height.mas_equalTo(50);
-//        }];
-//    }
+    [self.view addSubview:self.backImageView];
+    [self.backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(-100, -200, -100, -200));
+    }];
+
+    {
+        UIView *redView = [[UIView alloc] init];
+        redView.backgroundColor = UIColor.redColor;
+        [self.backImageView addSubview:redView];
+        [redView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.top.equalTo(self.backImageView);
+            make.width.height.mas_equalTo(50);
+        }];
+    }
+
+    {
+        UIView *redView = [[UIView alloc] init];
+        redView.backgroundColor = UIColor.redColor;
+        [self.backImageView addSubview:redView];
+        [redView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.top.equalTo(self.backImageView);
+            make.width.height.mas_equalTo(100);
+        }];
+    }
+
+    {
+        UIView *redView = [[UIView alloc] init];
+        redView.backgroundColor = UIColor.redColor;
+        [self.backImageView addSubview:redView];
+        [redView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.bottom.equalTo(self.backImageView);
+            make.width.height.mas_equalTo(50);
+        }];
+    }
+
+    {
+        UIView *redView = [[UIView alloc] init];
+        redView.backgroundColor = UIColor.redColor;
+        [self.backImageView addSubview:redView];
+        [redView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.bottom.equalTo(self.backImageView);
+            make.width.height.mas_equalTo(50);
+        }];
+    }
+    [self.backImageView gm_startWithMaxHorizontalOffset:200 maxVerticalOffset:100 maxAngleDx:60 maxAngleDy:60];
     
     {
         UIView *redView = [[UIView alloc] init];
@@ -88,9 +89,6 @@
         make.center.equalTo(self.view);
         make.size.width.height.mas_equalTo(150);
     }];
-    
-//    [self.backImageView gm_startWithMaxHorizontalOffset:200 maxVerticalOffset:100 maxAngleDx:60 maxAngleDy:60];
-//    [self.frontLabel gm_startRotateWithXAngel:10 yAngel:10 maxXAngel:30 maxYAngel:30];
 }
 
 - (void)dealloc
