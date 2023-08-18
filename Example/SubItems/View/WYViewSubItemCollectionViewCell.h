@@ -11,6 +11,7 @@
 typedef NS_ENUM(NSUInteger, WYViewType) {
     WYViewTypeWave,
     WYViewTypeGravity,
+    WYViewTypeFlipClock,
     WYViewTypeCount,
 };
 

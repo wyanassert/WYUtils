@@ -29,6 +29,9 @@
         case WYViewTypeGravity:
             self.titleLabel.text = @"GRAVITY Motion";
             break;
+        case WYViewTypeFlipClock:
+            self.titleLabel.text = @"Flip Clock";
+            break;
         default:
             break;
     }

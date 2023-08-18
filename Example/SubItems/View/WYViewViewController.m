@@ -9,6 +9,7 @@
 #import "WYViewViewController.h"
 #import "WYWaveViewController.h"
 #import "WYGravityMotionViewController.h"
+#import "WYFlipClockViewController.h"
 
 @interface WYViewViewController () <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
@@ -44,6 +45,11 @@
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case WYViewTypeFlipClock: {
+            WYFlipClockViewController *vc = [[WYFlipClockViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;;
         default:
             break;
     }

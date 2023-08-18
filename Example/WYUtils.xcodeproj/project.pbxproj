@@ -42,6 +42,7 @@
 		9388737E238E899A00F26E68 /* WYFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9388737D238E899A00F26E68 /* WYFontViewController.m */; };
 		93887381238E8D9E00F26E68 /* WYExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93887380238E8D9E00F26E68 /* WYExampleViewController.m */; };
 		93B358582A5FA80000E52D7A /* WYGravityMotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B358572A5FA80000E52D7A /* WYGravityMotionViewController.m */; };
+		93D39A4F2A8F4F2100F0308C /* WYFlipClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D39A4E2A8F4F2100F0308C /* WYFlipClockViewController.m */; };
 		CF658823FEA36F27C76A4DAC /* Pods_WYUtils_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD71252413ABAD0C397F28E2 /* Pods_WYUtils_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +123,8 @@
 		93887380238E8D9E00F26E68 /* WYExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYExampleViewController.m; sourceTree = "<group>"; };
 		93B358562A5FA80000E52D7A /* WYGravityMotionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYGravityMotionViewController.h; sourceTree = "<group>"; };
 		93B358572A5FA80000E52D7A /* WYGravityMotionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYGravityMotionViewController.m; sourceTree = "<group>"; };
+		93D39A4D2A8F4F2100F0308C /* WYFlipClockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYFlipClockViewController.h; sourceTree = "<group>"; };
+		93D39A4E2A8F4F2100F0308C /* WYFlipClockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYFlipClockViewController.m; sourceTree = "<group>"; };
 		AEA00F096C437DC490F35821 /* Pods_WYUtils_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WYUtils_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E7C5064C47AD98D4AF3665 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F82E36ED5EC379098CB0B363 /* WYUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WYUtils.podspec; path = ../WYUtils.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -345,6 +348,8 @@
 				9328605824975E24006A4605 /* WYWaveViewController.m */,
 				93286054249759F4006A4605 /* WYViewSubItemCollectionViewCell.h */,
 				93286055249759F4006A4605 /* WYViewSubItemCollectionViewCell.m */,
+				93D39A4D2A8F4F2100F0308C /* WYFlipClockViewController.h */,
+				93D39A4E2A8F4F2100F0308C /* WYFlipClockViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -587,6 +592,7 @@
 				93887361238E87D700F26E68 /* WYDeviceViewController.m in Sources */,
 				93887341238E7F9200F26E68 /* WYHomeCollectionViewCell.m in Sources */,
 				9388735E238E87CF00F26E68 /* WYDataViewController.m in Sources */,
+				93D39A4F2A8F4F2100F0308C /* WYFlipClockViewController.m in Sources */,
 				93887367238E87E500F26E68 /* WYLabelViewController.m in Sources */,
 				93887364238E87DE00F26E68 /* WYImageViewController.m in Sources */,
 				93887370238E880000F26E68 /* WYOperationViewController.m in Sources */,
