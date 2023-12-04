@@ -42,6 +42,8 @@
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
+    
+    WYLogWithLevelAndTag(WYLogLevelError, @"测试", @"%@ %d 2-1", @"53", 3);
 }
 
 - (void)didReceiveMemoryWarning
