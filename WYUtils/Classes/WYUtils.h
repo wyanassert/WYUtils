@@ -39,4 +39,6 @@
 #import "WYSafeNavigationController.h"
 #import "WYTabBar.h"
 
+#import "WYCollectionMutableDeepCopy.h"
+
 #endif /* WYUtils_h */
