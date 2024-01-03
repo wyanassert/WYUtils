@@ -5,6 +5,7 @@ target 'WYUtils_Example' do
   pod 'Masonry'
   pod 'BlocksKit'
   pod 'LookinServer', :configurations => ['Debug']
+  pod 'fishhook', :git => 'https://github.com/facebook/fishhook.git', :branch => 'main'
 
   target 'WYUtils_Tests' do
     inherit! :search_paths

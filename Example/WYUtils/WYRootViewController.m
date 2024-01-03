@@ -23,6 +23,7 @@
 #import "WYViewViewController.h"
 #import "WYExampleViewController.h"
 #import "WYTextViewViewController.h"
+#import "fishhook.h"
 
 @interface WYRootViewController () <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
@@ -43,7 +44,26 @@
         make.edges.equalTo(self.view);
     }];
     
-    WYLogWithLevelAndTag(WYLogLevelError, @"测试", @"%@ %d 2-1", @"53", 3);
+    struct rebinding nslog;
+    nslog.name = "NSLog";//要hook的函数名称
+    nslog.replacement = myNSLog;//这里是函数的指针，也就是函数名称
+    nslog.replaced = &sys_nslog;
+//    rebinding 结构体数组
+    struct rebinding rebs[1] = {nslog};
+    /***
+     存放rebinding 结构体数组
+     数组长度
+     */
+    rebind_symbols(rebs, 1);
+    
+    NSLog(@"测试");
+}
+
+static void(*sys_nslog)(NSString * format,...);
+//定义一个新函数
+void myNSLog(NSString *format,...){
+    format = [format stringByAppendingString:@"~~~~~hook 到了!"];
+    sys_nslog(format);
 }
 
 - (void)didReceiveMemoryWarning
