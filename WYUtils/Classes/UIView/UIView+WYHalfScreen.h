@@ -8,16 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, QMAddSongToFolderStatus)
+typedef NS_ENUM(NSUInteger, WYHalfScreenStatus)
 {
     /// 隐藏
-    QMAddSongToFolderStatus_Hide = 0,
+    WYHalfScreenStatus_Hide = 0,
     /// 半屏, 默认状态
-    QMAddSongToFolderStatus_HalfScreen,
+    WYHalfScreenStatus_HalfScreen,
     /// 接近满屏
-    QMAddSongToFolderStatus_FullScreen,
+    WYHalfScreenStatus_FullScreen,
     /// 正在动画
-    QMAddSongToFolderStatus_Animating,
+    WYHalfScreenStatus_Animating,
 };
 
 NS_ASSUME_NONNULL_BEGIN
@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 收起手势相关, 请不要使用这些值 */
 /// 当前状态
-@property (nonatomic, assign) QMAddSongToFolderStatus hs_actionStyle;
+@property (nonatomic, assign) WYHalfScreenStatus hs_actionStyle;
 /// 滑动时记录contentOffsetY，为了判断上滑下滑
 @property (nonatomic, assign) CGFloat hs_contentOffsetY;
 /// 滑动初始的偏移，为了判断是否触发轻扫收起

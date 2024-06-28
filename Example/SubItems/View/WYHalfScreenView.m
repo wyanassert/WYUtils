@@ -33,7 +33,6 @@
 - (void)show
 {
     // 不能直接在 VC 上弹出, 二级页边缘手势处理不了, 跟歌曲AS一样直接在 UIWindow 上弹出吧
-    // [parentVC.view addSubview:self];
     UIWindow *window = [[UIApplication sharedApplication] keyWindow];
     [window addSubview:self];
     WY_WEAK_SELF(self);

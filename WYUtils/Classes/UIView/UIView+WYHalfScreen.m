@@ -35,12 +35,12 @@
     BOOL shouldBegin = NO;
     switch (self.hs_actionStyle)
     {
-        case QMAddSongToFolderStatus_Animating:
-        case QMAddSongToFolderStatus_Hide:
+        case WYHalfScreenStatus_Animating:
+        case WYHalfScreenStatus_Hide:
             shouldBegin = NO;
             break;
-        case QMAddSongToFolderStatus_HalfScreen:
-        case QMAddSongToFolderStatus_FullScreen:
+        case WYHalfScreenStatus_HalfScreen:
+        case WYHalfScreenStatus_FullScreen:
             shouldBegin = YES;
             break;
         default:
@@ -52,8 +52,8 @@
 - (void)hs_scrollViewDidScroll:(UIScrollView *)scrollView
 {
     WYASSERT(self.hs_scrollView);
-    BOOL shouldLocateBgView = self.hs_actionStyle == QMAddSongToFolderStatus_FullScreen ||
-    (self.hs_actionStyle == QMAddSongToFolderStatus_HalfScreen && (self.hs_scrollView.contentOffset.y <= 0 || self.hs_contentOffsetY <= 0 || scrollView.contentOffset.y >= self.hs_contentOffsetY + 1));
+    BOOL shouldLocateBgView = self.hs_actionStyle == WYHalfScreenStatus_FullScreen ||
+    (self.hs_actionStyle == WYHalfScreenStatus_HalfScreen && (self.hs_scrollView.contentOffset.y <= 0 || self.hs_contentOffsetY <= 0 || scrollView.contentOffset.y >= self.hs_contentOffsetY + 1));
     if (shouldLocateBgView)
     {
         if (scrollView.contentOffset.y < self.hs_contentOffsetY) // 正在向下滑
@@ -67,7 +67,7 @@
         }
         else if (scrollView.contentOffset.y >= self.hs_contentOffsetY + 1)// 否则正在向上滑, 大于等于1个点再处理, 不用太灵敏, 容易误判
         {
-            if (self.hs_isFollowFinger || self.hs_actionStyle == QMAddSongToFolderStatus_HalfScreen)
+            if (self.hs_isFollowFinger || self.hs_actionStyle == WYHalfScreenStatus_HalfScreen)
             {
                 // 向上滑，还在跟指状态下时优先改变as高度，直至到达最高点，再响应内部tableview的滚动
                 CGFloat actionViewY = self.y - (scrollView.contentOffset.y - self.hs_contentOffsetY);
@@ -76,7 +76,7 @@
                 self.height = MAX(self.height, self.hs_viewHeight - self.y);
                 if (self.y > (self.hs_viewHeight - self.hs_maxHeight))
                 {
-                    if (self.hs_actionStyle == QMAddSongToFolderStatus_HalfScreen)
+                    if (self.hs_actionStyle == WYHalfScreenStatus_HalfScreen)
                     {
                         [self.hs_scrollView setContentOffset:CGPointMake(self.hs_scrollView.contentOffset.x, MAX(self.hs_contentOffsetY, 0)) animated:NO];
                     }
@@ -103,7 +103,7 @@
 - (void)hs_scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     WYASSERT(self.hs_scrollView);
-    if (self.hs_actionStyle == QMAddSongToFolderStatus_Animating)
+    if (self.hs_actionStyle == WYHalfScreenStatus_Animating)
     {
         return; // 正在拖曳, 不响应
     }
@@ -115,7 +115,7 @@
 - (void)hs_scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     WYASSERT(self.hs_scrollView);
-    if (self.hs_actionStyle == QMAddSongToFolderStatus_Animating)
+    if (self.hs_actionStyle == WYHalfScreenStatus_Animating)
     {
         return; // 正在拖转, 不响应
     }
@@ -127,7 +127,7 @@
                     willDecelerate:(BOOL)decelerate
 {
     WYASSERT(self.hs_scrollView);
-    if (self.hs_actionStyle == QMAddSongToFolderStatus_Animating)
+    if (self.hs_actionStyle == WYHalfScreenStatus_Animating)
     {
         return; // 正在拖转, 不响应
     }
@@ -143,7 +143,7 @@
                 targetContentOffset:(inout CGPoint *)targetContentOffset
 {
     WYASSERT(self.hs_scrollView);
-    if (self.hs_actionStyle == QMAddSongToFolderStatus_Animating)
+    if (self.hs_actionStyle == WYHalfScreenStatus_Animating)
     {
         return; // 正在拖转, 不响应
     }
@@ -153,16 +153,16 @@
         {
             // 轻扫关闭
             self.hs_isFollowFinger = NO;
-            if (self.hs_actionStyle == QMAddSongToFolderStatus_HalfScreen)
+            if (self.hs_actionStyle == WYHalfScreenStatus_HalfScreen)
             {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    self.hs_actionStyle = QMAddSongToFolderStatus_Animating;
+                    self.hs_actionStyle = WYHalfScreenStatus_Animating;
                     [self hs_hide];
                 });
             }
-            else if (self.hs_actionStyle == QMAddSongToFolderStatus_FullScreen)
+            else if (self.hs_actionStyle == WYHalfScreenStatus_FullScreen)
             {
-                self.hs_actionStyle = QMAddSongToFolderStatus_Animating;
+                self.hs_actionStyle = WYHalfScreenStatus_Animating;
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self hs_changeToHalfScreen];
                 });
@@ -176,11 +176,11 @@
         }
         else if (velocity.y > 1.5) // 快速上划
         {
-            if (self.hs_actionStyle == QMAddSongToFolderStatus_HalfScreen)
+            if (self.hs_actionStyle == WYHalfScreenStatus_HalfScreen)
             {
                 *targetContentOffset = CGPointMake((*targetContentOffset).x, scrollView.contentOffset.y); // 这个场景 scrollView 还是不要动了
                 self.hs_isFollowFinger = NO;
-                self.hs_actionStyle = QMAddSongToFolderStatus_Animating;
+                self.hs_actionStyle = WYHalfScreenStatus_Animating;
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self hs_changeToFullScreen];
                 });
@@ -210,7 +210,7 @@
 - (void)hs_hide:(void (^)(void))animation completion:(void (^)(void))completion
 {
     WY_WEAK_SELF(self);
-    self.hs_actionStyle = QMAddSongToFolderStatus_Animating;
+    self.hs_actionStyle = WYHalfScreenStatus_Animating;
     [UIView animateWithDuration:0.3
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseInOut
@@ -220,7 +220,7 @@
         if (animation) animation();
     } completion:^(BOOL finished) {
         WY_STRONG_SELF(self);
-        self.hs_actionStyle = QMAddSongToFolderStatus_Hide;
+        self.hs_actionStyle = WYHalfScreenStatus_Hide;
         if (completion) completion();
     }];
 }
@@ -230,7 +230,7 @@
     WYASSERT(self.hs_scrollView);
     CGFloat bounceHeight = 5.f;
     WY_WEAK_SELF(self);
-    self.hs_actionStyle = QMAddSongToFolderStatus_Animating;
+    self.hs_actionStyle = WYHalfScreenStatus_Animating;
     [self setY:WY_SCREEN_HEIGHT];
     [UIView animateWithDuration:0.16
                           delay:0.0
@@ -252,7 +252,7 @@
             [self setY:showY];
             self.height = self.hs_minHeight;
         } completion:^(BOOL finished) {
-            self.hs_actionStyle = QMAddSongToFolderStatus_HalfScreen;
+            self.hs_actionStyle = WYHalfScreenStatus_HalfScreen;
             if (completion) completion();
         }];
     }];
@@ -279,14 +279,14 @@
 - (void)hs_changeToHalfScreen
 {
     CGFloat maxY = self.hs_viewHeight - self.hs_minHeight;
-    self.hs_actionStyle = QMAddSongToFolderStatus_Animating;
+    self.hs_actionStyle = WYHalfScreenStatus_Animating;
     WY_WEAK_SELF(self);
     [self hs_animation:^{
         WY_STRONG_SELF(self);
         self.y = maxY;
     } completion:^{
         WY_STRONG_SELF(self);
-        self.hs_actionStyle = QMAddSongToFolderStatus_HalfScreen;
+        self.hs_actionStyle = WYHalfScreenStatus_HalfScreen;
         self.y = maxY;
         // 结束再缩小 TableView 的高度
         self.height = self.hs_viewHeight - self.y;
@@ -296,7 +296,7 @@
 - (void)hs_changeToFullScreen
 {
     CGFloat minY = self.hs_viewHeight - self.hs_maxHeight;
-    self.hs_actionStyle = QMAddSongToFolderStatus_Animating;
+    self.hs_actionStyle = WYHalfScreenStatus_Animating;
     WY_WEAK_SELF(self);
     [self hs_animation:^{
         WY_STRONG_SELF(self);
@@ -304,7 +304,7 @@
         self.height = self.hs_viewHeight - self.y;
     } completion:^{
         WY_STRONG_SELF(self);
-        self.hs_actionStyle = QMAddSongToFolderStatus_FullScreen;
+        self.hs_actionStyle = WYHalfScreenStatus_FullScreen;
     }];
 }
 
@@ -381,7 +381,7 @@
             break;
             
         default:
-            self.hs_actionStyle = QMAddSongToFolderStatus_Animating;
+            self.hs_actionStyle = WYHalfScreenStatus_Animating;
             break;
     }
 }
@@ -432,13 +432,13 @@
     objc_setAssociatedObject(self, @selector(hs_maxHeight), @(hs_maxHeight), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (QMAddSongToFolderStatus)hs_actionStyle
+- (WYHalfScreenStatus)hs_actionStyle
 {
     NSNumber *number = objc_getAssociatedObject(self, @selector(hs_actionStyle));
     return [number unsignedIntegerValue];
 }
 
-- (void)setHs_actionStyle:(QMAddSongToFolderStatus)hs_actionStyle
+- (void)setHs_actionStyle:(WYHalfScreenStatus)hs_actionStyle
 {
     objc_setAssociatedObject(self, @selector(hs_actionStyle), @(hs_actionStyle), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
