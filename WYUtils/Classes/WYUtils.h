@@ -20,6 +20,9 @@
 #import "UINavigationBar+WYUtils.h"
 #import "UIDevice+WYUtils.h"
 #import "AVAsset+WYUtils.h"
+#import "UIScrollView+SimpleExposure.h"
+#import "NSArray+WYUtils.h"
+#import "NSDictionary+WYUtils.h"
 
 #import "WYMacroHeader.h"
 #import "WYSerializeKit.h"
@@ -38,6 +41,7 @@
 #import "WYNavigationItemType.h"
 #import "WYSafeNavigationController.h"
 #import "WYTabBar.h"
+#import "WYAssert.h"
 
 #import "WYCollectionMutableDeepCopy.h"
 

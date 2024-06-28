@@ -41,6 +41,9 @@
 		9388737A238E88DE00F26E68 /* WYDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93887379238E88DE00F26E68 /* WYDateViewController.m */; };
 		9388737E238E899A00F26E68 /* WYFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9388737D238E899A00F26E68 /* WYFontViewController.m */; };
 		93887381238E8D9E00F26E68 /* WYExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93887380238E8D9E00F26E68 /* WYExampleViewController.m */; };
+		9391E1DC2C2EB234003100C5 /* WYScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391E1DB2C2EB234003100C5 /* WYScrollViewController.m */; };
+		9391E1DF2C2EB27A003100C5 /* WYScrollExposureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391E1DE2C2EB27A003100C5 /* WYScrollExposureViewController.m */; };
+		9391E1E22C2EB2E2003100C5 /* WYScrollCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391E1E12C2EB2E2003100C5 /* WYScrollCollectionViewCell.m */; };
 		93B358582A5FA80000E52D7A /* WYGravityMotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B358572A5FA80000E52D7A /* WYGravityMotionViewController.m */; };
 		93D39A4F2A8F4F2100F0308C /* WYFlipClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D39A4E2A8F4F2100F0308C /* WYFlipClockViewController.m */; };
 		CF658823FEA36F27C76A4DAC /* Pods_WYUtils_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD71252413ABAD0C397F28E2 /* Pods_WYUtils_Tests.framework */; };
@@ -121,6 +124,12 @@
 		9388737D238E899A00F26E68 /* WYFontViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYFontViewController.m; sourceTree = "<group>"; };
 		9388737F238E8D9E00F26E68 /* WYExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYExampleViewController.h; sourceTree = "<group>"; };
 		93887380238E8D9E00F26E68 /* WYExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYExampleViewController.m; sourceTree = "<group>"; };
+		9391E1DA2C2EB234003100C5 /* WYScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYScrollViewController.h; sourceTree = "<group>"; };
+		9391E1DB2C2EB234003100C5 /* WYScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYScrollViewController.m; sourceTree = "<group>"; };
+		9391E1DD2C2EB27A003100C5 /* WYScrollExposureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYScrollExposureViewController.h; sourceTree = "<group>"; };
+		9391E1DE2C2EB27A003100C5 /* WYScrollExposureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYScrollExposureViewController.m; sourceTree = "<group>"; };
+		9391E1E02C2EB2E2003100C5 /* WYScrollCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYScrollCollectionViewCell.h; sourceTree = "<group>"; };
+		9391E1E12C2EB2E2003100C5 /* WYScrollCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYScrollCollectionViewCell.m; sourceTree = "<group>"; };
 		93B358562A5FA80000E52D7A /* WYGravityMotionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYGravityMotionViewController.h; sourceTree = "<group>"; };
 		93B358572A5FA80000E52D7A /* WYGravityMotionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYGravityMotionViewController.m; sourceTree = "<group>"; };
 		93D39A4D2A8F4F2100F0308C /* WYFlipClockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYFlipClockViewController.h; sourceTree = "<group>"; };
@@ -263,19 +272,20 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		936A420229F29FEF00DDE8F2 /* UItextView */ = {
+		936A420229F29FEF00DDE8F2 /* UITextView */ = {
 			isa = PBXGroup;
 			children = (
 				936A420329F2A00000DDE8F2 /* WYTextViewViewController.h */,
 				936A420429F2A00000DDE8F2 /* WYTextViewViewController.m */,
 			);
-			path = UItextView;
+			path = UITextView;
 			sourceTree = "<group>";
 		};
 		93887343238E875300F26E68 /* SubItems */ = {
 			isa = PBXGroup;
 			children = (
-				936A420229F29FEF00DDE8F2 /* UItextView */,
+				9391E1D92C2EB21F003100C5 /* ScrollView */,
+				936A420229F29FEF00DDE8F2 /* UITextView */,
 				93887355238E878E00F26E68 /* Color */,
 				9388734F238E878D00F26E68 /* Data */,
 				93887377238E88D800F26E68 /* Date */,
@@ -410,6 +420,19 @@
 				9313AAB62A67C9E70053F1A1 /* WYALLFontViewController.m */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		9391E1D92C2EB21F003100C5 /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				9391E1DA2C2EB234003100C5 /* WYScrollViewController.h */,
+				9391E1DB2C2EB234003100C5 /* WYScrollViewController.m */,
+				9391E1E02C2EB2E2003100C5 /* WYScrollCollectionViewCell.h */,
+				9391E1E12C2EB2E2003100C5 /* WYScrollCollectionViewCell.m */,
+				9391E1DD2C2EB27A003100C5 /* WYScrollExposureViewController.h */,
+				9391E1DE2C2EB27A003100C5 /* WYScrollExposureViewController.m */,
+			);
+			path = ScrollView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -590,11 +613,13 @@
 			files = (
 				6003F59E195388D20070C39A /* WYAppDelegate.m in Sources */,
 				93887361238E87D700F26E68 /* WYDeviceViewController.m in Sources */,
+				9391E1DC2C2EB234003100C5 /* WYScrollViewController.m in Sources */,
 				93887341238E7F9200F26E68 /* WYHomeCollectionViewCell.m in Sources */,
 				9388735E238E87CF00F26E68 /* WYDataViewController.m in Sources */,
 				93D39A4F2A8F4F2100F0308C /* WYFlipClockViewController.m in Sources */,
 				93887367238E87E500F26E68 /* WYLabelViewController.m in Sources */,
 				93887364238E87DE00F26E68 /* WYImageViewController.m in Sources */,
+				9391E1DF2C2EB27A003100C5 /* WYScrollExposureViewController.m in Sources */,
 				93887370238E880000F26E68 /* WYOperationViewController.m in Sources */,
 				9313AAB72A67C9E70053F1A1 /* WYALLFontViewController.m in Sources */,
 				93B358582A5FA80000E52D7A /* WYGravityMotionViewController.m in Sources */,
@@ -611,6 +636,7 @@
 				936A420529F2A00000DDE8F2 /* WYTextViewViewController.m in Sources */,
 				93286056249759F4006A4605 /* WYViewSubItemCollectionViewCell.m in Sources */,
 				9388735B238E87C100F26E68 /* WYColorViewController.m in Sources */,
+				9391E1E22C2EB2E2003100C5 /* WYScrollCollectionViewCell.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

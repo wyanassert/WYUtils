@@ -68,6 +68,7 @@
         @"WYNavigationBarViewController",
         @"WYViewViewController",
         @"WYTextViewViewController",
+        @"WYScrollViewController",
     ][indexPath.row];
     
     NSString *descText = @[
@@ -84,6 +85,7 @@
         @"NavigationBar",
         @"View",
         @"TextView",
+        @"ScrollView",
     ][indexPath.row];
     Class class = NSClassFromString(className);
     WYExampleViewController *vc = [[class alloc] init];

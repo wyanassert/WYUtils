@@ -231,7 +231,7 @@ return __singleton__; \
 #define kWYPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define kWYPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
-#define WY_TARGETED_DEVICE_IS_IPHONE_X   (kWYPhone && (WY_SCREEN_HEIGHT == 812 || WY_SCREEN_HEIGHT == 896))
+#define WY_TARGETED_DEVICE_IS_IPHONE_X   (kWYPhone && (WY_SCREEN_HEIGHT == 812 || WY_SCREEN_HEIGHT == 896 || WY_SCREEN_HEIGHT == 926))
 #define WY_TARGETED_DEVICE_IS_IPAD_iOS12 (kWYPad && WY_IOS_VERSION_GREATER_THAN_OR_EQUAL_TO(@"12.0"))
 
 //iPhone X 适配的
@@ -256,11 +256,6 @@ return __singleton__; \
 #define WY_AVOID_NIL_STRING(x) ((x) ?: @"")
 #define WY_AVOID_NIL_DIC(x) ((x) ?: @{})
 #define WY_AVOID_NIL_ARRAY(x) ((x) ?: @[])
-
-
-// 判断当前运行在主线程
-#define ASSERT_MAIN_THREAD ASSERT([NSThread currentThread] == [NSThread mainThread]);
-#define ASSERT_NO_MAIN_THREAD() ASSERT([NSThread currentThread] != [NSThread mainThread])
 
 
 /* 宏字符串操作，避免在宏里面嵌套使用宏带来的问题 */
