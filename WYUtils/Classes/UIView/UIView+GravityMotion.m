@@ -5,7 +5,6 @@
 //  Created by wyan on 2023/7/13.
 //
 
-
 #import "UIView+GravityMotion.h"
 #import <CoreMotion/CoreMotion.h>
 #import <objc/runtime.h>
@@ -188,6 +187,8 @@ static NSString *const kGravityMotionPositionAnimation = @"kGravityMotionPositio
     transform = CATransform3DRotate(transform, gravityX * M_PI_2, 0, 1, 0);
     transform = CATransform3DRotate(transform, gravityY * M_PI_2, 1, 0, 0);
     self.layer.transform = transform;
+    self.layer.shouldRasterize = YES;
+    self.layer.rasterizationScale = [UIScreen mainScreen].scale;
 }
 
 - (CGFloat)calValue:(CGFloat)value

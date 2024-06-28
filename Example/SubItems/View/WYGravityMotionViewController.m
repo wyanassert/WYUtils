@@ -73,15 +73,24 @@
     [self.backImageView gm_startWithMaxHorizontalOffset:200 maxVerticalOffset:100 maxAngleDx:60 maxAngleDy:60];
     
     {
-        UIView *redView = [[UIView alloc] init];
-        redView.backgroundColor = UIColor.redColor;
-        [self.view addSubview:redView];
-        [redView mas_makeConstraints:^(MASConstraintMaker *make) {
+        // 中间需要插入一个 superview, 不然就被截断了
+        UIView *tmpView = [UIView new];
+        tmpView.backgroundColor = UIColor.clearColor;
+        [self.view addSubview:tmpView];
+        [tmpView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self.view);
             make.top.equalTo(self.view).offset(100);
             make.width.height.mas_equalTo(200);
         }];
-        [redView gm_startRotateWithXAngel:30 yAngel:30 maxXAngel:30 maxYAngel:30];
+        UIView *redView = [[UIView alloc] init];
+        redView.backgroundColor = UIColor.redColor;
+        [tmpView addSubview:redView];
+        redView.frame = CGRectMake((WY_SCREEN_WIDTH - 300)/2, 100, 300, 300);
+        redView.layer.cornerRadius = 10;
+        [redView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(tmpView);
+        }];
+        [redView gm_startRotateWithXAngel:0 yAngel:0 maxXAngel:60 maxYAngel:60];
     }
     
     [self.view addSubview:self.frontLabel];
@@ -127,3 +136,4 @@
     return _backImageView;
 }
 @end
+
