@@ -44,6 +44,8 @@
 		9391E1DC2C2EB234003100C5 /* WYScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391E1DB2C2EB234003100C5 /* WYScrollViewController.m */; };
 		9391E1DF2C2EB27A003100C5 /* WYScrollExposureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391E1DE2C2EB27A003100C5 /* WYScrollExposureViewController.m */; };
 		9391E1E22C2EB2E2003100C5 /* WYScrollCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391E1E12C2EB2E2003100C5 /* WYScrollCollectionViewCell.m */; };
+		9391E1F72C2ECC5E003100C5 /* WYHalfScreenAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391E1F62C2ECC5E003100C5 /* WYHalfScreenAlertViewController.m */; };
+		9391E1FA2C2ECCFF003100C5 /* WYHalfScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391E1F92C2ECCFF003100C5 /* WYHalfScreenView.m */; };
 		93B358582A5FA80000E52D7A /* WYGravityMotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B358572A5FA80000E52D7A /* WYGravityMotionViewController.m */; };
 		93D39A4F2A8F4F2100F0308C /* WYFlipClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D39A4E2A8F4F2100F0308C /* WYFlipClockViewController.m */; };
 		CF658823FEA36F27C76A4DAC /* Pods_WYUtils_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD71252413ABAD0C397F28E2 /* Pods_WYUtils_Tests.framework */; };
@@ -130,6 +132,10 @@
 		9391E1DE2C2EB27A003100C5 /* WYScrollExposureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYScrollExposureViewController.m; sourceTree = "<group>"; };
 		9391E1E02C2EB2E2003100C5 /* WYScrollCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYScrollCollectionViewCell.h; sourceTree = "<group>"; };
 		9391E1E12C2EB2E2003100C5 /* WYScrollCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYScrollCollectionViewCell.m; sourceTree = "<group>"; };
+		9391E1F52C2ECC5E003100C5 /* WYHalfScreenAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYHalfScreenAlertViewController.h; sourceTree = "<group>"; };
+		9391E1F62C2ECC5E003100C5 /* WYHalfScreenAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYHalfScreenAlertViewController.m; sourceTree = "<group>"; };
+		9391E1F82C2ECCFF003100C5 /* WYHalfScreenView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYHalfScreenView.h; sourceTree = "<group>"; };
+		9391E1F92C2ECCFF003100C5 /* WYHalfScreenView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYHalfScreenView.m; sourceTree = "<group>"; };
 		93B358562A5FA80000E52D7A /* WYGravityMotionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYGravityMotionViewController.h; sourceTree = "<group>"; };
 		93B358572A5FA80000E52D7A /* WYGravityMotionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYGravityMotionViewController.m; sourceTree = "<group>"; };
 		93D39A4D2A8F4F2100F0308C /* WYFlipClockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYFlipClockViewController.h; sourceTree = "<group>"; };
@@ -352,14 +358,18 @@
 			children = (
 				93887374238E880F00F26E68 /* WYViewViewController.h */,
 				93887375238E880F00F26E68 /* WYViewViewController.m */,
+				93286054249759F4006A4605 /* WYViewSubItemCollectionViewCell.h */,
+				93286055249759F4006A4605 /* WYViewSubItemCollectionViewCell.m */,
 				93B358562A5FA80000E52D7A /* WYGravityMotionViewController.h */,
 				93B358572A5FA80000E52D7A /* WYGravityMotionViewController.m */,
 				9328605724975E24006A4605 /* WYWaveViewController.h */,
 				9328605824975E24006A4605 /* WYWaveViewController.m */,
-				93286054249759F4006A4605 /* WYViewSubItemCollectionViewCell.h */,
-				93286055249759F4006A4605 /* WYViewSubItemCollectionViewCell.m */,
 				93D39A4D2A8F4F2100F0308C /* WYFlipClockViewController.h */,
 				93D39A4E2A8F4F2100F0308C /* WYFlipClockViewController.m */,
+				9391E1F52C2ECC5E003100C5 /* WYHalfScreenAlertViewController.h */,
+				9391E1F62C2ECC5E003100C5 /* WYHalfScreenAlertViewController.m */,
+				9391E1F82C2ECCFF003100C5 /* WYHalfScreenView.h */,
+				9391E1F92C2ECCFF003100C5 /* WYHalfScreenView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -631,12 +641,14 @@
 				9388736D238E87F900F26E68 /* WYObejectViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* WYRootViewController.m in Sources */,
 				9388737A238E88DE00F26E68 /* WYDateViewController.m in Sources */,
+				9391E1FA2C2ECCFF003100C5 /* WYHalfScreenView.m in Sources */,
 				9328605924975E24006A4605 /* WYWaveViewController.m in Sources */,
 				93887376238E880F00F26E68 /* WYViewViewController.m in Sources */,
 				936A420529F2A00000DDE8F2 /* WYTextViewViewController.m in Sources */,
 				93286056249759F4006A4605 /* WYViewSubItemCollectionViewCell.m in Sources */,
 				9388735B238E87C100F26E68 /* WYColorViewController.m in Sources */,
 				9391E1E22C2EB2E2003100C5 /* WYScrollCollectionViewCell.m in Sources */,
+				9391E1F72C2ECC5E003100C5 /* WYHalfScreenAlertViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

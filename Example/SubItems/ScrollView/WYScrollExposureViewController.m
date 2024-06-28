@@ -108,6 +108,8 @@
     return height;
 }
 
+#pragma mark - UITableViewDelegate
+
 // 看需要可以打开, 或者做下限频, 比如一秒调用一次
 //- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 //{

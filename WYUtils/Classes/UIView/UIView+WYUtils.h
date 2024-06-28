@@ -10,6 +10,8 @@
 #import "UIView+WYRenderImage.h"
 #import "UIView+WYCorner.h"
 #import "UIView+WYGestureRecognizer.h"
+#import "UIView+WYPosition.h"
+#import "UIView+WYHalfScreen.h"
 #import "WYDisplayImageView.h"
 #import "WYStickerView.h"
 #import "WYMaskView.h"

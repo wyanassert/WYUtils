@@ -32,6 +32,9 @@
         case WYViewTypeFlipClock:
             self.titleLabel.text = @"Flip Clock";
             break;
+        case WYViewTypeHalfScreen:
+            self.titleLabel.text = @"HalfScreen ActionSheet";
+            break;
         default:
             break;
     }

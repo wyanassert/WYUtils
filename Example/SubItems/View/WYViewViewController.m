@@ -10,6 +10,7 @@
 #import "WYWaveViewController.h"
 #import "WYGravityMotionViewController.h"
 #import "WYFlipClockViewController.h"
+#import "WYHalfScreenAlertViewController.h"
 
 @interface WYViewViewController () <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
@@ -49,7 +50,12 @@
             WYFlipClockViewController *vc = [[WYFlipClockViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
-            break;;
+            break;
+        case WYViewTypeHalfScreen: {
+            WYHalfScreenAlertViewController *vc = [[WYHalfScreenAlertViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
         default:
             break;
     }
